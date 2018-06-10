@@ -31,10 +31,18 @@ docs/_build
 # Tutorial
 tutorials/cdr/data/CDR*.BioC.xml
 tutorials/cdr/data/dicts
-
 tutorials/intro/data/articles-dev.tsv
 tutorials/intro/data/articles-test.tsv
 tutorials/intro/data/articles-train.tsv
 tutorials/intro/data/gold_labels.tsv
-
 tutorials/tables/data/hardware/
+
+# abstractnet
+abstractnet/testrun/data/70kpaper.tsv
+abstractnet/cdr/data/CDR*.BioC.xml
+abstractnet/cdr/data/dicts
+abstractnet/intro/data/articles-dev.tsv
+abstractnet/intro/data/articles-test.tsv
+abstractnet/intro/data/articles-train.tsv
+abstractnet/intro/data/gold_labels.tsv
+abstractnet/tables/data/hardware/
