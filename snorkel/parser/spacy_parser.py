@@ -18,6 +18,7 @@ try:
         spacy_version=1
 except:
     raise Exception("spaCy not installed. Use `pip install spacy`.")
+import en_core_web_sm
 
 
 class Spacy(Parser):
@@ -58,7 +59,6 @@ class Spacy(Parser):
         super(Spacy, self).__init__(name="spacy")
         self.model = Spacy.load_lang_model(lang)
         self.num_threads = num_threads
-
         self.pipeline = []
         if spacy_version==1:
             for proc in annotators:
@@ -95,6 +95,12 @@ class Spacy(Parser):
         :param lang:
         :return:
         '''
+
+        # if lang=="en":
+        #     # nlp = en_core_web_sm.load()
+        #     nlp=spacy.blank('en')
+        #     nlp.add_pipe(nlp.create_pipe('sentencizer'))
+        #     return nlp
         if not Spacy.model_installed(lang):
             download(lang)
         return spacy.load(lang)
@@ -109,9 +115,14 @@ class Spacy(Parser):
         :param text:
         :return:
         '''
+        # print("original text "+text)
         text = self.to_unicode(text)
-
+        # print("later text "+text)
+        # print(text)
+        # self.model.add_pipe(self.model.create_pipe('sentencizer'))
         doc = self.model.tokenizer(text)
+        # doc=self.model(text)   # bug fix by Xin: tokenize sentences by period?  https://github.com/explosion/spaCy/issues/93
+        
         for proc in self.pipeline:
             proc(doc)
         assert doc.is_parsed
@@ -120,7 +131,6 @@ class Spacy(Parser):
         for sent in doc.sents:
             parts = defaultdict(list)
             text = sent.text
-
             for i,token in enumerate(sent):
                 parts['words'].append(str(token))
                 parts['lemmas'].append(token.lemma_)
