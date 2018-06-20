@@ -70,7 +70,6 @@ class Matcher(object):
         Optionally only takes the longest match (NOTE: assumes this is the *first* match)
         """
         seen_spans = set()
-        print("within here apply")
 
         for ind,c in enumerate(candidates):
             if self.f(c) and (not self.longest_match_only or not any([self._is_subspan(c, s) for s in seen_spans])):
@@ -111,11 +110,6 @@ class DictionaryMatch(NgramMatcher):
             if self.stemmer == 'porter':
                 self.stemmer = PorterStemmer()
             self.d = frozenset(self._stem(w) for w in list(self.d))
-
-    # def _is_subspan(self, c, span):
-    #     self.stemmed_text(c)
-    #     input(span.__dict__)
-    #     return True
 
 
     def stemmed_text(self,c):
