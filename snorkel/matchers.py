@@ -70,7 +70,9 @@ class Matcher(object):
         Optionally only takes the longest match (NOTE: assumes this is the *first* match)
         """
         seen_spans = set()
-        for c in candidates:
+        print("within here apply")
+
+        for ind,c in enumerate(candidates):
             if self.f(c) and (not self.longest_match_only or not any([self._is_subspan(c, s) for s in seen_spans])):
                 if self.longest_match_only:
                     seen_spans.add(self._get_span(c))
@@ -98,6 +100,7 @@ class DictionaryMatch(NgramMatcher):
         self.reverse     = self.opts.get('reverse', False)
         try:
             self.d = frozenset(w.lower() if self.ignore_case else w for w in self.opts['d'])
+            # input("dictionary is "+str(self.d))
         except KeyError:
             raise Exception("Please supply a dictionary (list of phrases) d as d=d.")
 
@@ -109,6 +112,19 @@ class DictionaryMatch(NgramMatcher):
                 self.stemmer = PorterStemmer()
             self.d = frozenset(self._stem(w) for w in list(self.d))
 
+    # def _is_subspan(self, c, span):
+    #     self.stemmed_text(c)
+    #     input(span.__dict__)
+    #     return True
+
+
+    def stemmed_text(self,c):
+        p = c.get_attrib_span(self.attrib)
+        p = p.lower() if self.ignore_case else p
+        p = self._stem(p) if self.stemmer is not None else p
+
+        return p
+
     def _stem(self, w):
         """Apply stemmer, handling encoding errors"""
         try:
@@ -117,10 +133,17 @@ class DictionaryMatch(NgramMatcher):
             return w
 
     def _f(self, c):
-        p = c.get_attrib_span(self.attrib)
-        p = p.lower() if self.ignore_case else p
-        p = self._stem(p) if self.stemmer is not None else p
-        return (not self.reverse) if p in self.d else self.reverse
+        # p = c.get_attrib_span(self.attrib)
+        # p = p.lower() if self.ignore_case else p
+        # p = self._stem(p) if self.stemmer is not None else p
+
+        p=self.stemmed_text(c)
+        # print(p,any([(word in p) for word in self.d]),self.d )
+
+        # if (not self.reverse) if any([(word in p) for word in self.d]) else self.reverse:
+        #     print(p)
+        #     input("is candidate "+str((not self.reverse) if any([(word in p) for word in self.d]) else self.reverse))
+        return (not self.reverse) if any([(word in p) for word in self.d]) else self.reverse
 
 class LambdaFunctionMatcher(NgramMatcher):
     """Selects candidate Ngrams that return True when fed to a function f."""
@@ -248,6 +271,8 @@ class RegexMatchEach(RegexMatch):
     """Matches regex pattern on **each token**"""
     def _f(self, c):
         tokens = c.get_attrib_tokens(self.attrib)
+        input(c)
+        input(type(c))
         return True if tokens and all([self.r.match(t) is not None for t in tokens]) else False
 
 
