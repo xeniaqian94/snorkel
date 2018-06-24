@@ -291,8 +291,6 @@ class RegexMatchEach(RegexMatch):
 
     def _f(self, c):
         tokens = c.get_attrib_tokens(self.attrib)
-        input(c)
-        input(type(c))
         return True if tokens and all([self.r.match(t) is not None for t in tokens]) else False
 
 
