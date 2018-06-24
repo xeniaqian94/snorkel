@@ -7,6 +7,7 @@ from builtins import *
 import os
 import re
 import warnings
+
 # Travis will not import the PorterStemmer
 if 'CI' not in os.environ:
     try:
@@ -21,9 +22,10 @@ class Matcher(object):
     returning only candidates _c_ s.t. _f(c) == True_,
     where f can be compositionally defined.
     """
+
     def __init__(self, *children, **opts):
-        self.children           = children
-        self.opts               = opts
+        self.children = children
+        self.opts = opts
         self.longest_match_only = self.opts.get('longest_match_only', True)
         self.init()
         self._check_opts()
@@ -71,7 +73,7 @@ class Matcher(object):
         """
         seen_spans = set()
 
-        for ind,c in enumerate(candidates):
+        for ind, c in enumerate(candidates):
             if self.f(c) and (not self.longest_match_only or not any([self._is_subspan(c, s) for s in seen_spans])):
                 if self.longest_match_only:
                     seen_spans.add(self._get_span(c))
@@ -80,8 +82,10 @@ class Matcher(object):
 
 WORDS = 'words'
 
+
 class NgramMatcher(Matcher):
     """Matcher base class for Ngram objects"""
+
     def _is_subspan(self, c, span):
         """Tests if candidate c is subspan of span, where span is defined specific to candidate type"""
         return c.char_start >= span[0] and c.char_end <= span[1]
@@ -93,10 +97,12 @@ class NgramMatcher(Matcher):
 
 class DictionaryMatch(NgramMatcher):
     """Selects candidate Ngrams that match against a given list d"""
+
     def init(self):
         self.ignore_case = self.opts.get('ignore_case', True)
-        self.attrib      = self.opts.get('attrib', WORDS)
-        self.reverse     = self.opts.get('reverse', False)
+        self.attrib = self.opts.get('attrib', WORDS)
+        self.reverse = self.opts.get('reverse',
+                                     False)  # if it contains, then any span that contains the token is not okay
         try:
             self.d = frozenset(w.lower() if self.ignore_case else w for w in self.opts['d'])
             # input("dictionary is "+str(self.d))
@@ -111,8 +117,7 @@ class DictionaryMatch(NgramMatcher):
                 self.stemmer = PorterStemmer()
             self.d = frozenset(self._stem(w) for w in list(self.d))
 
-
-    def stemmed_text(self,c):
+    def stemmed_text(self, c):
         p = c.get_attrib_span(self.attrib)
         p = p.lower() if self.ignore_case else p
         p = self._stem(p) if self.stemmer is not None else p
@@ -131,36 +136,52 @@ class DictionaryMatch(NgramMatcher):
         # p = p.lower() if self.ignore_case else p
         # p = self._stem(p) if self.stemmer is not None else p
 
-        p=self.stemmed_text(c)
-        # print(p,any([(word in p) for word in self.d]),self.d )
-
-        # if (not self.reverse) if any([(word in p) for word in self.d]) else self.reverse:
-        #     print(p)
-        #     input("is candidate "+str((not self.reverse) if any([(word in p) for word in self.d]) else self.reverse))
+        p = self.stemmed_text(c)  # p is a string
         return (not self.reverse) if any([(word in p) for word in self.d]) else self.reverse
+
 
 class LambdaFunctionMatcher(NgramMatcher):
     """Selects candidate Ngrams that return True when fed to a function f."""
+
     def init(self):
         self.ignore_case = self.opts.get('ignore_case', True)
-        self.attrib      = self.opts.get('attrib', WORDS)
+        self.attrib = self.opts.get('attrib', WORDS)
         try:
             self.func = self.opts['func']
         except KeyError:
             raise Exception("Please supply a function f as func=f.")
-    
+
     def _f(self, c):
         """The internal (non-composed) version of filter function f"""
         return self.func(c)
 
 
+# def containsComma(c):
+#     p=self.stemmed_text(c)
+
+
 class Union(NgramMatcher):
     """Takes the union of candidate sets returned by child operators"""
+
     def f(self, c):
-       for child in self.children:
-           if child.f(c) > 0:
-               return True
-       return False
+        for child in self.children:
+            if child.f(c) > 0:
+                return True
+        return False
+
+
+class Intersection(NgramMatcher):
+    """Takes the intersection of candidate sets returned by child operators"""
+
+    def f(self, c):
+        for child in self.children:
+            # input(type(child))
+            if not child.f(c):
+                return False
+        return True
+
+    # def _f(self, c):
+    #     return self.f(c)
 
 
 class Concat(NgramMatcher):
@@ -168,12 +189,13 @@ class Concat(NgramMatcher):
     Selects candidates which are the concatenation of adjacent matches from child operators
     NOTE: Currently slices on **word index** and considers concatenation along these divisions only
     """
+
     def init(self):
-        self.permutations   = self.opts.get('permutations', False)
-        self.left_required  = self.opts.get('left_required', True)
+        self.permutations = self.opts.get('permutations', False)
+        self.left_required = self.opts.get('left_required', True)
         self.right_required = self.opts.get('right_required', True)
-        self.ignore_sep     = self.opts.get('ignore_sep', True)
-        self.sep            = self.opts.get('sep', " ")
+        self.ignore_sep = self.opts.get('ignore_sep', True)
+        self.sep = self.opts.get('sep', " ")
 
     def f(self, c):
         if len(self.children) != 2:
@@ -184,12 +206,12 @@ class Concat(NgramMatcher):
             return True
 
         # Iterate over candidate splits **at the word boundaries**
-        for wsplit in range(c.get_word_start()+1, c.get_word_end()+1):
+        for wsplit in range(c.get_word_start() + 1, c.get_word_end() + 1):
             csplit = c.word_to_char_index(wsplit) - c.char_start  # NOTE the switch to **candidate-relative** char index
 
             # Optionally check for specific separator
-            if self.ignore_sep or c.get_span()[csplit-1] == self.sep:
-                c1 = c[:csplit-len(self.sep)]
+            if self.ignore_sep or c.get_span()[csplit - 1] == self.sep:
+                c1 = c[:csplit - len(self.sep)]
                 c2 = c[csplit:]
                 if self.children[0].f(c1) and self.children[1].f(c2):
                     return True
@@ -200,6 +222,7 @@ class Concat(NgramMatcher):
 
 class SlotFillMatch(NgramMatcher):
     """Matches a slot fill pattern of matchers _at the character level_"""
+
     def init(self):
         self.attrib = self.opts.get('attrib', WORDS)
         try:
@@ -208,8 +231,8 @@ class SlotFillMatch(NgramMatcher):
             raise Exception("Please supply a slot-fill pattern p as pattern=p.")
 
         # Parse slot fill pattern
-        split        = re.split(r'\{(\d+)\}', self.pattern)
-        self._ops    = list(map(int, split[1::2]))
+        split = re.split(r'\{(\d+)\}', self.pattern)
+        self._ops = list(map(int, split[1::2]))
         self._splits = split[::2]
 
         # NOTE: Must have non-null splits!!
@@ -219,7 +242,7 @@ class SlotFillMatch(NgramMatcher):
         # Check for correct number of child matchers / slots
         if len(self.children) != len(set(self._ops)):
             raise ValueError("Number of provided matchers (%s) != number of slots (%s)." \
-                    % (len(self.children), len(set(self._ops))))
+                             % (len(self.children), len(set(self._ops))))
 
     def f(self, c):
 
@@ -229,22 +252,23 @@ class SlotFillMatch(NgramMatcher):
             return False
 
         # Then, recursively apply matchers
-        for i,op in enumerate(self._ops):
-            if self.children[op].f(c[m.start(i+1):m.end(i+1)]) == 0:
+        for i, op in enumerate(self._ops):
+            if self.children[op].f(c[m.start(i + 1):m.end(i + 1)]) == 0:
                 return False
         return True
 
 
 class RegexMatch(NgramMatcher):
     """Base regex class- does not specify specific semantics of *what* is being matched yet"""
+
     def init(self):
         try:
             self.rgx = self.opts['rgx']
         except KeyError:
             raise Exception("Please supply a regular expression string r as rgx=r.")
         self.ignore_case = self.opts.get('ignore_case', True)
-        self.attrib      = self.opts.get('attrib', WORDS)
-        self.sep         = self.opts.get('sep', " ")
+        self.attrib = self.opts.get('attrib', WORDS)
+        self.sep = self.opts.get('sep', " ")
 
         # Compile regex matcher
         # NOTE: Enforce full span matching by ensuring that regex ends with $!
@@ -257,12 +281,14 @@ class RegexMatch(NgramMatcher):
 
 class RegexMatchSpan(RegexMatch):
     """Matches regex pattern on **full concatenated span**"""
+
     def _f(self, c):
         return True if self.r.match(c.get_attrib_span(self.attrib, sep=self.sep)) is not None else False
 
 
 class RegexMatchEach(RegexMatch):
     """Matches regex pattern on **each token**"""
+
     def _f(self, c):
         tokens = c.get_attrib_tokens(self.attrib)
         input(c)
@@ -277,6 +303,7 @@ class PersonMatcher(RegexMatchEach):
     A convenience class for setting up a RegexMatchEach to match spans
     for which each token was tagged as a person.
     """
+
     def __init__(self, *children, **kwargs):
         kwargs['attrib'] = 'ner_tags'
         kwargs['rgx'] = 'PERSON'
@@ -290,6 +317,7 @@ class LocationMatcher(RegexMatchEach):
     A convenience class for setting up a RegexMatchEach to match spans
     for which each token was tagged as a location.
     """
+
     def __init__(self, *children, **kwargs):
         kwargs['attrib'] = 'ner_tags'
         kwargs['rgx'] = 'LOCATION|LOC'
@@ -303,6 +331,7 @@ class OrganizationMatcher(RegexMatchEach):
     A convenience class for setting up a RegexMatchEach to match spans
     for which each token was tagged as an organization.
     """
+
     def __init__(self, *children, **kwargs):
         kwargs['attrib'] = 'ner_tags'
         kwargs['rgx'] = 'ORGANIZATION|ORG'
@@ -316,6 +345,7 @@ class DateMatcher(RegexMatchEach):
     A convenience class for setting up a RegexMatchEach to match spans
     for which each token was tagged as a date.
     """
+
     def __init__(self, *children, **kwargs):
         kwargs['attrib'] = 'ner_tags'
         kwargs['rgx'] = 'DATE'
@@ -329,6 +359,7 @@ class NumberMatcher(RegexMatchEach):
     A convenience class for setting up a RegexMatchEach to match spans
     for which each token was tagged as a number.
     """
+
     def __init__(self, *children, **kwargs):
         kwargs['attrib'] = 'ner_tags'
         kwargs['rgx'] = 'NUMBER|QUANTITY'
@@ -342,6 +373,7 @@ class MiscMatcher(RegexMatchEach):
     A convenience class for setting up a RegexMatchEach to match spans
     for which each token was tagged as miscellaneous.
     """
+
     def __init__(self, *children, **kwargs):
         kwargs['attrib'] = 'ner_tags'
         kwargs['rgx'] = 'MISC'

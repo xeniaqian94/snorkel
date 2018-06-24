@@ -127,14 +127,14 @@ test_sents  = set()
 
 for i, doc in enumerate(docs):
     for s in doc.sentences:
-        if number_of_people(s) <= 5:
-            if i % 10 == 8:
-                
-                dev_sents.add(s)
-            elif i % 10 == 9:
-                test_sents.add(s)
-            else:
-                train_sents.add(s)
+        # if number_of_people(s) <= 5:
+        if i % 10 == 8:
+
+            dev_sents.add(s)
+        elif i % 10 == 9:
+            test_sents.add(s)
+        else:
+            train_sents.add(s)
                 
 for i, sents in enumerate([train_sents, dev_sents, test_sents]):
     cand_extractor.apply(sents, split=i)
@@ -164,8 +164,7 @@ for i in range(len(cands)):
     document_list+=[cands[i].background_cue.sentence]
     print()
     
-print("Check if any of the extracted candidates come from the same sentence? "+str(len(set(document_list))!=len(document_list)))
-
+print("Is there any of the extracted candidates come from the same sentence? "+str(len(set(document_list))!=len(document_list)))
 
 # **(Solved) Question 1:** the `CandidateExtractor` extracts only spans with length 1. But Each sentence is only getting matched once with one span (try search "sentence=3993", for example). The sentence is good, but we still would want longer span, e.g. half part or the whole of a sentence. 
 # 
