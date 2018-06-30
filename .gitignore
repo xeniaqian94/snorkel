@@ -45,4 +45,5 @@ abstractnet/intro/data/articles-dev.tsv
 abstractnet/intro/data/articles-test.tsv
 abstractnet/intro/data/articles-train.tsv
 abstractnet/intro/data/gold_labels.tsv
+abstractnet/testrun/snorkel.db
 abstractnet/tables/data/hardware/
