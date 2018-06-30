@@ -1,0 +1,1000 @@
+Removed: 5834868425ff05a97b00c156	In this lecture we discuss two parsing algorithms, both of which traverse the input string from left to right. The first, LL (1), makes a decision on which grammar production to use based on the first character of the input string. If that were ambiguous, the grammar would have to be rewritten to fall into this class, which is not always possible. The second, LR (1), can postpone the decision at first by pushing input characters onto a stack and then deciding on the production later, taking into account both the first input character and the stack. It is 
+
+
+Removed: 5834868425ff05a97b00c15d	Abstract. Cyber-physical systems integrate cyber elements with physical elements, thereby combining the computing and physics regimes. This integration has exciting prospects as a basis for advanced systems that solve big technical, societal, economical, and ecological challenges. When designing, understanding, and analyzing these cyber-physical systems, however, we also face big integrative challenges. Challenges of integrating CPS. Challenging of integrating dynamics. Of integrating theories, technologies, and tools. And 
+
+
+Removed: 5834868425ff05a97b00c160	Abstract. This paper is a tutorial on how to model and prove complex properties of complex hybrid systems in KeYmaera, an automatic and interactive formal verification tool for hybrid systems implementing differential dynamic logic. Hybrid systems can model highly nontrivial controllers of physical plants, whose behaviors are often safety critical such as trains, cars, airplanes, or medical devices. Formal methods can help design systems that work correctly. This paper illustrates how KeYmaera can be used to systematically model, validate, and 
+
+
+Removed: 5834868425ff05a97b00c164	We first present some additional examples illustrating ordered inference that capture computations of finite state transducers and Turing machines. Then we return to cut elimination, also called Gentzen's Hauptsatz [Gen35], for the Lambek calculus given in its sequent formulation. Together with identity elimination, this justifies our program of viewing the inference rules as defining the meaning of the connectives even more clearly than the cut reduction and identity expansion by themselves. The idea behind these will emerge in 
+
+
+Removed: 5834868425ff05a97b00c169	2011 Technical Reports by Author Computer Science Department School of Computer Science,\nCarnegie Mellon University. AGRAWAL, Mukesh CMU-CS-11-101. AKELLA, Aditya\nCMU-CS-11-100, CMU-CS-11-117. ALDRICH, Jonathan CMU-CS-11-142. ANAND, Ashok\nCMU-CS-11-100, CMU-CS-11-117. ANDERSEN, David CMU-CS-11-100. BALA, Vasanth\nCMU-CS-11-135. BARNAT, Alfred CMU-CS-11-123. BENISCH, Michael CMU-CS-11-113.\nBIERHOFF, Kevin CMU-CS-11-142. BOCCHINO, Robert CMU-CS-11-142. BUTLER, Eric CMU-  \n
+
+
+Removed: 5834868425ff05a97b00d763	Abstract Computing the edit distance between two genomes is a basic problem in the study of genome evolution. The double-cut-and-join (DCJ) model has formed the basis for most algorithmic research on rearrangements over the last few years. The edit distance under the DCJ model can be computed in linear time for genomes without duplicate genes, while the problem becomes NP-hard in the presence of duplicate genes. In this article, we propose an integer linear programming (ILP) formulation to compute the DCJ distance between two 
+
+
+Removed: 5834868425ff05a97b00c815	Abstract. Students are starting to use networked visual argumentation tools to discuss, debate, and argue with one another about topics presented by a teacher. However, this development gives rise to an emergent issue for teachers: how do they support students during these e-discussions? The ARGUNAUT system aims to provide the teacher (or moderator) with tools that will facilitate effective moderation of several simultaneous e-discussions. Awareness Indicators, provided as part of a moderator's user interface, help 
+
+
+Removed: 5834868425ff05a97b00c816	Abstract Large practical NLP applications require robust analysis components that can effectively handle input that is disfluent or extra-grammatical. The effectiveness and efficiency of any robust parser are a direct function of three main factors:(1) Flexibility: what types of disfluencies and deviations from the grammar can the parser handle?;(2) Search: How does the parser search the space of possible interpretations, and what techniques are applied to prune the search space?; and (3) Parse Selection and Disambiguation: What 
+
+
+Removed: 5834868425ff05a97b00c81c	Abstract: Tutorial Dialog Systems that employ Conversational Agents (CAs) to deliver instructional content to learners in one-on-one tutoring settings have been shown to be effective in multiple learning domains by multiple research groups. Our work focuses on extending this successful learning technology to collaborative learning settings involving two or more learners interacting with one or more agents. Experience from extending existing techniques for developing conversational agents into multiple-learner settings highlights 
+
+
+Removed: 5834868425ff05a97b00c82d	Abstract It is often assumed that engaging in a one-on-one dialogue with a tutor is more effective than listening to a lecture or reading a text. Although earlier experiments have not always supported this hypothesis, this may be due in part to allowing the tutors to cover different content than the noninteractive instruction. In 7 experiments, we tested the interaction hypothesis under the constraint that (a) all students covered the same content during instruction,(b) the task domain was qualitative physics,(c) the instruction was in 
+
+
+Removed: 5834868425ff05a97b00c1d8	In this lecture we discuss another logic program analysis, namely verifying the progress property. Progress guarantees that a predicate can never fail for arbitrary values of its input arguments. Together with termination this guarantees that a predicate is total in its given input arguments. As sketched in the previous lecture, this an important piece in the general technique of verifying properties of logic programs by reasoning about proof terms.
+
+
+Removed: 5834868425ff05a97b00c82e	Abstract Many of the intelligent tutoring systems that have been developed during the last 20 years have proven to be quite successful, particularly in the domains of mathematics, science, and technology. They produce significant learning gains beyond classroom environments. They are capable of engaging most students' attention and interest for hours. We have been working on a new generation of intelligent tutoring systems that hold mixed-initiative conversational dialogues with the learner. The tutoring systems present 
+
+
+Removed: 5834868425ff05a97b00c1d9	In this lecture we return to the view that a logic program is defined by a collection of inference rules for atomic propositions. But we now base the operational semantics on reasoning forward from facts, which are initially given as rules with no premisses. Every rule application potentially adds new facts. Whenever no more new facts can be generated we say forward reasoning saturates and we can answer questions about truth by examining the saturated database of facts. We illustrate bottom-up logic programming with several 
+
+
+Removed: 5834868425ff05a97b00d7a2	Search all the public and authenticated articles in CiteULike. Include unauthenticated results\ntoo (may include \spam\") Enter a search phrase. You can also specify a CiteULike article id\n(123456),. a DOI (doi:10.1234/12345678). or a PubMed ID (pmid:12345678). Click Help for\nadvanced usage. CiteULike, Group: evoting, Search, Register, Log in,  \n"
+
+
+Removed: 5834868425ff05a97b00d7b2	Abstract: A number of seemingly unrelated problems involving the proximity of N points in the plane are studied, such as finding a Euclidean minimum spanning tree, the smallest circle enclosing the set, k nearest and farthest neighbors, the two closest points, and a proper straight-line triangulation. For most of the problems considered a lower bound of O (N log N) is shown. For all of them the best currently-known upper bound is O (N2) or worse. The purpose of this paper is to introduce a single geometric structure, called the Voronoi 
+
+
+Removed: 5834868425ff05a97b00d7b4	ABSTRACT: With funding from the NorthEast Gas Association (NGA), the US Department of Energy (DoE) and NASA, Carnegie Mellon University (CMU) has developed Explorer, a long range, un-tethered, modular inspection robot for the visual inspection of 6” and 8” natural gas distribution system pipelines. The robot can be launched into the pipeline under live conditions utilizing a commercial no-blow system via a specially designed attachment, and can negotiate diameter changes, 45-deg and 90-deg bends and tees, as well as inclined 
+
+
+Removed: 5834868425ff05a97b00d7b7	Abstract—This paper describes selected issues with the commissioning and implementation of a real-time control system for an experimental bipedal robot platform named MABEL at the University of Michigan. Real world issues with printed circuit board layout and manufacturing, replacement of third party components, and communication issues associated with the computer control system are discussed. Control system implementation issues such as cable stretching in the hip and knee joint drivetrains, sensor resolution 
+
+
+Removed: 5834868425ff05a97b00c888	Rationale: Vitamin D insufficiency (a serum 25 (OH) D< 30 ng/ml) has been associated with severe asthma exacerbations, but this could be explained by underlying racial ancestry or disease severity. Little is known about vitamin D and asthma in Puerto Ricans. Objectives: To examine whether vitamin D insufficiency is associated with severe asthma exacerbations in Puerto Rican children, independently of racial ancestry, atopy, and time outdoors. Methods: A cross-sectional study was conducted of 560 children ages 6–14 years with (n= 
+
+
+Removed: 5834868425ff05a97b00c88e	The observation that haplotypes from a particular region of the genome differ between affected and unaffected individuals or between chromosomes transmitted to affected individuals versus those not transmitted is sound evidence for a disease-liability mutation in the region. Tests for differentiation of haplotype distributions often take the form of either Pearson's χ2 statistic or tests based on the similarity among haplotypes in the different populations. In this article, we show that many measures of haplotype similarity can be 
+
+
+Removed: 5834868425ff05a97b00c24b	Abstract. To make development of grid applications less arduous, a natural, powerful, and convenient programming interface is required. First, we propose an expressive grid programming language which we hope will provide such an interface. Then we show how to map programs in this language onto a low-level, more compact architecture that can more easily provide the fault tolerance and inexpensive scheduling suitable for grid computing. Finally, we discuss programming techniques for taking advantage of the underlying 
+
+
+Removed: 5834868425ff05a97b00c88f	Abstract Large, population-based samples and large-scale genotyping are being used to evaluate disease/gene associations. A substantial drawback to such samples is the fact that population substructure can induce spurious associations between genes and disease. We review two methods, called genomic control (GC) and structured association (SA), that obviate many of the concerns about population substructure by using the features of the genomes present in the sample to correct for stratification. The GC approach exploits the 
+
+
+Removed: 5834868425ff05a97b00c252	Abstract Kidney exchanges are organized markets where patients swap willing but incompatible donors. In the last decade, kidney exchanges grew from small and regional to large and national—and soon, international. This growth results in more lives saved, but exacerbates the empirical hardness of the NP-complete problem of optimally matching patients to donors. State-of-the-art matching engines use integer programming techniques to clear fielded kidney exchanges, but these methods must be tailored to specific models 
+
+
+Removed: 5834868425ff05a97b00c18f	2010 Technical Reports by Author Computer Science Department School of Computer Science,\nCarnegie Mellon University. ABOUTALIB, Sarah CMU-CS-10-153. AMMONS, Glenn\nCMU-CS-10-111. ARNOLD, Rob CMU-CS-10-145. BALAKRISHNAN, Sivaraman\nCMU-CS-10-113. BILA, Nilton CMU-CS-10-111. BLELLOCH, Guy E. CMU-CS-10-154. BRYANT,\nRandal E. CMU-CS-10-140. BURROUGHS, Michelle CMU-CS-10-107. CARBONELL, Jaime\nG. CMU-CS-10-113. CERVESATO, Iliano CMU-CS-10-125. CLARKE, Edmund M. CMU-CS-10-  \n
+
+
+Removed: 5834868425ff05a97b00c19c	Abstract Proof theory is a powerful tool for understanding computational phenomena, as most famously exemplified by the Curry–Howard isomorphism between intuitionistic logic and the simply-typed λ-calculus. In this paper, we identify a fragment of intuitionistic linear logic with least fixed points and establish a Curry–Howard isomorphism between a class of proofs in this fragment and deterministic finite automata. Proof-theoretically, closure of regular languages under complementation, union, and intersection can then be 
+
+
+Removed: 5834868425ff05a97b00c268	ABSTRACT Hybrid systems with both discrete and continuous dynamics are an important model for real-world physical systems. The key challenge is how to ensure their correct functioning wrt safety requirements. Promising techniques to ensure safety seem to be modeldriven engineering to develop hybrid systems in a well-defined and traceable manner, and formal verification to prove their correctness. Their combination forms the vision of verification-driven engineering. Despite the remarkable progress in automating formal 
+
+
+Removed: 5834868425ff05a97b00c1a6	The logic programming language AProlog extends Prolog by containing polymorphic types, \nhigher-order programming, A-terms as data structures, higher-order unification, modules, lexical \nscope, abstract data types, and implicational and universally quantified goals. These extensions \nare integrated into a single logical system and provide AProlog with expressive strengths not \nfound in Prolog. After surveying various aspects of this lan- guage, we shall focus on its uses \nin specifying proof systems and implementing theorem provers. In particular, we shall  
+
+
+Removed: 5834868425ff05a97b00c8c1	Abstract The impact of Computer-Integrated Surgery (CIS) on medicine in the next 20 years will be as great as that of Computer-Integrated Manufacturing on industrial production over the past 20 years. Development of advanced CIS systems is best pursued within the context of systems-oriented multidisciplinary research providing close collaboration between engineering faculty, students, surgeons, and industry. This paper introduces basic themes of CIS systems and describes the overall research strategy pursued within our NSF 
+
+
+Removed: 5834868425ff05a97b00c277	Hybrid systems have so far served us well throughout this course as a model for cyberphysical systems [Pla08, Pla10b, Pla12c]. Most definitely, hybrid systems can also serve as models for other systems that are not cyber-physical per se, ie they are not built as a combination of cyber and computing capabilities with physical capabilities. Some biological systems can be understood as hybrid systems, because they combine discrete and continuous dynamics. Or physical processes in which things happen at very different 
+
+
+Removed: 5834868425ff05a97b00c8f3	Abstract: This paper develops a physical model of a MEMS capacitive accelerometer in order to use the accelerometer effectively in low-g motion tracking applications. The proposed physical model includes common physical parameters used to rate an accelerometer: scale factor, bias, and misalignment. Simple experiments used to reveal the behavior and characteristics of these parameters are described. A phenomenological modeling method is used to establish mathematical representations of these parameters 
+
+
+Removed: 5834868425ff05a97b00c2ab	Normalizing transformations do not optimize the program itself but help subsequent optimizations \nfind more syntactically identical expressions. They use algebraic laws like associativity and \ndistributivity. Their use is gener- ally restricted by definitions of the evaluation order (for \nJava), by the ex- ception order (Java, Eiffel), or by the limitations of floating-point arithmetic (which \nis neither associative nor distributive). A simple normalization is to use commutativity a + b = \nb + a. But we could use this equation in both directions? Which one do we use? If we use  
+
+
+Removed: 5834868425ff05a97b00d952	Abstract The availability of unlicensed spectrum coupled with the increasing popularity of wireless communication has given rise to a diverse range of wireless technologies that compete for spectrum. In particular, 802.11 devices face a host of problems such as interference with other 802.11 devices (hidden terminals) as well as with technologies like Bluetooth and ZigBee. Inferring the cause of wireless performance problems based on observations from a single node is hard. Past work on wireless diagnosis has made use of 
+
+
+Removed: 5834868425ff05a97b00d955	Abstract Quality-of-Service (QoS) routing tries to select a path that satisfies a set of QoS constraints, while also achieving overall network resource efficiency. We present initial results on QoS path selection for traffic requiring bandwidth and delay guarantees. For traffic with bandwidth guarantees, we found that several routing algorithms that favor paths with fewer hops perform well. For traffic with delay guarantees, we show that for a broad class of WFQ-like scheduling algorithms, the problem of finding a path satisfying bandwidth, delay, 
+
+
+Removed: 5834868425ff05a97b00d957	Abstract: Networking research benefits from controlled, repeatable experimentation using simulation and emulation systems. Making simulations realistic is a challenge for wireless systems and is especially difficult for vehicular networks. This paper presents a general framework for modeling and reproducing environment-specific channel properties. We show that one can estimate localized environment information, and adding such information to state-of-the art channel models significantly increases accuracy. We describe the 
+
+
+Removed: 5834868425ff05a97b00c2b0	In the previous lectures we have considered a programming language C0 with pointers and memory and array allocation. C0 had no way of getting rid of allocated memory again when it is not needed anymore. There are basically two solutions. One is to use manual memory management by adding a free operation to the language. The other is to add automatic garbage collection instead, which will take care of freeing memory automatically when it is not used anymore. Requiring free seems like it would be convenient for the compiler 
+
+
+Removed: 5834868425ff05a97b00c8fd	Abstract: This work presents the development of an intelligent microsurgical instrument to perform real-time tremor compensation within a handheld tool. The intelligent instrument senses its own motion, distinguishes between voluntary and erroneous motion, and manipulates its tip to cancel the undesired component in real-time. The on-board sensing unit is made up of a magnetometer-aided all-accelerometer inertial measurement unit and sensor fusion is performed via a quaternion-based Kalman filtering. Tremor is modeled 
+
+
+Removed: 5834868425ff05a97b00c2b3	In this lecture we consider loop transformations that can be used for cache optimization. The transformations can improve cache locality of the loop traversal or enable other optimizations that have been impossible before due to bad data dependencies. The same loop transformations are needed for loop parallelization and vectorization.
+
+
+Removed: 5834868425ff05a97b00c1d5	In this lecture we consider how to prove that connectives are asynchronous as goals and then consider cut elimination, one of the most important and fundamental properties of logical systems. We then revisit residuation to restore some of the connectives not present in the asynchronous fragment of linear logic. For each synchronous assumption we find a corresponding synchronous goal connective.
+
+
+Removed: 5834868425ff05a97b00d959	Abstract: Switched LANs are become more widely used because they can provide a higher bandwidth than LANs based on shared media. Examples of packet switched LANs include HIPPI, and switched FDDI and Ethernet. A number of studies have evaluated the performance of HIPPI networks, making simplifying assumptions about both the network and the traffic load. In this paper we present the results of a simulation study of circuit-switched LANs such as HIPPI using more realistic models for the system and the traffic. We observe 
+
+
+Removed: 5834868425ff05a97b00c90d	Abstract: We describe the design and performance of a handheld actively stabilized tool to increase accuracy in microsurgery or other precision manipulation. It removes involuntary motion, such as tremor, by the actuation of the tip to counteract the effect of the undesired handle motion. The key components are a 3-degree-of-freedom (DOF) piezoelectric manipulator that has a 400-μm range of motion, 1-N force capability, and bandwidth over 100 Hz, and an optical position-measurement subsystem that acquires the tool pose with 
+
+
+Removed: 5834868425ff05a97b00c2b9	Page 1. Sarah M. Loos and André Platzer Computer Science Department Carnegie Mellon\nUniversity October, 2011 Safe Intersections: At the Crossing of Hybrid Systems and Verification\nPage 2. Ultimately… 1/12 Page 3. Simplifying Assumptions 2/12 • Vehicles have positive\nvelocity • Accurate sensing • Instantaneous braking and acceleration • Time synchronization •\nDelay for sensor updates is bounded • Straight lane dynamics • Cars represented as points,\nlanes as lines Page 4. Previous Work: Highway Control 3/12  \n
+
+
+Removed: 5834868425ff05a97b00c911	Abstract Intelligent Tutoring Systems are highly effective at helping students learn, but have required intensive amounts of development time in the past, keeping teachers from making their own. Data-driven tutoring has made it possible to build these tutors more efficiently. For my thesis work, I intend to build an authoring tool for data-driven tutors that is designed to be used by computer science teachers. I plan to design this system based on data gathered in interviews with CS educators and evaluate it on its usability for new users.
+
+
+Removed: 5834868425ff05a97b00c915	ABSTRACT In complex problem solving domains, correct solutions are often comprised of a combination of individual components. Students usually go through several attempts, each attempt reflecting an individual solution state that can be observed during practice. Classic metrics to measure student performance over time rely on counting the number of submissions or focusing on time taken to complete the problem correctly. These metrics are not robust to the correction of errors that may increase problem solving time, and do not 
+
+
+Removed: 5834868425ff05a97b00c2bd	Page 1. Sarah Loos, and André Platzer Computer Science Department Carnegie Mellon University\nTowards Formal Verification of Freeway Traffic Control Stefan Mitsch Information Systems Group\nJohannes Kepler University April 19, 2012 Page 2. How Can We Prove Complex Highways?\n2/22 Page 3. How Can We Prove Complex Highways? Traffic centers aim at global functioning\nand safety. 3/22 observed by local sensor range Page 4. How Can We Prove Complex Highways?\n3/22 Traffic centers aim at global functioning and safety.  \n
+
+
+Removed: 5834868425ff05a97b00d980	Abstract A typical behavioral targeting system optimizing purchase activities, called conversions, faces two main challenges: the web-scale amounts of user histories to process on a daily basis, and the relative sparsity of conversions. In this paper, we try to address these challenges through feature selection. We formulate a multi-task (or group) feature-selection problem among a set of related tasks (sharing a common set of features), namely advertising campaigns. We apply a group-sparse penalty consisting of a combination of 
+
+
+Removed: 5834868425ff05a97b00c2be	Lecture 4 on Safety & Contracts demonstrated how useful and crucial CPS contracts are for CPS. Their role and understanding goes beyond dynamic testing. In CPS, proven CPS contracts are infinitely more valuable than dynamically tested contracts, because dynamical tests of contracts at runtime of a CPS generally leave open very little flexibility for reacting to them in any safe way. After all, the failure of a contract indicates that some safety condition that was expected to hold is not longer true. Unless provably sufficient safety margins and 
+
+
+Removed: 5834868425ff05a97b00c1e7	This course is a thorough introduction to compiler design, focusing on more low-level and systems aspects rather than high-level questions such as polymorphic type inference or separate compilation. You will be building several complete end-to-end compilers for successively more complex languages, culminating in a mildly optimizing compiler for a (subset of a) safe variant of the C programming language to x86-64 assembly language. For the last project of this course you will have the opportunity to optimize more aggressively, 
+
+
+Removed: 5834868425ff05a97b00c2c1	Lexical analysis is the first phase of a compiler. Its job is to turn a raw byte or character input stream coming from the source file into a token stream by chopping the input into pieces and skipping over irrelevant details. The primary benefits of doing so include significantly simplified jobs for the subsequent syntactical analysis, which would otherwise have to expect whitespace and comments all over the place. The job of the lexical analysis is also to classify input tokens into types like INTEGER or IDENTIFIER or WHILE-keyword or 
+
+
+Removed: 5834868425ff05a97b00d98c	Abstract: We study distributed stochastic convex optimization under the delayed gradient model where the server nodes perform parameter updates, while the worker nodes compute stochastic gradients. We discuss, analyze, and experiment with a setup motivated by the behavior of real-world distributed computation networks, where the machines are differently slow at different time. Therefore, we allow the parameter updates to be sensitive to the actual delays experienced, rather than to worst-case bounds on the maximum delay. This 
+
+
+Removed: 5834868425ff05a97b00d98d	We highlight the important issue of non-iid observations: when data are observed in space, time, or on a network,“nearby” observations are likely to be similar. This fact biases estimates of dependence between variables. Inspired by the success of Gaussian Process regression for handling non-iid observations in a wide variety of areas, and by the usefulness of the Hilbert-Schmidt Independence Criterion (HSIC), a kernelbased independence test, we propose a simple framework to address all of these issues: first, 
+
+
+Removed: 5834868425ff05a97b00c2c5	Abstract We prove that any invariant algebraic set of a given polynomial vector field can be algebraically represented by one polynomial and a finite set of its successive Lie derivatives. This so-called differential radical characterization relies on a sound abstraction of the reachable set of solutions by the smallest variety that contains it. The characterization leads to a differential radical invariant proof rule that is sound and complete, which implies that invariance of algebraic equations over real-closed fields is decidable. Furthermore, the 
+
+
+Removed: 5834868425ff05a97b00c1e9	In this lecture we discuss the process of instruction selection, which typcially turns some form of intermediate code into a pseudo-assembly language in which we assume to have infinitely many registers called “temps”. We next apply register allocation to the result to assign machine registers and stack slots to the temps before emitting the actual assembly code. Additional material regarding instruction selection can be found in the textbook [App98, Chapter 9].
+
+
+Removed: 5834868425ff05a97b00c2ca	Page 1. Constructive Authorization Logics Frank Pfenning Carnegie Mellon University Invited\nTalk Workshop on Foundations of Computer Security (FCS'05) Chicago, Illinois, June 30-July\n1, 2005 Joint work with Deepak Garg and Kevin Watkins Work in progress! FCS'05, Chicago,\nJul'05 – p.1 Page 2. Outline • Background • Towards Universal Access Control • Desiderata for\nAuthorization • Proof-Carrying Authorization • Logic Design Principles • Intuitionistic Authorization\nLogic • Cut Elimination • Independence and Non-Interference  \n
+
+
+Removed: 5834868425ff05a97b00c968	2004 Technical Reports by Author Computer Science Department School of Computer Science,\nCarnegie Mellon University. ACAR, Umut A. CMU-CS-04-155. AIROLDI, Edoardo\nCMU-CS-04-130. AKELLA, Aditya CMU-CS-04-158. ARUNACHALAM, Raghu CMU-CS-04-107,\nCMU-CS-04-164. BLELLOCH, Guy E. CMU-CS-04-155, CMU-CS-04-166. BLUM, Avrim\nCMU-CS-04-142. BROWNING, Brett CMU-CS-04-181. BRUMLEY, David CMU-CS-04-113.\nBRYANT, Randal E. CMU-CS-04-179. BUDIU, Mihai CMU-CS-04-103. BURCH, Hal CMU-CS-  \n
+
+
+Removed: 5834868425ff05a97b00c2f6	Abstract In the Claytronics project, we have used Meld, a logic programming language suitable for writing scalable and concise distributed programs for ensembles. Meld allows declarative code to be compiled into distributed code that can be executed in thousands of computing units. We are now using Meld to program more traditional algorithms that run on multicore machines. We made several modifications to the core language, to the compiler and to the runtime system to take advantage of the characteristics of the target architecture
+
+
+Removed: 5834868425ff05a97b00c979	2004 Technical Reports by Author Computer Science Department School of Computer Science,\nCarnegie Mellon University. ACAR, Umut A. CMU-CS-04-155. AIROLDI, Edoardo\nCMU-CS-04-130. AKELLA, Aditya CMU-CS-04-158. ARUNACHALAM, Raghu CMU-CS-04-107,\nCMU-CS-04-164. BLELLOCH, Guy E. CMU-CS-04-155, CMU-CS-04-166. BLUM, Avrim\nCMU-CS-04-142. BROWNING, Brett CMU-CS-04-181. BRUMLEY, David CMU-CS-04-113.\nBRYANT, Randal E. CMU-CS-04-179. BUDIU, Mihai CMU-CS-04-103. BURCH, Hal CMU-CS-  \n
+
+
+Removed: 5834868425ff05a97b00c97a	ABSTRACT In order to develop a robust distributed application, developers need realistic (overlay) testbeds, simulation tools or emulation testbeds. While overlay testbeds such as PlanetLab and RON give realistic network conditions, they don't lend themselves to repeatability and provide less control over experiments. On the other hand, the current trend in simulation (which gives repeatability) is to more accurately reproduce network topologies and scale to a large number of nodes. Emulation testbeds such as Emulab and ModelNet 
+
+
+Removed: 5834868425ff05a97b00dd6b	Abstract: The Internet is rapidly changing from a set of wires and switches that carry packets into a sophisticated infrastructure that delivers a set of complex value-added services to end users. Services can range from bit transport all the way up to distributed value-added services like video teleconferencing, data mining, and distributed interactive simulations. Before such services can be supported in a general and dynamic manner we have to develop appropriate resource management mechanisms. These resource management 
+
+
+Removed: 5834868425ff05a97b00c20e	If we are trying to use this rule in an attempt to construct a proof of C from resources ∆ and ∆/ \nas well as persistent assumptions Γ, we have to conjecture an (arbitrary!) lemma A, prove it, which \nthen licenses its use in the proof of C. If we know cut and cut! are redundant, then all other rules \nexcept identity and copy only break down the structure of the given propo- sition. Identity, of \ncourse, completes a subproof, and copy only provides another copy of a proposition already \nin Γ. This means that proof search never has to invent new propositions, just analyze the  
+
+
+Removed: 5834868425ff05a97b00c97d	2002 Technical Reports by Author Computer Science Department School of Computer Science,\nCarnegie Mellon University. ABRAMS, Zoë CMU-CS-02-199. AGRAWAL, Mukesh\nCMU-CS-02-159. AILAMAKI, Anastassia CMU-CS-02-113. AKELLA, Aditya CMU-CS-02-139,\nCMU-CS-02-163, CMU-CS-02-170. AWERBUCK, Baruch CMU-CS-02-209. AZAR, Yossi\nCMU-CS-02-209. BAKKALOGLU, Mehmet CMU-CS-02-129. BANSAL, Nikhil CMU-CS-02-159,\nCMU-CS-02-177, CMU-CS-02-201. BENNETT, Paul N. CMU-CS-02-126.  \n
+
+
+Removed: 5834868425ff05a97b00c984	Page 1. MCSA'94 Committees General Chair Darrell Long, University ofCalifornia, Santa Cruz\nFinance &Registration Chair Richard Golding, Hewlett-Packard Corporation Publication Chair\nLuis-Felipe Cabrera, IBM Almaden Program Chair M. Satyanarayanan, Carnegie Mellon University\nProgram Committee Dan Duchamp, Columbia University Peter Honeyman, University ofMichigan\nRandy Katz, University of Cal~fornia, Berkeley & ARPA Jay  \n
+
+
+Removed: 5834868425ff05a97b00dd6f	Abstract: Pervasive computing applications are increasingly leveraging contextual information from several sources to provide users with behavior appropriate to the environment in which they reside. If these sources of contextual information are used and deployed in an ad hoc manner however they may provide overlapping functionality, fail to provide needed functionality, and require the use of inconsistent interfaces by applications. To overcome these problems, we introduce a contextual information service that provides 
+
+
+Removed: 5834868425ff05a97b00dd70	Abstract The ability to locate network bottlenecks along end-to-end paths on the Internet is of great interest to both network operators and researchers. For example, knowing where bottleneck links are, network operators can apply traffic engineering either at the interdomain or intradomain level to improve routing. Existing tools either fail to identify the location of bottlenecks, or generate a large amount of probing packets. In addition, they often require access to both end points. In this paper we present Pathneck, a tool that allows 
+
+
+Removed: 5834868425ff05a97b00c994	2002 Technical Reports by Author Computer Science Department School of Computer Science,\nCarnegie Mellon University. ABRAMS, Zoë CMU-CS-02-199. AGRAWAL, Mukesh\nCMU-CS-02-159. AILAMAKI, Anastassia CMU-CS-02-113. AKELLA, Aditya CMU-CS-02-139,\nCMU-CS-02-163, CMU-CS-02-170. AWERBUCK, Baruch CMU-CS-02-209. AZAR, Yossi\nCMU-CS-02-209. BAKKALOGLU, Mehmet CMU-CS-02-129. BANSAL, Nikhil CMU-CS-02-159,\nCMU-CS-02-177, CMU-CS-02-201. BENNETT, Paul N. CMU-CS-02-126.  \n
+
+
+Removed: 5834868425ff05a97b00c21c	This book constitutes the proceedings of the 16th International Conference on Foundations of Software Science and Computational Structures, FOSSACS 2013, held as part of the Joint European Conferences on Theory and Practice of Software, ETAPS 2013, which took place in Rome, Italy, in March 2013 The 28 papers presented in this volume were carefully reviewed and selected from 109 submissions. They are organized in topical sections named: models of computation; reasoning about processes; bisimulation; modal and 
+
+
+Removed: 5834868425ff05a97b00c21d	A basic block is a sequence of instructions with one entry point and one exit point. In \nparticular, from nowhere in the program do we jump into the middle of the basic block, nor do \nwe exit the block from the middle. In our language, the last instruction in a basic block should \ntherefore be a return, goto, or if, where we accept the pattern if (x ? c) goto l1 goto l2   Here \nisqrt is an integer square root function previously defined. We have as- sumed a new form of \ninstruction   We mark where we are in the traversal with a line, and indicate there the  
+
+
+Removed: 5834868425ff05a97b00c998	2008 Technical Reports by Author Institute for Software Research School of Computer Science,\nCarnegie Mellon University. ABI-ANTOUN, Marwan CMU-ISR-08-127, CMU-ISR-08-132,\nCMU-ISR-08-133. ALDRICH, Jonathan CMU-ISR-08-119, CMU-ISR-08-120, CMU-ISR-08-126,\nCMU-ISR-08-127 CMU-ISR-08-132, CMU-ISR-08-133, CMU-ISR-08-140. ALTMAN, Neal\nCMU-ISR-08-122. ANDREWS, James CMU-ISR-08-134. ARUNACHALAM, Raghu\nCMU-ISR-08-117. BECKMAN, Nels E. CMU-ISR-08-126.  \n
+
+
+Removed: 5834868425ff05a97b00c99a	2 Results In our prior research on automated mechanism design [5], we studied the computational complexity of the general problem, and showed that typically, the problem is NP-complete when randomized mechanisms are not allowed, but solvable in polynomial time (by linear programming) otherwise. In contrast, in our recent research we have created software that can solve arbitrary automated mechanism design instances using a mixed integer/linear program solver (CPLEX 8.0). We then used this software to solve some 
+
+
+Removed: 5834868425ff05a97b00dd84	Page 1. Ethics and Privacy in EDM Dragan Gasevic University of Edinburgh dragan.gasevic@\ned.ac.uk Taylor Martin (moderator) National Science Foundation htmartin@nsf.gov Zach\nPardos UC Berkeley pardos@berkeley.edu Mykola Pechenizkiy TU Eindhoven\nm.pechenizkiy@tue.nl John Stamper CMU and PSLC DataShop john@stamper.org Osmar\nZaiane University of Alberta zaiane@ualberta.ca ABSTRACT Educational data mining is\ninherently falls into the category of the so-called secondary data analysis.  \n
+
+
+Removed: 5834868425ff05a97b00c30c	Abstract. Session types are widely accepted as an expressive discipline for structuring communications in concurrent and distributed systems. In order to express infinitely unbounded sessions, session typed languages often include general recursion which may introduce undesirable divergence, eg, infinite unobservable reduction sequences. In this paper we address, by means of typing, the challenge of ensuring non-divergence in a session-typed π-calculus with general (co) recursion, while still allowing interesting infinite 
+
+
+Removed: 5834868425ff05a97b00c99f	Abstract This paper studies coalition formation among self-interested agents that cannot make sidepayments. We show that-core stability reduces to analyzing whether some utility profile is maximal for all agents. We also show that strategy profiles that lead to the-core are a subset of Strong Nash equilibria. This fact carries our-core-based stability results directly over to two other strategic solution concepts: Nash equilibrium and Coalition-Proof Nash equilibrium.'This material is based upon work supported by the National Science 
+
+
+Removed: 5834868425ff05a97b00c315	Abstract: Synthesis of robot behaviors towards nontrivial goals often requires reasoning about both discrete and continuous aspects of the underlying domain. Existing approaches in building automated tools for such synthesis problems attempt to augment methods from either discrete planning or continuous control with hybrid elements, but largely fail to ensure a uniform treatment of both aspects of the domain. In this paper, we present a new formalism, constrained intuitionistic linear logic (CILL), merging continuous constraint 
+
+
+Removed: 5834868425ff05a97b00dd8d	TU/e.  \n
+
+
+Removed: 5834868425ff05a97b00c229	In this lecture we'll look way back at the lecture on register allocation, and consider the ways in which register allocation can be optimized to improve program performance. The most important operation we'll consider is register coalescing, which gets rid of register-register moves when doing doesn't lead to spilling more temps. One of the advantages of Pereira and Palsberg's chordal graph coloring algorithm [PP05] is that it lends itself to a register coalescing approach that is independent of the actual register allocation process. In 
+
+
+Removed: 5834868425ff05a97b00c319	Abstract: Probabilistic planning methods can have various objectives: usually they either maximize the probability of goal achievement or minimize the expected execution cost of the plan, and therefore assume that the agent that executes the plan has a risk-neutral attitude. Although there are many situations where risk-sensitive behavior Is more appropriate, researchers have largely ignored the question how to incorporate risk-sensitive attitudes into their planning mechanisms. Utility theory shows that it is rational to maximize expected 
+
+
+Removed: 5834868425ff05a97b00dd97	Abstract. The ability of Intelligent Tutoring Systems to adapt to an individual student's needs have shown significant improvement in achievement over nonadaptive instruction. Although the improvement is significant, the use of Intelligent Tutoring Systems has not become ubiquitous in the classroom because these adaptive systems are extremely difficult to create. The most successful of these systems require the construction of complex cognitive models that are applicable only to a specific tutorial in a specific field, requiring the time of experts 
+
+
+Removed: 5834868425ff05a97b00c23a	A true A is true A↑ A has a verification A↓ A may be used M: AM is a proof term for A, or, equivalently, M has type A In addition, we have considered hypothetical judgments J1,..., Jn⊣ J in general, and x1: A1,..., xn: An⊣ M: C in particular. A few crucial properties of these systems are still outstanding. In particular, we still need to prove global versions of the local soundness and completeness properties. We call them here internal soundess and completeness to remind us that they refer to properties of proofs and verifications, rather 
+
+
+Removed: 5834868425ff05a97b00dd98	Intelligent Tutoring Systems (ITSs) that adapt to an individual student's needs have shown significant improvement in achievement over non-adaptive instruction (Murray 1999). This improvement occurs due to the individualized instruction and feedback that an ITS provides. In order to achieve the benefits that ITSs provide, we must find a way to simplify their creation. Therefore, we have created methods that can use data to automatically generate hints to adapt computer-aided instruction to help individual students. Our MDP method 
+
+
+Removed: 5834868425ff05a97b00c32f	Abstract The identification of singularities is an important aspect of research in parallel manipulators, which has received a great deal of attention in the past few decades. Yet, even in many well-studied manipulators, very few reported results are of complete or analytical nature. This chapter tries to address this issue from a slightly different perspective than the standard method of Jacobian analysis. Using the condition for existence of repeated roots of the univariate equation representing the forward kinematic problem of 
+
+
+Removed: 5834868425ff05a97b00c23c	In this lecture we present an intuitionistic approach to describing a multipleworld semantics for modal logic in the style of Kripke. This is done by providing judgments and inference rules that reason about truths in multiple worlds. A thorough analysis of intuitionistic modal logic in this style has been carried out by Simpson [Sim94]. This presentation of the logic suggests an operational interpretation via distributed computation, where worlds correspond to loci of computation (hosts or processes), with accessibility being connectivity between 
+
+
+Removed: 5834868425ff05a97b00dd9a	Abstract The amount of data available to build simulation models of schools is immense, but using these data effectively is difficult. Traditional methods of computer modeling of educational systems often either lack transparency in their implementation, are complex, and often do not natively simulate non-linear systems. In response, we advocate a Complex Adaptive Systems approach towards modeling and data mining. By simulating agent-level attributes rather than system-level attributes, the modeling is inherently transparent, easily 
+
+
+Removed: 5834868425ff05a97b00dd9b	Abstract Past studies have shown that Bayesian Knowledge Tracing (BKT) can predict student performance and implement Cognitive Mastery successfully. Standard BKT individualizes parameter estimates for skills, also referred to as knowledge components (KCs), but not for students. Studies deriving individual student parameters from the data logs of student tutor performance have shown improvements to the standard BKT model fits, and result in different practice recommendations for students. This study investigates whether 
+
+
+Removed: 5834868425ff05a97b00c33b	Abstract: This report summarizes the Phase 1 developments of Zaxel Systems, Inc. on award DAAH01-00-C-R058, Voxel-based Immersive Environments. The overall objective of Phase 1 was to demonstrate the feasibility of real-time voxel-based immersive visualization by achieving four objectives: Demonstrate voxel-based 3D reconstruction at 3 frames per second; Demonstrate interactive view generation at 3 frames per second; Determine communication bandwidth requirements and potential compression strategies; 
+
+
+Removed: 5834868425ff05a97b00c243	Formal deductive systems play an important role in computer science, particularly in the areas of logic and semantics of programming languages. They are employed in three different, but obviously related roles. Firstly, they are used to specify logics, type systems, operational semantics and other aspects of languages. Secondly, they form the basis for the implementation of such deductive systems. Thirdly, they provide an appropriate language for the formulation and proof of metatheorems of programming languages. The LF Logical 
+
+
+Removed: 5834868425ff05a97b00dda2	One major goal of our Advanced Distributed Learning (ADL)-funded “Hyper-Personalized Intelligent Tutor”(HPIT) project is to develop an architecture that allows for personalization of educational software based on non-cognitive factors including student preferences, motivation, affect, and other features (Fancsali, Ritter, Stamper & Nixon, 2013). We are particularly interested in using such information to improve instruction within intelligent tutoring systems (ITSs) like Carnegie Learning's Cognitive Tutor®(CT)(Ritter, Anderson, 
+
+
+Removed: 5834868425ff05a97b00dda3	Abstract This study examines how accurately individual student differences in learning can be predicted from prior student learning activities. Bayesian Knowledge Tracing (BKT) predicts learner performance well and has often been employed to implement cognitive mastery. Standard BKT individualizes parameter estimates for knowledge components, but not for learners. Studies have shown that individualizing parameters for learners improves the quality of BKT fits and can lead to very different (and potentially better) practice 
+
+
+Removed: 5834868425ff05a97b00dda4	Abstract. A Bayesian Knowledge Base is a generalization of traditional Bayesian Networks where nodes or groups of nodes have independence. In this paper we describe a method of generating a Bayesian Knowledge Base from a corpus of student problem attempt data in order to automatically generate hints for new students. We further show that using problem attempt data from systems used to teach propositional logic we could successfully use the created Bayesian Knowledge Base to solve other problems. Finally, we compare this 
+
+
+Removed: 5834868425ff05a97b00c345	Abstract: The US Army Corps of Engineers'(USACE) Virtual Autonomous Navigation Environment (VANE) is a physics-based, multi-scale numerical testbed designed to quantitatively and accurately predict sensor and autonomous system performance in a simulation environment. The work presented here captures progress on an initial empirical evaluation of how well the current VANE system is able to reproduce a real autonomy system's perception performance. Findings will directly guide continuing development of 
+
+
+Removed: 5834868425ff05a97b00c247	Abstract: We present a general framework for provably safe mobile code. It relies on a formal definition of a safety policy and explicit evidence for compliance with this policy which is attached to a binary. Concrete realizations of this framework are proof-carrying code (PCC), where the evidence for safety is a formal proof generated by a certifying compiler and typed assembly language (TAL), where the evidence for safety is given via type annotations propagated throughout the compilation process in typed intermediate languages. Validity 
+
+
+Removed: 5834868425ff05a97b00dda7	In. this. chapter,. we. present. our. novel. application. of. Markov. decision. processes.(MDPs). for. building. student. knowledge. models. from. collected. student. data.. These. models. can. be. integrated. into. existing. computer-aided. instructional. tools. to. automatically. generate. context-specific. hints.. The. MDP. method. is. straightforward. to. implement. in. many. educational. domains. where. computer-aided. instruction. exists. and. student. log. data. is. being. generated,. but. no. intelligent. tutors. have. been. created.. In. 
+
+
+Removed: 5834868425ff05a97b00dda9	ABSTRACT We present an algorithm for reducing the size and complexity of the Interaction Network, a data structure used for storing solution paths explored by students in open-ended multi-step problem solving environments. Our method reduces the number of edges and nodes of an Interaction Network by an average of 90% while still accounting for 40% of actions performed by students, and preserves the most frequent half of solution paths. We compare our method to two other approaches and demonstrate why it is more effective at 
+
+
+Removed: 5834868425ff05a97b00c3a2	Abstract: This paper examines the application of extended permutation rank selection (EPRS) filters in image interpolation. EPRS filters are constrained to output an order statistic based on N observation samples and K statistics that are functions of the observation samples. By including the sample mean as the sole statistic when K= 1, EPRS filters were shown to have superior edge-enhancing properties. By letting K= 0, we can define a subset class known as rank conditioned rank selection (RCRS) filters. We show that these filters 
+
+
+Removed: 5834868425ff05a97b00c9ed	Read 'Toward Multi-Organ Exchange.' on Ovid Insights.\n
+
+
+Removed: 5834868425ff05a97b00c9ee	Read 'Exploring the Candidate/Donor Compatibility Matrix to Identify Opportunities to Improve\nthe OPTN KPD Pilot Program's Priority Point Schedule.' on Ovid Insights.\n
+
+
+Removed: 5834868425ff05a97b00c3a5	ABSTRACT A distributed camera network allows for many compelling applications such as large-scale tracking or event detection. In most practical systems, resources are constrained. Although one would like to probe every camera at every time instant and store every frame, this is simply not feasible. Constraints arise from network bandwidth restrictions, I/O and disk usage from writing images, and CPU usage needed to extract features from the images. Assume that, due to resource constraints, only a subset of sensors can be probed at any 
+
+
+Removed: 5834868425ff05a97b00c28f	Abstract Cyber-physical systems (CPS) combine cyber aspects such as communication and computer control with physical aspects such as movement in space, which arise frequently in many safety-critical application domains, including aviation, automotive, railway, and robotics. But how can we ensure that these systems are guaranteed to meet their design goals, eg, that an aircraft will not crash into another one? This paper highlights some of the most fascinating aspects of cyber-physical systems and their dynamical systems models, 
+
+
+Removed: 5834868425ff05a97b00c3a9	Abstract: We present a robust 3-D parts-based (PB) tracking system designed to follow the upper limb of stroke survivors during desktop activities. This system fits a probabilistic model of the arm to sequences of images taken from multiple angles. The arm model defines shapes and colors of limbs and limb configurations that are more or less likely. We demonstrate that the system is 1) robust to cluttered scenes and temporary occlusions, 2) accurate relative to a commercial motion capture device, and 3) capable of capturing 
+
+
+Removed: 5834868425ff05a97b00de3a	Abstract This research identifies an eleven degree of freedom dynamic model of MABEL, a new robot for the study of bipedal walking and running. Model parameters are identified on the basis of fourteen angles measured by encoders and the commanded torque of the robot's four independent actuators. The identification process is modular and begins with the cable-driven transmission mechanism of the robot. By blocking an appropriate pulley, the springs that are part of the transmission can be removed from the initial portion of the 
+
+
+Removed: 5834868425ff05a97b00c9f1	Abstract. We develop the first general, algorithm-agnostic, solution quality guarantees for Nash equilibria and approximate self-trembling equilibria computed in imperfect-recall abstractions, when implemented in the original (perfect-recall) game. Our results are for a class of games that generalizes the only previously known class of imperfect-recall abstractions where any results had been obtained. Further, our analysis is tighter in two ways, each of which can lead to an exponential reduction in the solution quality error 
+
+
+Removed: 5834868425ff05a97b00c3aa	Abstract: We present a system for automatic people tracking and activity recognition. Our basic approach to people-tracking is to build an appearance model for the person in the video. The video illustrates our method of using a stylized-pose detector. Our system builds a model of limb appearance from those sparse stylized detections. Our algorithm then reprocesses the video, using the learned appearance models to find people in unrestricted configuration. We can use our tracker to recover 3D configurations and activity labels. We 
+
+
+Removed: 5834868425ff05a97b00c297	Synopsis Aircraft collision avoidance manoeuvres are important and complex applications. Curved flight exhibits nontrivial continuous behaviour. In combination with the control choices during air traffic manoeuvres, this results in hybrid systems with challenging interactions of discrete and continuous dynamics. As a case study for demonstrating the scalability of logical analysis for hybrid systems with challenging dynamics, we analyse collision freedom of roundabout manoeuvres in air traffic control, where appropriate 
+
+
+Removed: 5834868425ff05a97b00de3b	Abstract: This paper describes selected issues with the commissioning and implementation of a real-time control system for an experimental bipedal robot platform named MABEL at the University of Michigan. Real world issues with printed circuit board layout and manufacturing, replacement of third party components, and communication issues associated with the computer control system are discussed. Control system implementation issues such as cable stretching in the hip and knee joint drivetrains, sensor resolution 
+
+
+Removed: 5834868425ff05a97b00c9f2	Abstract: In this paper we consider strong Nash equilibria, in mixed strategies, for finite games. Any strong Nash equilibrium outcome is Pareto efficient for each coalition. First, we analyze the two--player setting. Our main result, in its simplest form, states that if a game has a strong Nash equilibrium with full support (that is, both players randomize among all pure strategies), then the game is strictly competitive. In order to get our result we use the indifference principle fulfilled by any Nash equilibrium, and the classical KKT conditions (
+
+
+Removed: 5834868425ff05a97b00c3ab	Abstract: Active Appearance Models (AAMs) typically only use 50–100 mesh vertices because they are usually constructed from a set of training images with the vertices hand-labeled on them. In this paper, we propose an algorithm to increase the density of an AAM. Our algorithm operates by iteratively building the AAM, refitting the AAM to the training data, and refining the AAM. We compare our algorithm with the state of the art in optical flow algorithms and find it to be significantly more accurate. We also show that dense AAMs 
+
+
+Removed: 5834868425ff05a97b00c299	Synopsis Hybrid systems are models for complex physical systems and are defined as dynamical systems with interacting discrete transitions and continuous evolutions along differential equations. With the goal of developing a theoretical and practical foundation for deductive verification of hybrid systems, we introduce a dynamic logic for hybrid programs, which is a program notation for hybrid systems. As a verification technique that is suitable for automation, we introduce a free-variable proof calculus with a novel combination of real-
+
+
+Removed: 5834868425ff05a97b00c3b1	Abstract: We focus on the task of everyday hand pose estimation from egocentric viewpoints. For this task, we show that depth sensors are particularly informative for extracting near-field interactions of the camera wearer with his/her environment. Despite the recent advances in full-body pose estimation using Kinect-like sensors, reliable monocular hand pose estimation in RGB-D images is still an unsolved problem. The problem is considerably exacerbated when analyzing hands performing daily activities from a first-person 
+
+
+Removed: 5834868425ff05a97b00de41	National Robotics Initiative, a Robotics Expo was hosted by the Congressional Ro botics Caucus \non 9 June 2016 in Washington, DC The event highlighted the achievements in collaborative \nrobotics supported by the coalition of federal research agencies led by the National Science \nFoundation (NSF). The National Robotics Initiative is a US multiagency effort among the \nNSF, NASA, the National Institutes for Health, the US Department of Agri culture, the Department \nof Defense, and the Department of Energy to accelerate the development and use of  
+
+
+Removed: 5834868425ff05a97b00c29e	Formal verification techniques are used routinely in finite-state digital circuits. Theorem proving is also used successfully for infinite-state discrete systems. But many safety-critical computers are actually embedded in physical systems. Hybrid systems [1] model complex physical systems as dynamical systems with interacting discrete transitions and continuous evolutions along differential equations. They arise frequently in many application domains, including aviation, automotive, railway, and robotics. There is a well-understood theory for 
+
+
+Removed: 5834868425ff05a97b00c3bb	Abstract: We describe a method for generating N-best configurations from part-based models, ensuring that they do not overlap according to some user-provided definition of overlap. We extend previous N-best algorithms from the speech community to incorporate non-maximal suppression cues, such that pixel-shifted copies of a single configuration are not returned. We use approximate algorithms that perform nearly identical to their exact counterparts, but are orders of magnitude faster. Our approach outperforms standard 
+
+
+Removed: 5834868425ff05a97b00c2a2	In this section, we define the syntax and semantics of quantified modal logic [Car46, Kri63]. An excellent source on first-order modal logic, its various variations and pitfalls is the book by Fitting and Mendelsohn [FM99]. We fix a set Σ of function symbols and predicate symbols, with arities associated (number of arguments) and a set of logical variables. Terms are defined as in first-order logic. The syntax of classical first-order modal logic is defined as follows:
+
+
+Removed: 5834868425ff05a97b00c2a3	First-order modal logic is clearly more than classical first-order logic, because modalities can be used to phrase more advanced necessity and possibility properties. At the same time, first-order modal logic and non-modal first-order logic are not entirely different either. Modalities quantify over all (D) or some (0) worlds. Quantifiers also quantify over all (∀) or some (∃) objects (yet not usually over worlds). So all we need to do to relate firstorder modal with first-order non-modal logic is to make worlds and their accessibility relation “accessible” in the 
+
+
+Removed: 5834868425ff05a97b00c3bf	Abstract: We describe a system that can build appearance models of animals automatically from a video sequence of the relevant animal with no explicit supervisory information. The video sequence need not have any form of special background. Animals are modeled as a 2D kinematic chain of rectangular segments, where the number of segments and the topology of the chain are unknown. The system detects possible segments, clusters segments whose appearance is coherent over time, and then builds a spatial model of 
+
+
+Removed: 5834868425ff05a97b00c9fb	Abstract: Counterfactual Regret Minimization (CFR) is the most popular iterative algorithm for solving zero-sum imperfect-information games. Regret-Based Pruning (RBP) is an improvement that allows poorly-performing actions to be temporarily pruned, thus speeding up CFR. We introduce Total RBP, a new form of RBP that reduces the space requirements of CFR as actions are pruned. We prove that in zero-sum games it asymptotically prunes any action that is not part of a best response to some Nash equilibrium. This leads to provably 
+
+
+Removed: 5834868425ff05a97b00c2b2	Cache optimization can have a huge impact on program execution speed. It can accelerate by a factor 2 to 5 for numerical programs. Loops are the parts of the program that are generally executed most often. That is why cache optimization usually focuses exclusively on handling loops. Especially for loops that execute very often, optimizing small chunks of source code can have a fairly significant effect. Furthermore, loops have mathematically regular access. Cache optimization techniques are also important for vectorization and 
+
+
+Removed: 5834868425ff05a97b00c9fc	Abstract Classi er induction algorithms di er on what inductive hypotheses they can represent, and on how they search their space of hypotheses. No classi er is better than another for all problems: they have selective superiority. This paper empirically compares six classi er induction algorithms on the diagnosis of equine colic and the prediction of its mortality. The classication is based on simultaneously analyzing sixteen features measured from a patient. The relative merits of the algorithms (linear regression, decision trees, 
+
+
+Removed: 5834868425ff05a97b00de4e	Abstract: This paper extends the method of virtual constraints and hybrid zero dynamics, developed for rigid robots with a single degree of underactuation, to MABEL, a planar biped with a novel compliant transmission. A time-invariant feedback controller is designed for realizing exponentially stable waking gaits in such a way that the closed-loop system preserves the natural compliance of the system, and therefore the energetic benefits of springs. This is accomplished by incorporating the compliance into the hybrid zero 
+
+
+Removed: 5834868425ff05a97b00c9fe	Abstract A mechanism is manipulable if it is in agents' best interest to misrepresent their private information (lie) to the center. We provide the first formal treatment of the windfall of manipulability, the seemingly paradoxical quality by which the failure of any agent to play their best manipulation yields a strictly better result than an optimal truthful mechanism. We dub such mechanisms manipulation optimal. We prove that any manipulation-optimal mechanism can have at most one manipulable type per agent. We show the existence of 
+
+
+Removed: 5834868425ff05a97b00de4f	Abstract: We introduce Exponential Control Barrier Functions as means to enforce strict state-dependent high relative degree safety constraints for nonlinear systems. We also develop a systematic design method that enables creating the Exponential CBFs for nonlinear systems making use of tools from linear control theory. The proposed control design is numerically validated on a relative degree 6 linear system (the serial cart-spring system) and on a relative degree 4 nonlinear system (the two-link pendulum with elastic actuators.)
+
+
+Removed: 5834868425ff05a97b00c9ff	Abstract We demonstrate two game theory-based programs for heads-up limit and no-limit Texas Hold'em poker. The first player, GS3, is designed for playing limit Texas Hold'em, in which all bets are a fixed amount. The second player, Tartanian, is designed for the no-limit variant of the game, in which the amount bet can be any amount up to the number of chips the player has. Both GS3 and Tartanian are based on our potential-aware automated abstraction algorithm for identifying strategically similar situations in order to decrease the 
+
+
+Removed: 5834868425ff05a97b00c3e5	Abstract Summary: ANGES is a suite of Python programs that allows reconstructing ancestral genome maps from the comparison of the organization of extant-related genomes. ANGES can reconstruct ancestral genome maps for multichromosomal linear genomes and unichromosomal circular genomes. It implements methods inspired from techniques developed to compute physical maps of extant genomes. Examples of cereal, amniote, yeast or bacteria ancestral genomes are provided, computed with ANGES. Availability: ANGES 
+
+
+Removed: 5834868425ff05a97b00de64	ABSTRACT Micro Unmanned Aerial Vehicles (MAVs) have been used in a wide range of applications [1, 2, 3]. However, there are few papers addressing high-speed grasping and transportation of payloads using MAVs. Drawing inspiration from aerial hunting by birds of prey, we design and equip a quadrotor MAV with an actuated appendage enabling grasping and object retrieval at high speeds. We develop a nonlinear dynamic model of the system, demonstrate that the system is differentially flat, plan dynamic trajectories using the 
+
+
+Removed: 5834868425ff05a97b00ca16	Internet traffic is increasing at a tremendous rate. Some studies predict that the net traffic might grow 5-fold by 2013 [1]. Our recently proposed framework of deploying packet level redundancy elimination (RE) on network elements (eg, routers)([2],[3]) can serve as an effective way to improve network efficiency without expensive upgrades. These proposals expand the scope of point deployments (eg, access links of stub network) of “WAN Optimizers”(Riverbed, Peribit, etc.) to network-wide settings. In the SmartRE design [3], 
+
+
+Removed: 5834868425ff05a97b00de6a	Abstract. Humans can generate diverse locomotion behaviors through the hierarchical control of the supraspinal and the spinal systems, where the spinal control is often assumed to consist of central pattern generators and reflexes. It has been demonstrated through simulation that human walking and running can be generated with control models where the central pattern generator is controlled in a hierarchical structure. However, no reflex control model in such framework has been proposed. Here we propose that locomotion behaviors 
+
+
+Removed: 5834868425ff05a97b00c3fb	Abstract Data structure selection is one of the most critical aspects of developing effective applications. By analyzing data structures' behavior and their interaction with the rest of the application on the underlying architecture, tools can make suggestions for alternative data structures better suited for the program input on which the application runs. Consequently, developers can optimize their data structure usage to make the application conscious of an underlying architecture and a particular program input. This paper presents the design 
+
+
+Removed: 5834868425ff05a97b00c2f0	In mathematics, one sometimes lives under the illusion that there is just one logic that formalizes the correct principles of mathematical reasoning, the socalled predicate calculus or classical first-order logic. By contrast, in philosophy and computer science, one finds the opposite: there is a vast array of logics for reasoning in a variety of domains. We mention intuitionistic logic, sorted logic, modal logic, description logic, temporal logic, belief logic, dynamic logic, Hoare logic, specification logic, evaluation logic, relevance logic, higher-
+
+
+Removed: 5834868425ff05a97b00de79	Abstract: This paper proposes the need for accurate and fast solar panel simulators for the purpose of accurately modeling the behavior of Smart Grids. A comprehensive strategy for accurate simulation of solar panels under different conditions and various kinds of loads is developed using adaptive control, based only on data from the solar panel datasheet. A novel method for more accurate solar panel simulation is proposed using a controller-based strategy. We demonstrate that with a set of adaptive controllers accurate tracking of any 
+
+
+Removed: 5834868425ff05a97b00c321	Logic is a science studying the principles of reasoning and valid inference. Automated deduction is concerned with the mechanization of formal reasoning, following the laws of logic. The roots of the field go back to the end of the last century when Frege developed his Begriffsschrift1, the first comprehensive effort to develop a formal language suitable as a foundation for mathematics. Alas, Russell discovered a paradox which showed that Frege's system was inconsistent, that is, the truth of every proposition can be derived in it. Russell 
+
+
+Removed: 5834868425ff05a97b00c322	Abstract Focusing is traditionally seen as a means of reducing inessential non-determinism in backward-reasoning strategies such as uniform proof-search or tableaux systems. In this paper we construct a form of focused derivations for propositional linear logic that is appropriate for forward reasoning in the inverse method. We show that the focused inverse method conservatively generalizes the classical hyperresolution strategy for Horn-theories, and demonstrate through a practical implementation that the focused inverse method is 
+
+
+Removed: 5834868425ff05a97b00ca6a	Abstract Recent trends have exposed three key problems in today's operating systems. The first is the emergence of I/O latency as the dominant factor in the performance of many applications. The second is the need to cope with mobile communication environments where bandwidth and latency may be highly variable. The third is the importance of search activity to locating files of interest in a distributed system. In this paper we describe a single unifying abstraction called dynamic sets which can offer substantial benefits in the solution 
+
+
+Removed: 5834868425ff05a97b00deb2	Abstract This paper describes a high performance sampling architecture for inference of latent topic models on a cluster of workstations. Our system is faster than previous work by over an order of magnitude and it is capable of dealing with hundreds of millions of documents and thousands of topics. The algorithm relies on a novel communication structure, namely the use of a distributed (key, value) storage for synchronizing the sampler state between computers. Our architecture entirely obviates the need for separate 
+
+
+Removed: 5834868425ff05a97b00ca8e	Abstract The goal of this two-day meeting was to foster interaction between active workers in mobile computing, with a view toward cross-fertilization of ideas. Given the youth of the field, such interactions could have substantial impact on its future direction. In keeping with this goal, the conference organizers chose to have a small, informal workshop rather than a larger and more formal conference. The workshop was sponsored by the IEEE Computer Society Technical Committee on Operating Systems, in cooperation with ACM SIGOPS 
+
+
+Removed: 5834868425ff05a97b00c476	Abstract This paper studies sound proof rules for checking positive invariance of algebraic and semi-algebraic sets, that is, sets satisfying polynomial equalities and those satisfying finite boolean combinations of polynomial equalities and inequalities, under the flow of polynomial ordinary differential equations. Problems of this nature arise in formal verification of continuous and hybrid dynamical systems, where there is an increasing need for methods to expedite formal proofs. We study the trade-off between proof rule generality and 
+
+
+Removed: 5834868425ff05a97b00c47f	Abstract We present a formal proof of collision avoidance for a simple distributed hybrid system consisting of an arbitrary finite number of cars on a one dimensional road. Our cars take actions independently from one another and without synchronization, thus behaving in a truly distributed manner. We allow cars to enter and exit the road. For the continuous dynamics, we show how differential invariants and symbolic solutions can be used together harmoniously to prove things that neither could prove alone. We have fully mechanized 
+
+
+Removed: 5834868425ff05a97b00c48c	Abstract First-order programming (FOP) is a new representation language that combines the strengths of mixed-integer linear programming (MILP) and first-order logic (FOL). In this paper we describe a novel feasibility proving system for FOP formulas that combines MILP solving with instance-based methods from theorem proving. This prover allows us to perform lifted inference by repeatedly refining a propositional MILP. We prove that this procedure is sound and refutationally complete: if a formula is infeasible our solver will demonstrate 
+
+
+Removed: 5834868425ff05a97b00c48e	Abstract. Hybrid systems with both discrete and continuous dynamics are an important model for real-world physical systems. The key challenge is how to ensure their correct functioning wrt safety requirements. Promising techniques to ensure safety seem to be model-driven engineering to develop hybrid systems in a well-defined and traceable manner, and formal verification to prove their correctness. Their combination forms the vision of verification-driven engineering. Despite the remarkable progress in automating formal 
+
+
+Removed: 5834868425ff05a97b00ded7	Abstract: This paper collects some ideas targeted at advancing our understanding of the feature spaces associated with support vector (SV) kernel functions. We first discuss the geometry of feature space. In particular, we review what is known about the shape of the image of input space under the feature space map, and how this influences the capacity of SV methods. Following this, we describe how the metric governing the intrinsic geometry of the mapped surface can be computed in terms of the kernel, using the example of the 
+
+
+Removed: 5834868425ff05a97b00caf2	Abstract Previous research on automated mechanism design (proposed in UAI-02) assumed that the outcome space was flatly represented, which makes that work inapplicable if the outcome space is exponential, as it is, for example, in multi-item auctions. This paper introduces (to our knowledge) the first more concise representation for the problem, which relies on decomposing the outcome space into distinct issues. While the decomposability makes the input to the design problem polynomial, we show that it is NP-complete (even 
+
+
+Removed: 5834868425ff05a97b00c4c7	Abstract. Recently, there has been considerable interest in the use of Model Checking for Systems Biology. Unfortunately, the state space of stochastic biological models is often too large for classical Model Checking techniques. For these models, a statistical approach to Model Checking has been shown to be an effective alternative. Extending our earlier work, we present the first algorithm for performing statistical Model Checking using Bayesian Sequential Hypothesis Testing. We show that our Bayesian approach outperforms current 
+
+
+Removed: 5834868425ff05a97b00c375	Abstract In today's ubiquitous computing environment where users carry, manipulate, and interact with an increasing number of networked devices, applications and web services, human attention is the new bottleneck in computing. It is therefore important to minimize a user's mental effort due to notifications, especially in situations where users are mobile and using multiple wearable and mobile devices. To this end, we propose Attelia II, a novel middleware that identifies breakpoints in users' lives while using those devices, and 
+
+
+Removed: 5834868425ff05a97b00c4c9	Abstract Hybrid systems are models for complex physical systems and are defined as dynamical systems with interacting discrete transitions and continuous evolutions along differential equations. With the goal of developing a theoretical and practical foundation for deductive verification of hybrid systems, we introduce a dynamic logic for hybrid programs, which is a program notation for hybrid systems. As a verification technique that is suitable for automation, we introduce a free variable proof calculus with a novel combination of real-
+
+
+Removed: 5834868425ff05a97b00caf5	Abstract Automated market makers are algorithmic agents that provide liquidity in electronic markets. We construct two new automated market makers that each solve an open problem of theoretical and practical interest. First, we formulate a market maker that has bounded loss over separable measure spaces. This opens up an exciting new set of domains for prediction markets, including markets on locations and markets where events correspond to the natural numbers. Second, by shifting profits into liquidity, we create a market maker 
+
+
+Removed: 5834868425ff05a97b00deed	ABSTRACT The crowd provides significant power to complete micro tasks on-demand, but fails to provide the expertise necessary to complete complex, interdependent projects. Flash teams, a framework for coordinating teams of expert crowds, have been successful in providing efficient and consistent outcomes for project requesters, but are not currently accessible to the average person. We present Foundry, an authoring and runtime environment for flash teams. Foundry enables non-expert project requesters to use flash 
+
+
+Removed: 5834868425ff05a97b00c4d2	Abstract In this day and age, smart phones are fast becoming ubiquitous. They have evolved from their traditional use of solely being a device for communication between people, to a multipurpose device. With the advent of Android smart phones, the number of people accessing the Internet through their mobile phones is on a steep rise. Hence, web browsers play a major role in providing a highly enjoyable browsing experience for its users. As such, the objective of this paper is to analyze the performance of five major mobile web 
+
+
+Removed: 5834868425ff05a97b00c377	Abstract With advances in physiological sensors, we are able to understand people's physiological status and recognize stress to provide beneficial services. Despite the great potential in physiological stress recognition, there are some critical issues that need to be addressed such as the sensitivity and variability of physiology to many factors other than stress (eg., physical activity). To resolve these issues, in this paper, we focus on the understanding of physiological responses to both stressor and physical activity and 
+
+
+Removed: 5834868425ff05a97b00cafb	Abstract Coalition formation is one of the key problems in multiagent systems. One would prefer a coalition structure that maximizes the sum of the values of the coalitions, but often the number of coalition structures is too large to allow exhaustive search for the optimal one. This paper focuses on finding a worst case bound on how good the optimal coalition structure is compared to the best coalition structure that a nonexhaustive search finds. We show that none of the previous coalition structure generation algorithms can establish any 
+
+
+Removed: 5834868425ff05a97b00c4d6	Abstract Model-based reinforcement learning (MBRL) plays an important role in developing control strategies for robotic systems. However, when dealing with complex platforms, it is difficult to model systems dynamics with analytic models. While data-driven tools offer an alternative to tackle this problem, collecting data on physical systems is non-trivial. Hence, smart solutions are required to effectively learn dynamics models with small amount of examples. In this paper we present an extension to Data As Demonstrator for handling 
+
+
+Removed: 5834868425ff05a97b00c378	Abstract Much research in ubiquitous computing assumes that a user's phone will be always on and at-hand, for collecting user context and for communicating with a user. Previous work with the previous generation of mobile phones has shown that such an assumption is false. Here, we investigate whether this assumption about users' proximity to their mobile phones holds for a new generation of mobile phones, smart phones. We conduct a data collection field study of 28 smart phone owners over a period of 4 weeks. We show that in fact this 
+
+
+Removed: 5834868425ff05a97b00c392	ABSTRACT A distributed camera network allows for many compelling applications such as large-scale tracking or event detection. In most practical systems, resources are constrained. Although one would like to probe every camera at every time instant and store every frame, this is simply not feasible. Constraints arise from network bandwidth restrictions, I/O and disk usage from writing images, and CPU usage needed to extract features from the images. Assume that, due to resource constraints, only a subset of sensors can be probed at any 
+
+
+Removed: 5834868425ff05a97b00df01	Abstract. Cooperative information agents solve the task of locating relevant information sources. This involves retrieving and integrating information from multiple sources. We present two technologies, WebSemantics and the WebWrapper toolkit that assist the agents in this task. WebSemantics supports the publication of sources by the data providers and their discovery by agents. We describe an architecture, protocols, and a prototype implementation of WebSemantics, as well as an integrated language for registering and 
+
+
+Removed: 5834868425ff05a97b00cb0d	Abstract This paper presents Nomad, a mobile agent system for electronic auctions. It has been integrated with eAuctionHouse, our next generation Internet auction server. To our knowledge, eAuctionHouse is the first Internet auction site that supports combinatorial auctions, bidding via graphically drawn price-quantity graphs, and participation of mobile agents. It supports mobile agents so that a user can have her agent actively participating in the auction s while she is disconnected. Mobile agents that execute on the agent dock 
+
+
+Removed: 5834868425ff05a97b00c4f7	Abstract: We present the design and implementation of PCFS, a file system that adapts proof-carrying authorization to provide direct, rigorous, and efficient enforcement of dynamic access policies. The keystones of PCFS are a new authorization logic BL that supports policies whose consequences may change with both time and system state, and a rigorous enforcement mechanism that combines proof verification with conditional capabilities. We prove that our enforcement using capabilities is correct, and evaluate our design through 
+
+
+Removed: 5834868425ff05a97b00c399	Abstract: AutoCaption is a system that helps a smartphone user generate a caption for their photos. It operates by uploading the photo to a cloud service where a number of parallel modules are applied to recognize a variety of entities and relations. The outputs of the modules are combined to generate a large set of candidate captions, which are returned to the phone. The phone client includes a convenient user interface that allows users to select their favorite caption, reorder, add, or delete words to obtain the grammatical style they 
+
+
+Removed: 5834868425ff05a97b00cb1b	Page 1. A Report on 802.11 User Fingerprinting - Authors - Jeffrey Pang, Carnegie Mellon Univ\nBen Greenstein, Intel Corp (Seattle) Ramakrishna Gummadi, Univ of So Cal Srinivasan Seshan,\nCarnegie Mellon Univ David Wetherall, Univ of Washington Published at MobiCom '07, Montréal,\nCanada 9-14 Sept 07 Presented by James Gaskell 7 Nov 11 CS 577, Advanced Computer Networks\nProf Kinicki, WPI, Fall 2011 Page 2. 2 Overview 1. What is Fingerprinting 2. Experimental\nMethodology 3. Obvious Fingerprints 4. Four less obvious Fingerprints  \n
+
+
+Removed: 5834868425ff05a97b00c39a	Abstract We present a framework for sensor actuation and control in sentient spaces, in which sensors are used to observe a physical phenomena. We focus on sentient spaces that enable pervasive computing applications, such as smart video surveillance and situational awareness in instrumented office environments. Our framework utilizes the spatio-temporal statistical properties of an observed phenomena, with the goal of maximizing an application-specified reward. Specifically, we define an observation of a phenomena by assigning it a 
+
+
+Removed: 5834868425ff05a97b00c501	Abstract We present the spine calculus S→⊸ &⊤ as an efficient representation for the linear λ-calculus λ→⊸ &⊤ which includes unrestricted functions (→) linear functions (⊸) additive pairing (&) and additive unit (⊤). S→⊸ &⊤ enhances the representation of Church's simply typed λ-calculus by enforcing extensionality and by incorporating linear constructs. This approach permits procedures such as unification to retain the efficient head access that characterizes first-order term languages without the overhead of performing η-conversions 
+
+
+Removed: 5834868425ff05a97b00df09	Abstract: We study an online task assignment problem for multi-robot systems where robots can do multiple tasks during their mission and the tasks arrive dynamically in groups. Each robot can do at most one task from a group and the total number of tasks a robot can do is bounded by its limited battery life. There is a payoff for assigning each robot to a task and the objective is to maximize the total payoff. A special case, where each group has one task and each robot can do one task is the online maximum weighted bipartite matching problem (
+
+
+Removed: 5834868425ff05a97b00df0c	Abstract This paper establishes an analytical foundation for electronic market making. Creating an automated securities dealer is a challenging task with important theoretical and practical implications. Our main interest is a normative automation of the market maker's activities, as opposed to explanatory modeling of human traders, which was the primary concern of earlier work in this domain. We use a simple class of “non-predictive” trading strategies to highlight the fundamental issues. These strategies have a theoretical 
+
+
+Removed: 5834868425ff05a97b00c3a0	Abstract We analyze functional manipulations of handheld objects, formalizing the problem as one of fine-grained grasp classification. To do so, we make use of a recently developed fine-grained taxonomy of human-object grasps. We introduce a large dataset of 12000 RGB-D images covering 71 everyday grasps in natural interactions. Our dataset is different from past work (typically addressed from a robotics perspective) in terms of its scale, diversity, and combination of RGB and depth data. From a computer-vision perspective, our dataset 
+
+
+Removed: 5834868425ff05a97b00cb24	Abstract We describe the implementation of a large scale disk array controller and subsystem incorporating over 100 high performance 3.5\ disk drives. It is designed to provide 40 MB/s sustained performance and 40 GB capacity in three 19\" racks. The array controller forms an integral part of a file server that attaches to a Gb/s local area network. The controller implements a high bandwidth interconnect between an interleaved memory, an XOR calculation engine, the network interface (HIPPI), and the disk interfaces (SCSI). "
+
+
+Removed: 5834868425ff05a97b00df0d	Abstract Learning in a multi-agent system is difficult because the learning environment jointly created by all learning agents is time-variant. This paper studies the model of multi-agent learning in complete-information extensive games (CEGs). We provide two provably convergent algorithms for this model. Both algorithms utilize the special structure of CEGs and guarantee both individual and collective convergence. Our work contributes to the multi-agent learning literature in several aspects: 1. We identify a model of multi-agent learning, 
+
+
+Removed: 5834868425ff05a97b00cb25	1.0 Abstract Distributed systems in use today depend heavily on network communications between clients and servers. In this report, we describe the design and implementation of the network architecture (hardware, software and protocols) of the RAID-II system. RAID-II is a high speed network file server connected to an UltraNetwork. In order to support high bandwidth network transfers with the RAID-II server, we partitioned the networking software among the various processors in the system. Measurements of the system show that the 
+
+
+Removed: 5834868425ff05a97b00df0e	Abstract Many different multi-agent problems, such as distributed scheduling, can be formalized as distributed constraint optimization problems (DCOP [1]). Ordering the constraint variables is an important preprocessing step of the ADOPT algorithm [1], the state of the art method of solving DCOP. Currently ADOPT uses depth-first search (DFS) trees for that purpose. For certain classes of tasks DFS ordering does not exploit the problem structure as compared to pseudo-tree ordering [3]. Also the variables are currently ordered 
+
+
+Removed: 5834868425ff05a97b00c50d	TPS is a theorem proving system for first-and higher-order logic. It provides for automatic, semi-automatic, and interactive modes of proof, and contains various facilities useful for research on theorem proving. As its logical language TPS uses typed)~-calculus, in which most theorems of mathematics can be expressed very directly. A new version of TPS, called TPS3, is being developed in Common Lisp. It has grown naturally out of the system TPS1 discussed in [2]. TPS3 is being designed as a general system for proving theorems of 
+
+
+Removed: 5834868425ff05a97b00cb26	Imagine driving towards a destination in a busy metropolitan area. While stopped at a traffic light, you query your PDA specifying your destination and criteria for desirable parking spaces (eg, within two blocks of your destination, at least a four hour meter). You get back directions to an available parking space satisfying your criteria. Hours later, you realize that your meter is about to run out. You query your PDA to discover that, historically, meter enforcers are not likely to pass by your car in the next hour. A half hour later, you return to 
+
+
+Removed: 5834868425ff05a97b00c50f	Abstract The design of linear logic programming languages and theorem provers opens a number of new implementation challenges not present in more traditional logic languages such as Horn clauses (Prolog) and hereditary Harrop formulas (λProlog). Among these, the problem of efficiently managing the linear context when solving a goal is of crucial importance for the use of these systems in non-trivial applications. This paper studies this problem in the case of Lolli [6](though its results have application to other systems). We 
+
+
+Removed: 5834868425ff05a97b00c3a4	Abstract We address the task of articulated pose estimation from video sequences. We consider an interactive setting where the initial pose is annotated in the first frame. Our system synthesizes a large number of hypothetical scenes with different poses and camera positions by applying geometric deformations to the first frame. We use these synthetic images to generate a custom labeled training set for the video in question. This training data is then used to learn a regressor (for future frames) that predicts joint locations from image 
+
+
+Removed: 5834868425ff05a97b00c3ba	Abstract: We present a taxonomy for local distance functions where most existing algorithms can be regarded as approximations of the geodesic distance defined by a metric tensor. We categorize existing algorithms by how, where, and when they estimate the metric tensor. We also extend the taxonomy along each axis. How: We introduce hybrid algorithms that use a combination of techniques to ameliorate overfitting. Where: We present an exact polynomial-time algorithm to integrate the metric tensor along the lines between the test and training 
+
+
+Removed: 5834868425ff05a97b00c536	Abstract: A description is given of Elf, a metalanguage for proof manipulation environments that are independent of any particular logical system. Elf is intended for metaprograms such as theorem provers, proof transformers, or type inference programs for programming languages with complex type systems. Elf unifies logic definition (in the style of LF, the Edinburgh logical framework) with logic programming (in the style of lambda Prolog). It achieves this unification by giving types an operational interpretation, much the same way 
+
+
+Removed: 5834868425ff05a97b00c3c5	Abstract: We present a new method for training deformable models. Assume that we have training images where part locations have been labeled. Typically, one fits a model by maximizing the likelihood of the part labels. Alternatively, one could fit a model such that, when the model is run on the training images, it finds the parts. We do this by maximizing the conditional likelihood of the training data. We formulate model-learning as parameter estimation in a conditional random field (CRF). Initializing parameters with their maximum 
+
+
+Removed: 5834868425ff05a97b00df31	Abstract Heterogenous agents designed by, and distributed across various providers participate in an open multi-agent system (MAS). Norms (ie, obligations, prohibitions, and permissions), sanctions, and incentives are enforced within an open MAS to ensure that agents act and interact only in ways that satisfy stakeholders' requirements. We propose a framework, called Requirements-driven Contracting (RdC) for deriving executable norms, sanctions, and incentives from the requirements and associated relevant information. RdC 
+
+
+Removed: 5834868425ff05a97b00d49b	Abstract This paper presents an architecture that enables multiple robots to explicitly coordinate actions at multiple levels of abstraction. In particular, we are developing an extension to the traditional three-layered robot architecture that enables robots to interact directly at each layer {at the behavioral level, the robots create distributed control loops; at the executive level, they synchronize task execution; at the planning level, they use market-based techniques to assign tasks, form teams, and allocate resources. We illustrate these 
+
+
+Removed: 5834868425ff05a97b00df32	One of the main promises of web services standards is to enable and facilitate seamless interoperability of diverse applications and business processes implemented as components or services. A service can be part of a business workflow that prescribes control and data flows of complex applications. As business needs change, processes may need to get reconfigured or additional process components and services may need to be added. As a result of these changes, the previous components must become interoperable with the 
+
+
+Removed: 5834868425ff05a97b00cbb0	Editorial Board: M. Bπn (College Park, USA) FR Cohen (Lexington, USA) V. Enss (Berlin, \nFRG) R. Fintushel (East Lansing, USA) M. Fliess (Gif-sur-Yvette, France) M. Fukushima \n(Osaka, Japan) G. Gallavotti (Rome, Italy) R. Gobel (Essen, FRG) KH Hofmann (Darmstadt, \nFRG) J. Lindenstrauss (Jerusalem, Israel) DH Phong (New York, USA) D. Ramakrishnan \n(Ithaca, USA) A. Ranicki (Edinburgh, GB) P.-A. Raviart (Palaiseau, France) DS Scott \n(Pittsburgh, USA) D. Segal (Oxford, GB) B. Shiffman (Baltimore, USA) F. Skof (Torino,  
+
+
+Removed: 5834868425ff05a97b00cb80	Abstract: Networks today rely on expensive and proprietary hard-ware appliances, which are deployed at fixed locations, for DDoS defense. This introduces key limitations with respect to flexibility (eg, complex routing to get traffic to these\ chokepoints\") and elasticity in handling changing attack patterns. We observe an opportunity to ad-dress these limitations using new networking paradigms such as software-defined networking (SDN) and network functions virtualization (NFV). Based on this observation, we design and implement of Bohatei, an "
+
+
+Removed: 5834868425ff05a97b00d4af	ABSTRACT Dynamic adaptive systems based on multiple concurrent applications typically employ optimization models to decide how to allocate scarce resources among the applications and how to tune their runtime settings for optimal quality-of-service according to the preferences of an end user. Traditionally, such systems have avoided dealing with uncertainty by assuming that current snapshots of the relevant inputs are precise and by solving for an optimal system point. To achieve dynamic behavior, a system performs an 
+
+
+Removed: 5834868425ff05a97b00c569	Abstract—Modeling methods for Cyber-Physical Systems (CPS) originate in various engineering fields, and are difficult to use together due to their heterogeneity. Inconsistencies between mutually oblivious models and analyses often lead to implicit design errors, which may cause catastrophic failures of critical CPS. Such consistency issues are not fully solved by the state-of-the-art integration methods, which lack generality, formal guarantees, and effectiveness. To overcome these limitations and achieve better 
+
+
+Removed: 5834868425ff05a97b00cb68	Abstract This paper presents the design, implementation, and evaluation of Colyseus, a distributed architecture for interactive multiplayer games. Colyseus distributes dynamic game-play state and computation while adhering to tight latency constraints and maintaining scalable communication costs. Two key architectural decisions form the basis of our design: first, a single copy consistency model for game objects allows low-latency read/writes at the cost of weaker consistency, which is tolerated by most multiplayer games. Second, we 
+
+
+Removed: 5834868425ff05a97b00d4b1	Abstract Mission-and life-critical Ultra-Large-Scale (ULS) systems are increasingly prevalent and networked in many domains, including business, aviation, communication, defense, finance, health, and public utilities. Such systems are often too complex for generally centralized methods to work well for such tasks as requirements discovery, development, system integration, test, deployment, configuration, operation protection, and evolution. Yet today we lack sound methods and technologies for distributing these tasks across large 
+
+
+Removed: 5834868425ff05a97b00df34	Declines in situation awareness (SA) often accompany automation. Some of these effects have been characterized as out-of-the-loop, complacency, and automation bias. Increasing autonomy in multi-robot control might be expected to produce similar declines in operators' SA. In this paper we review a series of experiments in which automation is introduced in controlling robot teams. Automating path planning at a foraging task improved both target detection and localization which is closely tied to SA. Timing data, however, suggested 
+
+
+Removed: 5834868425ff05a97b00cb6b	Abstract Recently, there has been increasing deployment of distributed infrastructure and applications such as Akamai, PlanetLab and DHTs. A highly-available monitoring service for these systems is vital to ensuring their smooth operation. In this setting, a key challenge to high availability is the presence of correlated failures, not addressed by previous monitoring services. This paper presents our approach to achieving high availability in IRISLOG, a customizable wide-area monitoring service. IRISLOG incorporates a replication design 
+
+
+Removed: 5834868425ff05a97b00c3ea	Abstract Commonsense knowledge representation and reasoning is key for tasks such as natural language understanding. Since common-sense consists of information that humans take for granted, however, gathering it is an extremely difficult task. The game engine for common-sense knowledge acquisition (GECKA) aims to collect common-sense from game designers through the development of serious games. GECKA merges, as never before, the potential of serious games and games with a purpose. This not only provides a platform 
+
+
+Removed: 5834868425ff05a97b00d4b4	CiteSeerX - Document Details (Isaac Councill, Lee Giles, Pradeep Teregowda): Examples from\ndeveloper forums..... 2 Problem properties..... 7 Revisiting frameworks..... 8.\n
+
+
+Removed: 5834868425ff05a97b00cbb3	I suggest that the computational model of mind may be able to shed light on certain outstanding problems of philosophical ethics. The computational model of the mind offers a possible way to explain certain aspects of our moral thinking. In particular, I am thinking of difficulties that arise in implementing probabilistic reasoning in a computational model of mind and I am thinking about the so-called\ frame problem\" in artificial intelligence. There are aspects of ordinary moral thinking that can seem irrational from a certain point of view. "
+
+
+Removed: 5834868425ff05a97b00df35	Abstract: Social computing can be broadly defined as the computational facilitation of social studies and human social dynamics as well as the design and use of computing technologies that consider social contexts. With the development and adoption of social computing technologies, social computing systems are increasingly involved with the economic contexts and applications. In addition, with the development of economic systems, researchers are employing computational technologies both for computational economic 
+
+
+Removed: 5834868425ff05a97b00e7b5	ABSTRACT Mechanical systems often exhibit physical symmetries in their configuration variables, allowing for significant reduction of their mathematical complexity arising from characteristics such as underactuation and nonlinearity. In this paper, we exploit the geometric structure of such systems to explore the following motion planning problem: given a desired trajectory in the workspace, can we explicitly solve for the appropriate inputs to follow it? We appeal to results on differential flatness from the nonlinear control literature 
+
+
+Removed: 5834868425ff05a97b00c56b	Abstract 307 Whole-exome (WES) sequencing revealed tremendous mutational heterogeneity in leukemia. While WES can be applied for discovery, it also has potential as a diagnostic tool that can overcome the shortcomings of current methods. We theorized that, in addition to mutation discovery, systematic application of WES in MDS may reveal distinct mutational patterns allowing for new molecular classification. We performed WES in 116 paired exomes, including MDS (n= 57), MDS/MPN (n= 36), and sAML (n= 23). We also 
+
+
+Removed: 5834868425ff05a97b00d4cd	Abstract: At Carnegie Mellon University, we taught an introductory software engineering course that was organized around a project with a real deliverable for a real client. This case study describes the background and organization of the course and presents the lecture and project materials produced by the faculty and students of the course. Carnegie Mellon University has offered a course in software engineering since the early 1970s. Although its organization and position in the curriculum have changed over the years, the course has 
+
+
+Removed: 5834868425ff05a97b00cbb8	In this paper we link Winskel's bistructures [25], Girard's linear logic [10] and Berry's bidomains [25]. We show how bistructures provide a model of classical linear logic extending Girard's web model [10, 11]; we show too that a certain class of bistructures represent bidomains. We hope that the structures isolated here will help in the search for a direct, extensional and\ mathematically natural\" account of sequentiality and thereby of Milner's fully abstract model of PCF [20]. Girard has given an analysis of intuitionistic logic "
+
+
+Removed: 5834868425ff05a97b00d4ef	The term “software engineering” came to prominence when it was used as the name of a NATO workshop in 1968 [NaRan69]. It was used then to draw attention to software development problems. It was then, as to a large extent it remains now, a phrase of aspiration, not of description. In the intervening years, the focus of the academic community (though not so much the industrial software development community) has shifted from simply writing programs to analyzing and reasoning about large distributed systems of software 
+
+
+Removed: 5834868425ff05a97b00df41	In order to support the use of cognitive architectures in computer simulation studies involving virtual environments, an integration solution is proposed that enables ACT-R cognitive models to communicate with the Unity game engine. The integration solution is tested using virtual robots that are able to move around a 3D virtual environment and interact with various objects. The robots are equipped with visual, tactile and proprioceptive sensor systems, which yield information about the current sensory state of the robot. This information is 
+
+
+Removed: 5834868425ff05a97b00e814	MSW (Municipal Solid Waste) incineration plays an important pole in MSW disposal. But MSW incineration would bring secondary pollution if MSW incinerator runs out of order, especially dioxins, as restricts MSW incineration promotion and utilization. Summarized the research result about dioxins formation and oxidization reactions in MSW incineration, analysed the influencing factors of dioxins emission in MSW incineration, discussed the technologies that can settle total dioxins emission in MSW incineration, in order to 
+
+
+Removed: 5834868425ff05a97b00cbad	PETER ACZEL FREDERIC B. FITCH J. DONALD MONK JIRI BECVAR HANS KAMP GERT H. MULLER GEORGE BOOLOS DAVID KAPLAN CHARLES D. PARSONS JOAN BRESNAN JEROME KEISLER GABRIEL SABBAGH JOHN P. BURGESS SAUL A. KRIPKE GERALD SACKS STEPHEN A. COOK KENNETH KUNEN DANA S. SCOTT MJ CRESSWELL MICHAEL MAKKAI RICHARD A. SHORE SOLOMON FEFERMAN RUTH BARCAN MARCUS STEVEN K. THOMASON JENS ERIK FENSTAD DONALD A. MARTIN BAS VAN 
+
+
+Removed: 5834868425ff05a97b00df42	Cognitive architectures are computational frameworks that support the development of computational models of human cognitive processes. They have typically been used to advance our understanding of human cognition in specific task environments; however, they have also been used to support the development of a variety of intelligent systems and agents (eg, cognitive robots). There are a broad range of reasons to motivate the effort to integrate cognitive architectures with virtual environments. These include the development 
+
+
+Removed: 5834868425ff05a97b00df43	Abstract Cognitive architectures and virtual environments have a long history of use within the cognitive science community. Few studies, however, have sought to combine the use of these technologies to support computational studies into embodied, extended, situated and distributed (EESD) cognition. Here, we explore the extent to which the ACT-R cognitive architecture and the Unity game engine can be used for these purposes. A range of issues are discussed including the respective responsibilities that the cognitive architecture and 
+
+
+Removed: 5834868425ff05a97b00cb90	Scott Dana. Existence and Description in Formal Logic. Bertrand Russell, Philosopher of the \nCentury, Essays in His Honour, Edited by Schoenman Ralph, Little, Brown and Company, Boston \nand Toronto, and George Allen & Unwin Ltd, London, 1967, Pp. 181–200. [REVIEW]Alonzo Church \n- 1973 - Journal of Symbolic Logic 38 (1):166-169.   Existence and Description in Formal \nLogic.Dana Scott - 1967 - In Ralph Schoenman (ed.), Journal of Symbolic Logic. pp. \n181--200.   Logic of Intensional Acts and the Theory of Games.AT Ishmuratov - 1988 -  
+
+
+Removed: 5834868425ff05a97b00cbe1	I myself, perhaps unduly influenced by rather chilly receptions from audiences around 1933-35 to disquisitions on λ-definability, chose, after general recursiveness had appeared, to put my work in that format. I did later publish one paper 1962 on λ-definability in higher recursion theory.
+
+
+Removed: 5834868425ff05a97b00c3ee	Traditionally, there has been a single guarantee assumed for all data stored in a storage device: usually, the guarantee is that the data will remain unchanged and accessible. My work is explores applications that can continue to behave correctly even when the underlying storage does not meet this condition. Application data is classified based on the guarantees that the application requires; I will show an automated method for evaluating applications following changes to the disk's guarantees about its data.
+
+
+Removed: 5834868425ff05a97b00d4f9	In May 1999 the ACM Council adopted a resolution both reaffirming ACM's commitment to solving the software quality problem and also stating its opposition to licensing software engineers, on the grounds that licensing is premature and would be ineffective in addressing the software quality problem. ACM Council also affirmed its interest in developing a core body of knowledge for software engineering, which is often viewed as an appealing step toward improving software quality. Our committee was formed to study the 
+
+
+Removed: 5834868425ff05a97b00d4fa	Abstract End-user programming tools offer no data types except\ string\" for many categories of data, such as person names and street addresses. Consequently, these tools cannot automatically validate or reformat these data. To address this problem, we have developed a user-extensible model for string-like data. Each\" tope\" in this model is a user-defined abstraction that guides the interpretation of strings as a particular kind of data. Specifically, each tope implementation contains software functions for recognizing and reformatting "
+
+
+Removed: 5834868425ff05a97b00cba6	Abstract In Chapter I we encountered the rich lattice-theoretic structure of continuous lattices. Perhaps even more typical for these lattices is their wealth of topological structure. The aim or the present chapter is to introduce topology into the study—a program to be continued in Chapter III.
+
+
+Removed: 5834868425ff05a97b00d4fb	ABSTRACT How can we promote reuse of code, data and services? How can we make it easier to combine on-line resources to perform specific tasks? One serious impediment is the risk of relying on software that you do not control, especially the difficulty of determining whether the software is dependable enough for the specific task at hand. We concentrate on one form of economic risk mitigation, insurance, and explore its suitability for the software domain we are interested in. After reviewing the basic principles of insurance we present 
+
+
+Removed: 5834868425ff05a97b00df48	Abstract: The goal of this panel discussion is to identify key technical issues for information fusion at both lower and higher levels, and promising agent-based development approaches. Currently there are high expectations in the industrial, military, and business fusion communities that agent technologies can provide insights into and solutions for some of the most complex problems. Moreover, such expectations are also due to agents' inherent capability of operating autonomously, and communicating and coordinating with other 
+
+
+Removed: 5834868425ff05a97b00c598	This workshop targets researchers in the Learning Sciences, Computer Supported Collaborative Learning (CSCL) and Technology Enhanced Learning (TEL) communities who are interested in how human interaction leads to learning. Such researchers come from many different disciplines (psychology, linguistics, cognitive science, computer science, didactics, etc.) and thus employ diverse methods in pursuing their specific research goals as well as hold diverse theoretical assumptions in relation to these goals. Many of us are 
+
+
+Removed: 5834868425ff05a97b00cba7	FREDERIC B. FITCH GERT H MULLER HANS KAMP CHARLES D. PARSONS DAVID KAPLAN GABRIEL SABBAGH SAUL A KRIPKE GERALD SACKS KENNETH KUNEN ARTO SALOMAA MICHAEL MAKKAI DANA S. SCOTT RUTH BARCAN MARCUS JOSEPH R SHOENFIELD DONALD A MARTIN RICHARD A SHORE J. DONALD MONK STEVEN K THOMASON BAS VAN FRAASSEN
+
+
+Removed: 5834868425ff05a97b00cbaa	Abstract Here we enter into the discussion of our principal topic. Continuous lattices, as the authors have learned in recent years, exhibit a variety of different aspects, some are lattice theoretical, some are topological, some belong to topological algebra and some to category theory—and indeed there are others. We shall contemplate these aspects one at a time, and this chapter is devoted entirely to the lattice theory surrounding our topic.
+
+
+Removed: 5834868425ff05a97b00d513	In this paper we propose a tank-like climbing robot, called Tankbot, using flat (non-patterned) and soft elastomer adhesive treads. This wheeled climbing robot design enables continuous, vibration-free, and strong attachment to wide range of smooth and rough surfaces, relatively fast and smooth motion, and improved capability to traverse obstacles and to carry high payloads. Tankbot is lightweight (60—150 g) and can climb on any slope from 0• to 360• on smooth surfaces. Moreover, climbing vertically up, down, and laterally 
+
+
+Removed: 5834868425ff05a97b00d530	Abstract: This paper proposes two different nanomolding methods to fabricate synthetic gecko foot-hair nanostructures. The first method uses an atomic force microscope (AFM) probe indented flat wax surface and the second one uses a nano-pore membrane as a template. These templates are molded with silicone rubber, polyimide and polyester type polymers under vacuum and the template is peeled off or etched away. Results show that these synthetic nano-hair prototypes have adhesion close to the predicted values for 
+
+
+Removed: 5834868425ff05a97b00cc67	Abstract We present experimental results from Wi-Fi and 4G LTE networks to validate the intuition that low end-to-end latency of cloud services improves application response time and reduces energy consumption on mobile devices. We focus specifically on computational offloading as a cloud service. Using a wide range of applications, and exploring both pre-partitioned and dynamically partitioned approaches, we demonstrate the importance of low latency for cloud offload services. We show the best performance is achieved by 
+
+
+Removed: 5834868525ff05a97b00e91d	Abstract Sulfite is a compound commonly used as preservative in foods and pharmaceuticals. Many studies have examined the neurotoxicity of sulfite, but its effect on neuronal calcium homeostasis has not yet been reported. Here, we observed the effect of sulfite on the cytosolic free calcium concentration ([Ca 2+] i) in cultured cortical neurons using Fura-2/AM based calcium imaging technique. Sulfite (250–1000 μM) caused a sustained increase in [Ca 2+] i in the neurons via a dose-dependent manner. In Ca 2+-
+
+
+Removed: 5834868425ff05a97b00cc73	Abstract Cloudlet offload is a valuable technique for ensuring low end-to-end latency of resource-intensive cloud processing for many emerging mobile applications. This paper examines the impact of user mobility on cloudlet offload, and shows that even modest user mobility can result in significant network degradation. We propose VM handoff as a technique for seamlessly transferring VM-encapsulated execution to a more optimal offload site as users move. Our approach can perform handoff in roughly a minute even over 
+
+
+Removed: 5834868425ff05a97b00cc49	Researchers in the computer science research community. on both sides of the Atlantic have struggled to manage their time and travel budgets in the face of a proliferation of increasingly specialized conferences and workshops. Increasing specialization can, of course, be interpreted as a sign of the maturing of our field. But it can also reduce cross-fertilization, hinder new thinking at the boundaries of established technical areas, and stifle interaction and migration of researchers among technical areas. After three years of 
+
+
+Removed: 5834868525ff05a97b00e920	Abstract Ectonucleoside triphosphate diphosphohydrolase 1 (ENTPD1), also known as cluster of differentiation (CD) 39, is the rate‑limiting enzyme in the generation of immunosuppressive adenosine and is important in tumor progression. The present study evaluated the expression of CD39+ and CD39+ forkhead box P3 (FoxP3)+ regulatory T (Treg) cells in gastric cancer (GC), and determined their prognostic roles in patients with GC following radical resection. It was observed that CD39 was expressed at significantly 
+
+
+Removed: 5834868425ff05a97b00d5d0	Here we demonstrate a wireless sensor/actuator network that has been developed at Carnegie Mellon University to facilitate operations at a plant nursery. The system has been successfully deployed at a working nursery and has been continuously operational since September of 2003. Our demonstration has two distinct components designed to illustrate our contributions in the areas of hardware development, ad-hoc networking, and human interface: 1. A functioning 6-node network on site is used to demonstrate the node 
+
+
+Removed: 5834868425ff05a97b00d5dd	Abstract: A mobile robot we have developed is equipped with sensors to measure range to landmarks and can simultaneously localize itself as well as locate the landmarks. This modality is useful in those cases where environmental conditions preclude measurement of bearing (typically done optically) to landmarks. Here we extend the paradigm to consider the case where the landmarks (nodes of a sensor network) are able to measure range to each other. We show how the two capabilities are complimentary in being able to achieve a 
+
+
+Removed: 5834868525ff05a97b00e931	To improve the stability, real-time performance and interactivity of the power supply, a three-layer distributed monitoring structure is proposed after analyzing the demands of power monitoring. An embedded power monitoring system is then designed and achieved based on this structure. The system is developed on Linux and Qt platform and it transmits data in real time by sharing memory. The data is used to display the status of every parameter via Qwt. The results of experiments show that the system can monitor and warn the power 
+
+
+Removed: 5834868425ff05a97b00d5e3	At the dawn of the new millennium, robotics is undergoing a major transformation in scope and dimension. From a largely dominant industrial focus, robotics is rapidly expanding into the challenges of unstructured environments. Interacting with, assi-ing, serving, and exploring with humans, the emerging robots will increasingly touch people and their lives. The goal of the new series of Springer Tracts in Advanced Robotics (STAR) is to bring, in a timely fashion, the latest advances and developments in robotics on the basis of their 
+
+
+Removed: 5834868425ff05a97b00d5e5	Abstract: Position estimation for planetary rovers has been typically limited to odometry based on proprioceptive measurements such as the integration of distance traveled and measurement of heading change. Here we present and compare two methods of online visual odometry suited for planetary rovers. Both methods use omnidirectional imagery to estimate motion of the rover. One method is based on robust estimation of optical flow and subsequent integration of the flow. The second method is a full structure-from-motion 
+
+
+Removed: 5834868425ff05a97b00cc6f	Abstract We show how query-specific content-based computation pipelined with human cognition can be used for interactive search when a pre-computed index is not available. More specifically, we use query-specific parallel computation on large collections of complex data spread across multiple Internet servers to shrink a search task down to human scale. The expertise, judgement, and intuition of the user performing the search can then be brought to bear on the specificity and selectivity of the current search. Rather than text or 
+
+
+Removed: 5834868525ff05a97b00e966	Abstract To observe the therapeutic efficacy and safety of Haoqin Qingdan Decoction (HQD) in treating active stage of systemic lupus erythematosus (SLE). One hundred and twenty patients with SLE were randomly assigned into two groups, the treated group receiving HQD and prednisone, and the control group receiving prednisone and cyclophosphamide (CTX), both were treated for 3 months. SLE disease activity index (SLEDAI), various immunological indexes, blood and urine routine, hepatic and renal function, as well as the other adverse 
+
+
+Removed: 5834868425ff05a97b00cc77	Abstract Modern offices are crowded with personal computers. While studies have shown these to be idle most of the time, they remain powered, consuming up to 60&percnt; of their peak power. Hardware-based solutions engendered by PC vendors (eg, low-power states, Wake-on-LAN) have proved unsuccessful because, in spite of user inactivity, these machines often need to remain network active in support of background applications that maintain network presence. Recent proposals have advocated the use of consolidation of 
+
+
+Removed: 5834868425ff05a97b00d5f6	Microsoft established the Chief Environmental Strategist position in 2007. Listening to Rob Bernard, it was clearly the opportunity of a lifetime.“I was acutely aware that the position was being created,” Bernard describes with emphasis. He jumped at the opportunity to engage his longstanding passion for environmental issues within the company where he had worked for a decade. Under Bernard's leadership, Microsoft's vision can be categorized into what Benard calls “three pillars.” The first pillar involves promoting energy efficiency at 
+
+
+Removed: 5834868425ff05a97b00d5f7	Page 1. XRDS • fall 2011 • Vol.18 • No.1 23 Explaining what a “neuroengineer” is might be\nchallenging, but Ed Boyden, the leader of the Synthetic Neurobiology Group at MIT, is up to the\nchallenge. “Over the years,” Boyden says, “we've found a good vocabulary for talking about the\nissues.” The brain is a computer, he explains, a complex electrical and chemical piece of circuitry\nthat entirely mediates our relationship to the outside world. Boyden  \n
+
+
+Removed: 5834868525ff05a97b00e975	OBJECTIVE: Jervell and Lange-Nielsen syndrome (JLNS) is a severe cardioauditory syndrome manifested as QT interval prolongation, abnormal T waves, and relative bradycardia ventricular tachyarrhythmias. In this report, we screened a nonconsanguineous families with JLNS for mutations in KCNQ1. METHODS: Mutation analysis was performed by using purified PCR products to direct sequence analysis on an ABI-3730XL automated DNA sequencer. The whole sequence of proband'KCNQ1 was screened firstly, then screened 
+
+
+Removed: 5834868425ff05a97b00cdb2	Abstract Conventional wisdom has been that the performance limitations in the current Internet lie at the edges of the network--ie last mile connectivity to users, or access links of stub ASes. As these links are upgraded, however, it is important to consider where new bottlenecks and hot-spots are likely to arise. In this paper, we address this question through an investigation of non-access bottlenecks. These are links within carrier ISPs or between neighboring carriers that could potentially constrain the bandwidth available to long-lived 
+
+
+Removed: 5834868425ff05a97b00d895	Abstract While a user's preference is directly reflected in the interactive choice process between her and the recommender, this wealth of information was not fully exploited for learning recommender models. In particular, existing collaborative filtering (CF) approaches take into account only the binary events of user actions but totally disregard the contexts in which users' decisions are made. In this paper, we propose Collaborative Competitive Filtering (CCF), a framework for learning user preferences by modeling the choice process 
+
+
+Removed: 5834868425ff05a97b00cdfc	Abstract As Internet video goes mainstream, we see increasing user expectations for higher video quality and new global policy requirements for content providers. Inspired by the case for centralizing network-layer control, we present C3, a control system for optimizing Internet video delivery. The design of C3 addresses key challenges in ensuring scalability and tackling data plane heterogeneity. First, to ensure scalability and responsiveness, C3 introduces a novel split control plane architecture that can tolerate a small increase in 
+
+
+Removed: 5834868525ff05a97b00eb9c	生活中的一些應用, 例如行動手機, 聽障者的助聽系統, 自動語音辨識(ASR) 系統等, 都會有環境雜訊干擾的問題, 必須克服雜訊的干擾, 讓聽者可以聽到品質較好的語音或是改善系統的辨識率. 一般的單一通道語音增強技術, 需要先做雜訊的預估, 接著再計算頻譜增益函數用以抑制語音中含有的雜訊. 本文提出一個兩階段的單通道語音增強方法, 第一階段以短時間頻譜大小預估(STSA estimation, Short-Time Spectral Amplitude estimaion) 為基礎來處理, 第二階段以弦波模型重估有聲語音訊號, 增強其諧振成份, 抑制諧振間的雜訊. 針對最小控制遞
+
+
+Removed: 5834868525ff05a97b00eba1	Media and literature are closely related. By connecting science and technology directly with literary art, the modern media has brought about profound changes in literary production and communication methods. Therefore, the in-depth study of changes in literature under the influence of the media and through the thorough external and internal dialogue of literature, we can accurately grasp the actual style and features and the prospective orientation of literature in the context of electronic media. And then based on the 
+
+
+Removed: 5834868425ff05a97b00ce02	Abstract: Enterprises want their in-cloud services to leverage the performance and security benefits that middleboxes offer in traditional deployments. Such virtualized deployments create new opportunities (eg, flexible scaling) as well as new challenges (eg, dynamics, multiplexing) for middlebox management tasks such as service composition and provisioning. Unfortunately, enterprises lack systematic tools to efficiently compose and provision in-the-cloud middleboxes and thus fall short of achieving the benefits that cloud-
+
+
+Removed: 5834868425ff05a97b00ce07	Abstract Video viewership over the Internet is rising rapidly, and market predictions suggest that video will comprise over 90\\% of Internet traffic in the next few years. At the same time, there have been signs that the Content Delivery Network (CDN) infrastructure is being stressed by ever-increasing amounts of video traffic. To meet these growing demands, the CDN infrastructure must be designed, provisioned and managed appropriately. Federated telco-CDNs and hybrid P2P-CDNs are two content delivery infrastructure designs that 
+
+
+Removed: 5834868425ff05a97b00d951	Over the past few years, an increasingly diverse and ever-changing wireless spectrum has created a need for cognitive radio networks. Such networks leverage spectrum sensing and information from each layer in the protocol stack to overcome spectrum diversity by adapting all layers (eg, the MAC and PHY) on the fly. By doing so, cognitive radios can achieve the greatest level of performance, given the current networking conditions. For example, in areas where access to the spectrum is highly contended, the radio can switch from using a 
+
+
+Removed: 5834868425ff05a97b00d963	Abstract TCP is an important factor affecting user-perceived performance of Internet applications. Diagnosing the causes behind TCP performance issues in the wild is essential for better understanding the current shortcomings in TCP. This paper presents a TCP flow performance analysis framework that classifies causes of TCP stalls. The framework forms the basis of a tool that is publicly available to the research community. We use our tool to analyze packet-level traces of three services (cloud storage, software download and web 
+
+
+Removed: 5834868425ff05a97b00cdeb	Abstract: Epidemic-spreading attacks (eg, worm and botnet propagation) have a natural notion of attack causality-a single network flow causes a victim host to get infected and subsequently spread the attack. This paper is motivated by a simple question regarding the diagnosis of such attacks-is it possible to establish attack-causality through network-level monitoring, without relying on signatures and attack-specific properties? Using the observation that communication patterns of normal hosts are sparse, we posit the 
+
+
+Removed: 5834868425ff05a97b00cdf0	Abstract Recent studies have shown a range of co-residency side channels that can be used to extract private information from cloud clients. Unfortunately, addressing these side channels often requires detailed attack-specific fixes that require significant modifications to hardware, client virtual machines (VM), or hypervisors. Furthermore, these solutions cannot be generalized to future side channels. Barring extreme solutions such as single tenancy which sacrifices the multiplexing benefits of cloud computing, such side channels will 
+
+
+Removed: 5834868425ff05a97b00d987	Abstract In regression, the desired estimate of y| x is not always given by a conditional mean, although this is most common. Sometimes one wants to obtain a good estimate that satisfies the property that a proportion, τ, of y| x, will be below the estimate. For τ= 0.5 this is an estimate of the median. What might be called median regression, is subsumed under the term quantile regression. We present a nonparametric version of a quantile estimator, which can be obtained by solving a simple quadratic programming problem and provide uniform 
+
+
+Removed: 5834868525ff05a97b00ec3f	In one general aspect, a power device can include an active region having a plurality of pillars of a first conductivity type alternately arranged with a plurality of pillars of a second conductivity type. The power device can include a termination region surrounding at least a portion of the active region and can have a plurality of pillars of the first conductivity type alternately arranged with a plurality of pillars of the second conductivity type. Each of the plurality of pillars of the first conductivity type in the active region and the termination 
+
+
+Removed: 5834868425ff05a97b00ce05	Abstract Conventional static datacenter (DC) network designs offer extreme cost vs. performance tradeoffs---simple leaf-spine networks are cost-effective but oversubscribed, while\ fat tree\"-like solutions offer good worst-case performance but are expensive. Recent results make a promising case for augmenting an oversubscribed network with reconfigurable inter-rack wireless or optical links. Inspired by the promise of reconfigurability, this paper presents FireFly, an inter-rack network solution that pushes "
+
+
+Removed: 5834868425ff05a97b00d9b1	Machine learning research has–apart from some exceptions–originally concentrated on learning from data that can naturally be represented in a single table without links between the instances. Due to the needs of many real-world applications, in recent years an increasing amount of reserch has been devoted to machine learning on relational data with more complex structure. This book is then concerned with a very popular subject among this research, graphical models for relational data. In this chapter now we will give a short 
+
+
+Removed: 5834868525ff05a97b00ec49	Read 'Location of two novellargegene deletions in Chinese\nhaemophilia B patients' on Ovid Insights.\n
+
+
+Removed: 5834868425ff05a97b00ce09	Abstract: Despite the proliferation of detection and containment techniques in the worm defense literature, simple threshold-based methods remain the most widely deployed and most popular approach among practitioners. This popularity arises out of the simplistic appeal, ease of use, and independence from attack-specific properties such as scanning strategies and signatures. However, such approaches have known limitations: they either fail to detect low-rate attacks or incur very high false positive rates. We propose a multi-
+
+
+Removed: 5834868425ff05a97b00d9ba	Abstract We present a new solution to the``ecological inference''problem, of learning individual-level associations from aggregate data. This problem has a long history and has attracted much attention, debate, claims that it is unsolvable, and purported solutions. Unlike other ecological inference techniques, our method makes use of unlabeled individual-level data by embedding the distribution over these predictors into a vector in Hilbert space. Our approach relies on recent learning theory results for distribution regression, using kernel 
+
+
+Removed: 5834868425ff05a97b00ce15	ABSTRACT Understanding social network structure and evolution has important implications for many aspects of network and system design including provisioning, bootstrapping trust and reputation systems via social networks, and defenses against Sybil attacks. Several recent results suggest that augmenting the network structure with user attributes (eg, location, employer, communities of interest) can provide a more finegrained understanding of the network structure and evolution. However, there have been few 
+
+
+Removed: 5834868425ff05a97b00ce24	Abstract As the distribution of the video over the Internet becomes main-stream and its consumption moves from the computer to the TV screen, user expectation for high quality is constantly increasing. In this context, it is crucial for content providers to understand if and how video quality affects user engagement and how to best invest their resources to optimize video quality. This paper is a first step towards addressing these questions. We use a unique dataset that spans different content types, including short video on demand (VoD
+
+
+Removed: 5834868425ff05a97b00dc3d	Abstract—Sensory perception for unmanned ground vehicle navigation has received great attention from the robotics community. However, sensors mounted on the vehicle are regularly viewpoint impaired. A vehicle navigating at high speeds in offroad environments may be unable to react to negative obstacles such as large holes and cliffs. One approach to address this problem is to complement the sensing capabilities of an unmanned ground vehicle with overhead data gathered from an aerial source. This paper presents 
+
+
+Removed: 5834868425ff05a97b00ce2d	Abstract This note should perhaps be called just a 'footnote', since my concern here is in a reformulation of the definition. In a long sequence of papers Hintikka and his coworkers (see the bibliography, which I hope is reasonably complete) have introduced, developed, and applied the idea of this normal form and its constituents which are the main ingredient. Usually the description is quite syntactical—since after all these are normal forms of formulae written out in first-order predicate calculus. In the reformulation here the 
+
+
+Removed: 5834868425ff05a97b00dc42	Abstract Many problems in robotics and AI, such as the find-path problem, call for optimal solutions that satisfy global constraints. The problem is complicated when the cost information is unknown, uncertain, or changing during execution of the solution. Such problems call for efficient re-planning during execution to account for the new information acquired. This paper presents a novel real-time algorithm, Constrained D*(CD*), that re-plans resolution optimal solutions subject to a global constraint. CD* performs a binary 
+
+
+Removed: 5834868525ff05a97b00ec65	Objective To detect the level of Toll-like receptor 2 (TLR2) in CD8 (+) T cells of chronic HBV infected patients without antiviral treatment. Methods Forty chronic HBV infected donors without antivirus treatment and 19 healthy donors were enrolled in our study. All donors were divided into three groups: a high viral load (HBV DNA> 1× 10 (4) copies/mL) group, a low viral load (HBV DNA> 1× 10 (4) copies/mL) group, and a healthy control group. After the isolation and staining of peripheral blood mononuclear cells (PBMCs), the levels of TLR2, 
+
+
+Removed: 5834868425ff05a97b00dc72	Abstract: Recent research trends and technology developments are bringing us closer to the realization of autonomous multirobot systems performing increasingly complex missions. However, existing multirobot task allocation mechanisms treat tasks as simple, indivisible entities and ignore any inherent structure and semantics that such complex tasks might have. These properties can be exploited to produce more efficient team plans by giving individual robots the ability to come up with new ways to perform a task, or by allowing 
+
+
+Removed: 5834868425ff05a97b00dc7b	Abstract: As we progress towards a world where robots play an integral role in society, a critical problem that remains to be solved is the pickup team challenge; that is, dynamically formed heterogeneous robot teams executing coordinated tasks where little information is known a priori about the tasks, the robots, and the environments in which they would operate. Successful solutions to forming pickup teams would enable researchers to experiment with larger numbers of robots and enable industry to efficiently and cost-
+
+
+Removed: 5834868425ff05a97b00de03	Abstract By changing only the playback timing of a motion sequence, an animator can achieve a variety of effects that alter our perception of an event. In some scenarios, it may be important to consider physical properties of the motion when retiming (eg, to preserve physical plausibility). However, existing retiming solutions can be quite time consuming when physical parameters are considered. This paper presents an interactive method for creating optimal motion retimings that takes into account physically based constraints and 
+
+
+Removed: 5834868425ff05a97b00e14b	Abstract: In this paper we present an approach for a pursuit-evasion problem that considers a 2.5 d environment represented by a height map. Such a representation is particularly suitable for large-scale outdoor pursuit-evasion, captures some aspects of 3d visibility and can include target heights. In our approach we construct a graph representation of the environment by sampling strategic locations and computing their detection sets, an extended notion of visibility. From the graph we compute strategies using previous work 
+
+
+Removed: 5834868425ff05a97b00d762	Abstract. As many whole genomes are sequenced, comparative genomics is moving from pairwise comparisons to multiway comparisons framed within a phylogenetic tree. A central problem in this process is the inference of data for internal nodes of the tree from data given at the leaves. When phrased as an optimization problem, this problem reduces to computing a median of three genomes under the operations (evolutionary changes) of interest. We focus on the universal rearrangement operation known as double-cut-and join (DCJ) and 
+
+
+Removed: 5834868425ff05a97b00cfcf	Abstract Modern networks are extremely complex, varying both statically and dynamically. This complexity and dynamism are greatly increased when the network contains mobile elements. A number of researchers have proposed solutions to these problems based on dynamic adaptation to changing network conditions and application requirements. This paper summarizes the results of several such projects and extracts several important general lessons learned about adapting data flows over difficult network conditions. These 
+
+
+Removed: 5834868425ff05a97b00c812	Abstract. The current generation of intelligent tutoring systems (ITS) have successfully produced learning gains without the use of natural language technology, but the goal for the next generation is to add natural language dialogue capabilities. Since it is already a tremendous effort to add domain and pedagogical knowledge to the current generation of ITSs, adding natural language dialogue capabilities can further increase the development time by requiring that language knowledge also be engineered. Rather than having 
+
+
+Removed: 5834868425ff05a97b00c1c9	Page 1. Towards a Type Theory of Contexts Frank Pfenning Carnegie Mellon University Invited\nTalk Workshop on Mechanized Reasoning about Languages with Variable Binding (Merλin'05)\nTallinn, Estonia, September 30, 2005 Joint work with Aleks Nanevski and Brigitte Pientka Work\nin progress! Merlin'05, Tallinn, Sep'05 – p.1 Page 2. Context • Dictionary definition\n(Merriam-Webster Online) a. the parts of a discourse that surround a word or passage and can\nthrow light on its meaning b. the interrelated conditions in which something exists or occurs  \n
+
+
+Removed: 5834868425ff05a97b00d76e	Abstract: Autonomous navigation for large Unmanned Aerial Vehicles (UAVs) is fairly straight-forward, as expensive sensors and monitoring devices can be employed. In contrast, obstacle avoidance remains a challenging task for Micro Aerial Vehicles (MAVs) which operate at low altitude in cluttered environments. Unlike large vehicles, MAVs can only carry very light sensors, such as cameras, making autonomous navigation through obstacles much more challenging. In this paper, we describe a system that navigates a 
+
+
+Removed: 5834868425ff05a97b00c1cb	Lists are defined by two constructors: the empty list nil and the constructor cons which takes an element and a list, generating another list. For example, the list a, b, c would be represented as cons (a, cons (b, cons (c, nil))). The official Prolog notation for nil is [], and for cons (h, t) is.(h, t), overloading the meaning of the period '.'as a terminator for clauses and a binary function symbol. In practice, however, this notation for cons is rarely used. Instead, most Prolog programs use [h| t] for cons (h, t). There is also a sequence notation for lists, 
+
+
+Removed: 5834868425ff05a97b00cfbe	Abstract A basic building block of cloud computing is virtualization. Virtual machines (VMs) encapsulate a user's computing environment and efficiently isolate it from that of other users. VMs, however, are large entities, and no clear APIs exist yet to provide users with programatic, fine-grained control on short time scales. We present SnowFlock, a paradigm and system for cloud computing that introduces VM cloning as a first-class cloud abstraction. VM cloning exploits the well-understood and effective semantics of UNIX fork. We 
+
+
+Removed: 5834868425ff05a97b00e15a	Abstract Effective communication among agents in large teams is crucial because the members share a common goal but only have a partial views of the environment. Information sharing is difficult in a large team because, a team member may have a piece of valuable information but not know who needs the information, since it is infeasible to know what each other agent is doing. Although much related work has been done on efficient delivery of information, most work is based on assumptions which are not suited to large scale 
+
+
+Removed: 5834868425ff05a97b00cfc0	Abstract. In this paper, we demonstrate how component-based middleware can reduce the energy usage of closed-source applications. We first describe how the Puppeteer system exploits well-defined interfaces exported by applications to modify their behavior. We then present a detailed study of the energy usage of Microsoft's PowerPoint application and show that adaptive policies can reduce energy expenditure by 49% in some instances. In addition, we use the results of the study to provide general advice to developers of applications and 
+
+
+Removed: 5834868425ff05a97b00d790	Abstract Copyright and its international complications have presented a significant barrier to the Universal Digital Library (UDL)'s mission to digitize all the published works of mankind and make them available throughout the world. The discuss the effect of existing copyright treaties and various proposals, such as compulsory licensing and the public lending right that would allow access to copyrighted works without requiring permission of their owners. We argue that these schemes are ineffective for purposes of the UDL. Instead, making use 
+
+
+Removed: 5834868425ff05a97b00cfd6	Abstract This paper identifies application-aware adaptation as an essential capability of mobile clients, and provides an overview of Odyssey, an architecture that supports this capability. Functionality that has hitherto been implemented monolithically must now be split between the operating system and individual applications. The role of the operating system is to sense external events, and to monitor and allocate scarce resources. In contrast, the role of individual applications is to adapt to changing conditions by using the information 
+
+
+Removed: 5834868425ff05a97b00d791	Time and space are fundamental parameters for measuring the efficiency of algorithms, and the notion of trading off one for the other is a familiar one in the programmer's informal repertoire. Nonetheless, providing satisfactory mathematical definitions of computational time and space and establishing formal relationships between them remains a central problem in computing theory. In this chapter we examine the interplay between time and space determined by a variety of machine models and explore the connection between 
+
+
+Removed: 5834868425ff05a97b00cfc4	Abstract In this paper we describe a technique called operationbased update propagationfor efficiently transmitting updates to large files that have been modified on a weakly connected client of a distributed file system. In this technique, modifications are captured above the file-system layer at the client, shipped to a surrogate client that is strongly connected to a server, re-executed at the surrogate, and the resulting files transmitted from the surrogate to the server. If re-execution fails to produce a file identical to the original, the system falls back 
+
+
+Removed: 5834868425ff05a97b00c13b	Page 1. Supplementary Material for “Estimating Accuracy from Unlabeled Data: A Bayesian\nApproach” Emmanouil Antonios Platanios E.A.PLATANIOS@CS.CMU.EDU Avinava Dubey\nAKDUBEY@CS.CMU.EDU Tom Mitchell TOM.MITCHELL@CS.CMU.EDU Carnegie Mellon\nUniversity, Pittsburgh, PA 15213, USA 1. Gibbs Sampling Equations In this section we\nprovide the equations necessary to per- form Gibbs sampling over the models defined\nin our paper. 1.1. Coupled Bayesian Error Estimation  \n
+
+
+Removed: 5834868425ff05a97b00cfda	Abstract In the inaugural issue of MC2R in April 1997 [24], I highlighted the seminal influence of mobility in computing. At that time, the goal of\ information at your fingertips anywhere, anytime\" was only a dream. Today, through relentless pursuit of innovations in wireless technology, energy-efficient portable hardware and adaptive software, we have largely attained this goal. Ubiquitous email and Web access is a reality that is experienced by millions of users worldwide through their Blackberries, iPhones, iPads, Windows "
+
+
+Removed: 5834868425ff05a97b00c830	Abstract We develop new methods for improved computational deconvolution of clonal populations from heterogeneous bulk genomic data. Deconvolution methods have become an important tool in resolving intratumor heterogeneity from bulk tumor genomic data, but prevailing methods are still able only to resolve only coarse-grained approximations of true clonal substructure. We seek to improve a genomic deconvolution strategy called “simplicial complex inference” that is designed to take advantage of similarity between the clonal 
+
+
+Removed: 5834868425ff05a97b00d799	A method of communicating inferred information to a wireless communication device user is provided. That method includes determining a location of the wireless device, inferring a likely interest of the user from the location of the wireless device, and transmitting data related to the interest to the wireless device. The method may also ascertain time at the location of the wireless communication device user and infer an interest of the user from the time and location of the user. In addition, the method may include inferences made from 
+
+
+Removed: 5834868425ff05a97b00cfca	Abstract In this paper, we show that untrusted computers can be used to securely facilitate mobile data access. We discuss a novel architecture, data staging, that improves the performance of distributed file systems running on small, storage-limited pervasive computing devices by opportunistically caching data on nearby surrogate machines. Surrogates are untrusted and unmanaged: we use end-to-end encryption and secure hashes to provide privacy and authenticity of data, and have designed our system so that 
+
+
+Removed: 5834868425ff05a97b00c1da	In this lecture we go from the view of logic programming as derived from inference rules for atomic propositions to one with explicit logical connectives. We have made this step before in order to describe the backwardchaining semantics of top-down logic programming as in Prolog. Here we instead describe the forward-chaining semantics of bottom-up logic programming. We use this to prove the correctness of an earlier example, and introduce an algorithm for unification as another example.
+
+
+Removed: 5834868425ff05a97b00e17a	Objective: The number of robots an operator can supervise increases with the robots' level of autonomy. The reported study investigates multirobot foraging to identify aspects of the task most suitable for automation. Background: Many envisioned applications of robotics involve multirobot teams. One of the simplest of these applications is foraging, in which robots are operated independently to explore and discover targets. Depending on levels of autonomy and task, operators have been found able to manage 3 to 12 robots. Method: The foraging 
+
+
+Removed: 5834868425ff05a97b00c13d	With the advancement of robotics, machine learning, and machine perception, increasingly more robots will enter human environments to assist with daily tasks. However, dynamically-changing human environments requires reactive motion plans. Reactivity can be accomplished through re-planning, eg model-predictive control, or through a reactive feedback policy that modifies on-going behavior in response to sensory events. In this paper, we investigate how to use machine learning to add reactivity to a previously 
+
+
+Removed: 5834868425ff05a97b00cfcc	Abstract: We describe an interface to incorporate application-specific knowledge for conflict resolution in an optimistically replicated file system. Conflicts arise in such systems because replicas of an object can be modified simultaneously in different network partitions. Application-specific knowledge is made available by the application writer in specialized tools called Application-Specific Resolvers (or ASRS). The interface we describe here is used to bind ASRs to objects and to specify the conditions under which a specific ASR is 
+
+
+Removed: 5834868425ff05a97b00d79d	The recent spate of security issues and allegations of “lost votes” in the US demonstrates the inadequacy of the standards used to evaluate our election systems. The current standards (the FEC Voting Systems Standards) along with the revision being developed by IEEE 1583 (see the article by Deutsch and Berger in last month's Communications) are poor from another perspective: they establish a single pass/fail threshold for all systems, thereby eliminating incentives for existing suppliers to improve their products and rendering the 
+
+
+Removed: 5834868425ff05a97b00e17c	Abstract 1 We have developed an approach to acquire complicated user optimization criteria and use them to guide iterative solution improvement. The effectiveness of the approach was tested on job shop scheduling problems. The ill-structuredness of the domain and the desired optimization objectives in real-life problems, such as factory scheduling, makes the problems difficult to formalize and costly to solve. Current optimization technology requires explicit global optimization criteria in order to control its search for the optimal solution. But 
+
+
+Removed: 5834868425ff05a97b00c1db	Variables in backward chaining in the style of Prolog are placeholders for unknown terms. They are determined during unification, which occurs when the head of a program clause is compared to the current goal. The same strategy does not seem appropriate for forward chaining. As a first example, consider∀ x. Q (x)⊣ Q (a). This violates the restrictions imposed for the last lecture, because x occurs in the head of∀ x. Q (x) but not its body (which is empty). We cannot focus on the right-hand side since no Q () is in the context. But we can 
+
+
+Removed: 5834868425ff05a97b00c13e	MICRO 2012 Reviewers Yoshi Abe, CMU Almutaz Adileh, EPFL Berkin Akin, CMU Haitham \nAkkary, AUB Fuad Al Tabba, Oracle Erik Altman, IBM Amin Ansari, Illinois Adria Armejach, BSC \nDavid August, Princeton Rachata Ausavarungnirun, CMU Seungjae Baek, Pittsburgh Ali \nBakhoda, UBC Ioana Baldini, IBM Research Avram Bar-Cohen, DARPA Christopher Batten, \nCornell Michela Becchi, Missouri Oren Ben-Kiki, Intel Keren Bergman, Columbia Kerry \nBernstein, DARPA Valeria Bertacco, Michigan Jesse Beu, Georgia Tech Rishiraj Bheda,  
+
+
+Removed: 5834868425ff05a97b00cfd0	Abstract The evolution of the Andrew File System (AFS) into a wide-area distributed file system has encouraged collaboration and information dissemination on a much broader scale than ever before. We examine AFS as a provider of wide-area file services to over 100 organizations around the world. We discuss usage characteristics of AFS derived from empirical measurements of the system. Our observations indicate that AFS provides robust and efficient data access in its current configuration, thus confirming its viability as a 
+
+
+Removed: 5834868425ff05a97b00c1f8	We have seen that there are many differences between the intuitionistic and classical approaches to the study of logic. Intuitionistic logic starts with a notion of proof which corresponds to constructions and give rise to computation. To justify the logical laws and define the meaning of the connectives we use verifications. On the other hand, in classical logic the meaning of propositions is defined via an interpretation in mathematical structures of various kind. For modal logic, the most prominent structure is that of Kripke models with 
+
+
+Removed: 5834868425ff05a97b00d026	Abstract: In automated negotiation systems consisting of self-interested agents, contracts have traditionally been binding, ie, impossible to breach. Such contracts do not allow the agents to act efficiently upon future events. A leveled commitment protocol allows the agents to decommit from contracts by paying a monetary penalty to the contracting partner. The efficiency of such protocols depends heavily on how the penalties are decided. Different leveled commitment protocols and their parameterizations are empirically compared to 
+
+
+Removed: 5834868425ff05a97b00e1cb	Agents often utilise the services of other agents to perform tasks within multi agent systems. To achieve this, an agent must first locate another agent that has the capability to provide a desired service (ie a service provider agent), and then interact with it. To communicate with a service provider, an agent requires information about: 1) the service provider agent's interface; 2) the ontology that defines concepts used by the provider agent; and 3) the agent communication language (ACL) the agent uses so that it can parse and understand the 
+
+
+Removed: 5834868425ff05a97b00c150	HANRUI ZHANG, Tsinghua University e design and analysis of randomized approximation algorithms has traditionally focused on the expected quality of the algorithm's solution, while largely overlooking the variance of this solution's quality—partly because such an algorithm typically gives rise to a deterministic algorithm with the same approximation ratio through derandomization. But in algorithmic mechanism design, there is a known separation between deterministic and randomized strategyproof mechanisms, that is, the risk 
+
+
+Removed: 5834868425ff05a97b00e1f2	Abstract The WWW is increasingly being used for announcements of important events and solicitations such as conference announcements and requests for proposals. This information is accessed by users using direct manipulation tools. The volume of this information is increasing daily and users currently must sift through large amounts of text to access relevant information. We describe a reusable agent that learns a model of the user's preferences, scouts appropriate information sources, filters the information, and notifies 
+
+
+Removed: 5834868425ff05a97b00d050	In determining a winning allocation in a forward auction, reverse auction or an exchange, a plurality of allocations are defined wherein each allocation defines a trade between one or more potential buyers and one or more potential sellers. At least one potential buyer is queried regarding at least one preference of the buyer about at least one allocation or a bundle associated therewith. The buyer's reply or intimation to the query is received and, based on the reply or intimation, each allocation that is either not feasible or not optimal is 
+
+
+Removed: 5834868425ff05a97b00e1fd	Abstract Trust plays an important role in collaborations because it creates an environment in which people can openly exchange ideas and information with one another and engineer innovative solutions together with less perceived risk. The rise in globally distributed software development has created an environment in which workers are likely to have less information and lower quality information about their remote colleagues. As such, the likelihood of coordination breakdowns increases. Observers of a breakdown are more 
+
+
+Removed: 5834868425ff05a97b00e1fe	Abstract Community code engagements--short-term, intensive software development events--are used by some scientific communities to create new software features and promote community building. But there is as yet little empirical support for their effectiveness. This paper presents a qualitative study of two types of community code engagements: Google Summer of Code (GSoC) and hackathons. We investigated the range of outcomes these engagements produce and the underlying practices that lead to these outcomes. In GSoC, 
+
+
+Removed: 5834868425ff05a97b00e205	Abstract Trust remains a challenge in globally distributed development teams. In order to investigate how trust plays out in this context, we conducted a qualitative study of 5 multi-national IT organizations. We interviewed 58 individuals across 10 countries and made two principal findings. First, study participants described trust in terms of their expectations of their colleagues. These expectations fell into one of three dimensions: that socially correct behavior will persist, that team members possess technical competency, and that 
+
+
+Removed: 5834868425ff05a97b00c15c	Abstract: Die Entwicklung und Analyse komplexer physikalischer Systeme, eingebetteter Systeme und computerisierter Steuerungssysteme ist außerordentlich kompliziert, durch die steigende Verbreitung und drastische Sicherheitsrelevanz allerdings von enormer Wichtigkeit und mit hohen Kosten verbunden. Hybride Systeme sind Modelle solcher komplexen physikalischen Systeme mit sich überlagerndem diskreten Schaltverhalten und kontinuierlicher Dynamik, die durch Differentialgleichungen beschrieben wird. Als 
+
+
+Removed: 5834868425ff05a97b00e20a	Abstract One of the reasons large-scale software development is difficult is the number of dependencies that software engineers face. These dependencies create a need for communication and coordination that requires continuous effort by developers. Empirical studies, including our own, suggest that technical dependencies among software components create social dependencies among the software developers implementing those components. Based on this observation, we developed Ariadne, a plug-in for 
+
+
+Removed: 5834868425ff05a97b00c212	Γ;∆⊣ P:: x: A where Γ consists of shared channels uj: Bj,∆ consists of linear channels xi: Ai, and x: A is also a linear channel. Therefore, our goal is to translate proof terms M to processes P that preserves typing. We see that the processes use one additional channel, along which they offer a service, so the translation will have to take this as a parameter. We write
+
+
+Removed: 5834868425ff05a97b00e20b	Abstract Organizations commonly fail to keep commitments made to their employees. Despite such violations, employees often remain with their organization. How these violation survivors cope with the aftermath of violation, revise their psychological contract, and restore their well-being are issues that have received little scholarly attention. In this paper we present a novel theory, Post-Violation Resilience (PVR) theory, which aims to strengthen understanding of the resilience process among violation survivors. Specifically, PVR 
+
+
+Removed: 5834868425ff05a97b00c162	We address the problem of model checking stochastic systems, ie checking whether a stochastic system satisfies a certain temporal property with a probability greater (or smaller) than a fixed threshold. In particular, we present a novel Statistical Model Checking (SMC) approach based on Bayesian statistics. We show that our approach is feasible for hybrid systems with stochastic transitions, a generalization of Simulink/Stateflow models. Standard approaches to stochastic (discrete) systems require numerical solutions for large 
+
+
+Removed: 5834868425ff05a97b00d063	Abstract Aggregating the preferences of self-interested agents is a key problem for multiagent systems, and one general method for doing so is to vote over the alternatives (candidates). Unfortunately, the Gibbard-Satterthwaite theorem shows that when there are three or more candidates, all reasonable voting rules are manipulable (in the sense that there exist situations in which a voter would benefit from reporting its preferences insincerely). To circumvent this impossibility result, recent research has investigated 
+
+
+Removed: 5834868425ff05a97b00c16c	Abstract We develop a theory of inductive and coinductive session types in a computational interpretation of linear logic, enabling the representation of potentially infinite interactions in a compositionally sound way that preserves logical soundness, a major stepping stone towards a full dependent type theory for expressing and reasoning about session-based concurrent higher order distributed programs. The language consists of a λ-calculus with inductive types and a contextual monadic type encapsulating session-based concurrency, 
+
+
+Removed: 5834868425ff05a97b00d07c	We provide a single reduction that demonstrates that in normal-form games:(1) it is NP-complete to determine whether Nash equilibria with certain natural properties exist (these results are similar to those obtained by Gilboa and Zemel [Gilboa, I., Zemel, E., 1989. Nash and correlated equilibria: Some complexity considerations. Games Econ. Behav. 1, 80–93]),(2) more significantly, the problems of maximizing certain properties of a Nash equilibrium are inapproximable (unless P= NP), and (3) it is# P-hard to count the Nash 
+
+
+Removed: 5834868425ff05a97b00e228	Abstract Participatory sensing systems use people and their smartphones as a sensing infrastructure, and getting people to make contributions remains a critical challenge. Little work details how system designers should combine different interactions to increase coverage of service location. Tiramisu, a participatory sensing system, invites transit riders to crowdsource real-time arrival information by sharing location traces when they commute. We extended this system with a new feature that allows riders at stops to\ spot\" buses passing "
+
+
+Removed: 5834868425ff05a97b00d080	Abstract This paper presents a formalization of the bidding and awarding decision process that was left undefined in the original contract net task allocation protocol. This formalization is based on marginal cost calculations based on local agent criteria. In this way, agents having very different local criteria (based on their selfinterest) can interact to distribute tasks so that the network as a whole functions more effectively. In this model, both competitive and cooperative agents can interact. In addition, the contract net protocol is extended to allow 
+
+
+Removed: 5834868425ff05a97b00c170	The LICS Symposium is an annual international forum on theoretical and practical topics in computer \nscience that relate to logic in a broad sense. We invite submissions on that theme. \nSuggested, but not exclusive, topics of interest for submissions include: automata theory, \nauto- mated deduction, categorical models and logics, concurrency and distributed \ncomputation, con- straint programming, constructive mathematics, database theory, domain \ntheory, finite model theory, formal aspects of program analysis, formal methods, hybrid  
+
+
+Removed: 5834868425ff05a97b00d07e	This paper analyzes coalitions among self-interested agents that need to solve combinatorial optimization problems to operate efficiently in the world. By colluding (coordinating their actions by solving a joint optimization problem) the agents can sometimes save costs compared to operating individually. A model of bounded rationality is adopted where computation resources are costly. It is not worthwhile solving the problems optimally: solution quality is decision-theoretically traded off against computation cost. A 
+
+
+Removed: 5834868425ff05a97b00c22d	Abstract Prior work has established the logical connection between linear sequent calculus and session-typed message-passing concurrent computation. The basic system was shown to guarantee strong properties such as session fidelity and deadlock freedom. In this thesis, we extend the basic type system with intersection and union types in order to express multiple behavioral properties of processes in a single type. In the presence of equirecursive types and a natural notion of subtyping, the resulting system turns out to be strong enough 
+
+
+Removed: 5834868425ff05a97b00e22a	Abstract Access to large numbers of data sources introduces new problems for users of heterogeneous distributed databases. End users and application programmers must deal with unavailable data sources. Database administrators must deal with incorporating each new data source into the model. Database implementors must deal with the translation of queries between query languages and schemas. The Distributed Information Search COmponent (Disco) addresses these problems. Query processing semantics are 
+
+
+Removed: 5834868425ff05a97b00c232	We address the problem of complementing higher-order patterns without repetitions of existential variables. Differently from the first-order case, the complement of a pattern cannot, in general, be described by a pattern, or even by a finite set of patterns. We therefore generalize the simplytyped λ-calculus to include an internal notion of strict function so that we can directly express that a term must depend on a given variable. We show that, in this more expressive calculus, finite sets of patterns without repeated variables are closed 
+
+
+Removed: 5834868425ff05a97b00d081	Coalition formation is a key topic in multiagent systems. One may prefer a coalition structure that maximizes the sum of the values of the coalitions, but often the number of coalition structures is too large to allow exhaustive search for the optimal one. Furthermore, finding the optimal coalition structure is NP-complete. But then, can the coalition structure found via a partial search be guaranteed to be within a bound from optimum? We show that none of the previous coalition structure generation algorithms can establish any bound because 
+
+
+Removed: 5834868425ff05a97b00c234	In this lecture we combine ideas from the previous two lectures, linear monadic logic programming and higher-order abstract syntax, to present a specification technique for programming languages we call substructural operational semantics. The main aim of this style of presentation is semantic modularity: we can add new language features without having to rewrite prior definitions for smaller language fragments. We determine that this is mostly the case, although structural properties of the specification such as weakening or 
+
+
+Removed: 5834868425ff05a97b00d85a	Autor: Smola, AJ et al.; Genre: Buchkapitel; Im Druck\nveröffentlicht: 2003; Titel: Bayesian Kernel Models.\n
+
+
+Removed: 5834868425ff05a97b00e236	Documents; Authors; Tables. Log in; Sign up; MetaCart; Donate. CiteSeerX logo. Documents:\nAdvanced Search Include Citations. Authors: Advanced Search Include Citations. Tables: GlOSS:\nText-Source Discovery over the Internet (1998). Cached. Download as a PDF. Download Links.\n[www1.cs.columbia.edu]; [www.cs.columbia.edu]; [www.cs.virginia.edu]; [wortschatz.uni-leipzig.\nde]; [wortschatz.uni-leipzig.de]; [www.cs.columbia.edu] Other Repositories/Bibliography.  \n
+
+
+Removed: 5834868425ff05a97b00c180	Page 1. Contents for Volume 8 Issue No. 1 Editorial 3 DM Gabbay A Module System for a\nProgramming Language Based on the LF Logical 5 Framework R. Harper and F. Pfenning\nleanTAP Revisited 33 M. Fitting Constructive Z 49 S.-H. Mirian-Hosseinabadi and R. Turner\nEnhancing Fixed Point Logic with Cardinality Quantifiers 71 L. Hella and H. Imhof Updates and\nCounterfactuals 87 G. Grahne Adding die Everywhere Operator to Prepositional Logic 119 D.\nGries and FB Schneider Issue No. 2 Computation of Prime Implicates using Matrix and Paths  \n
+
+
+Removed: 5834868425ff05a97b00c23d	When we recast verifications as sequent proofs, we picked up a lot of redundancy in the choices we can make during proof search. Focusing is a way to eliminate much of this redundancy. On the so-called negative fragment of intutionistic logic, which consists of all connectives whose right rules are invertible, we can restore an isomorphism between verifications and focused proofs. If we also include positive connectives, we can do even better than verifications by further narrowing down the space of proofs with focusing. On 
+
+
+Removed: 5834868425ff05a97b00d85b	Abstract We introduce a unifying framework for discriminative and generative estimation. It is based on the fact that a large number of existing algorithms can be written as estimators of (conditional) densities by means of an exponential family. Special cases of this include Support Vectors, Gaussian Processes and Undirected graphical models and their combinations. It allows us to derive a large number of novel algorithms and statistical interpretations of existing algorithms easily, such as for multiclass classification, estimation 
+
+
+Removed: 5834868425ff05a97b00d0ba	Abstract: We present a deep hierarchical recurrent neural network for sequence tagging. Given a sequence of words, our model employs deep gated recurrent units on both character and word levels to encode morphology and context information, and applies a conditional random field layer to predict the tags. Our model is task independent, language independent, and feature engineering free. We further extend our model to multi-task and cross-lingual joint training by sharing the architecture and parameters. Our model 
+
+
+Removed: 5834868425ff05a97b00e248	Methods, apparatuses, and systems to automate a procedural task. In one embodiment, computer-readable memory including computer readable instructions which, when executed by a processor, cause the processor to perform steps comprising: identifying a set of data, wherein the data includes a plurality of items; prompting the user to process at least one item of the data in a predetermined manner, wherein the user interacts with a predetermined form system to process the data; monitoring input of the user, wherein the input of the user 
+
+
+Removed: 5834868425ff05a97b00c244	Abstract In this thesis proposal we propose to prove type preservation for Core SML. Type preservation is stated roughly as follows: if a phrase has type and evaluates to a value v, then v has type. In addition to being a very important property of SML, the proof of this theorem, which will be done with the theorem prover HOL, will demonstrate several things. First, that theorem provers are now capable of tackling big software problems. Second, that the speci cation technique used in the The De nition of Standard ML is a reasonable one 
+
+
+Removed: 5834868425ff05a97b00e252	Abstract Participatory sensing systems (PSS) require frequent injection of information that has a short shelf-life. The use of crowds to gather information for PSS is therefore particularly challenging. In this study, we explore the impact of two policies on user contributions. A quid-pro-quo policy exchanges contributions from users for access to critical information in the system. A request policy simply reminds the user that information is needed to make the system function well. Prior research has shown that request for help in crowdsourced 
+
+
+Removed: 5834868425ff05a97b00c24a	Abstract We contend that modularity is the key to improving software quality. We advocate a view of modularity that emphasizes not the mere assembling of software systems from component parts, but rather the specification of interfaces between components, verification that components meet their specifications, and the assembling only of components with compatible specifications. Key to this methodology is the use of types to specify and automatically to verify adherence to interfaces. We claim that this methodology makes a 
+
+
+Removed: 5834868425ff05a97b00d08e	Abstract//TRACE is a new approach for extracting and replaying traces of parallel applications to recreate their I/O behavior. Its tracing engine automatically discovers inter-node data dependencies and inter-request compute times for each node (process) in an application. This information is reflected in per-node annotated I/O traces. Such annotation allows a parallel replayer to closely mimic the behavior of a traced application across a variety of storage systems. When compared to other replay mechanisms,//TRACE offers 
+
+
+Removed: 5834868425ff05a97b00c256	Abstract State-of-the-art applications of Stackelberg security games—including wildlife protection—offer a wealth of data, which can be used to learn the behavior of the adversary. But existing approaches either make strong assumptions about the structure of the data, or gather new data through online algorithms that are likely to play severely suboptimal strategies. We develop a new approach to learning the parameters of the behavioral model of a bounded rational attacker (thereby pinpointing a near optimal strategy), by observing 
+
+
+Removed: 5834868425ff05a97b00e27f	Abstract Each month, more attacks are launched with the aim of making web users believe that they are communicating with a trusted entity for the purpose of stealing account information, logon credentials, and identity information in general. This attack method, commonly known as\ phishing,\" is most commonly initiated by sending out emails with links to spoofed websites that harvest information. We present a method for detecting these attacks, which in its most general form is an application of machine learning on a feature "
+
+
+Removed: 5834868425ff05a97b00d0d5	Abstract People can learn visual concepts from just one example, but it remains a mystery how this is accomplished. Many authors have proposed that transferred knowledge from more familiar concepts is a route to one shot learning, but what is the form of this abstract knowledge? One hypothesis is that the sharing of parts is core to one shot learning, and we evaluate this idea in the domain of handwritten characters, using a massive new dataset. These simple visual concepts have a rich internal part structure, yet they are particularly 
+
+
+Removed: 5834868425ff05a97b00d099	Abstract End-to-end tracing captures the work ow of causally-related activity (eg, work done to process a request) within and among the components of a distributed system. As distributed systems grow in scale and complexity, such tracing is becoming a critical tool for management tasks like diagnosis and resource accounting. Drawing upon our experiences building and using end-to-end tracing infrastructures, this paper distills the key design axes that dictate trace utility for important use cases. Developing tracing infrastructures without 
+
+
+Removed: 5834868425ff05a97b00c259	Abstract This paper explores a PAC (probably approximately correct) learning model in cooperative games. Specifically, we are given m random samples of coalitions and their values, taken from some unknown cooperative game; can we predict the values of unseen coalitions? We study the PAC learnability of several well-known classes of cooperative games, such as network flow games, threshold task games, and induced subgraph games. We also establish a novel connection between PAC learnability and core stability: for 
+
+
+Removed: 5834868425ff05a97b00d0d6	Abstract: The recent proliferation of richly structured probabilistic models raises the question of how to automatically determine an appropriate model for a dataset. We investigate this question for a space of matrix decomposition models which can express a variety of widely used models from unsupervised learning. To enable model selection, we organize these models into a context-free grammar which generates a wide variety of structures through the compositional application of a few simple rules. We use our grammar to generically and 
+
+
+Removed: 5834868425ff05a97b00d8ab	2008 Technical Reports by Author Computer Science Department School of Computer Science,\nCarnegie Mellon University. ACAR, Umut A. CMU-CS-08-141. AGARWAL, Pratul K.\nCMU-CS-08-109. ALDRICH, Jonathan CMU-CS-08-120, CMU-CS-08-169. BAILEY-KELLOGG,\nChris CMU-CS-08-162. BALCAN, Maria-Florina CMU-CS-08-153. BAR-JOSEPH, Ziv\nCMU-CS-08-118. BLELLOCH, Guy E. CMU-CS-08-110, CMU-CS-08-115. BRUMLEY, David\nCMU-CS-08-159. CHELLAPPA, Srinivas CMU-CS-08-117. CHEN, Shimin CMU-CS-08-170.  \n
+
+
+Removed: 5834868425ff05a97b00d09a	Abstract: The causes of performance changes in a distributed system often elude even its developers. This paper develops a new technique for gaining insight into such changes: comparing system behaviours from two executions (eg, of two system versions or time periods). Building on end-to-end request flow tracing within and across components, algorithms are described for identifying and ranking changes in the flow and/or timing of request processing. The implementation of these algorithms in a tool called Spectroscope 
+
+
+Removed: 5834868425ff05a97b00c199	Arrays have efficient O (1) access to elements given an index, but their size is set at allocation time. This makes storing an unknown number elements problematic: if the size is too small we may run out of places to put them, and if it is too large we will waste memory. Linked lists do not this problem at all since they are extensible, but accessing an element is O (1). In this lecture, we introduce unbounded arrays, which like lists can hold an arbitrary number of elements, but also allow these element to be retrieved in O (1) time? What 
+
+
+Removed: 5834868425ff05a97b00d0e1	Abstract We describe how the pre-training algorithm for Deep Boltzmann Machines (DBMs) is related to the pre-training algorithm for Deep Belief Networks and we show that under certain conditions, the pre-training procedure improves the variational lower bound of a two-hidden-layer DBM. Based on this analysis, we develop a different method of pre-training DBMs that distributes the modelling work more evenly over the hidden layers. Our results on the MNIST and NORB datasets demonstrate that the new pre-training algorithm allows us 
+
+
+Removed: 5834868425ff05a97b00c8ad	Abstract: With the increasing popularity of actuators involving smart materials like piezoelectric, control of such materials becomes important. The existence of the inherent hysteretic behavior hinders the tracking accuracy of the actuators. To make matters worse, the hysteretic behavior changes with rate. One of the suggested ways is to have a feedforward controller to linearize the relationship between the input and output. Thus, the hysteretic behavior of the actuator must be first modeled by sensing the relationship 
+
+
+Removed: 5834868425ff05a97b00d8af	Abstract. In an intelligent space, the user must be able to interact with the environment's multi-agent system while roaming between locations—rendering traditional desktop computer interaction paradigms inapplicable. Although handheld devices are an important platform for interface agents, their displays are inadequate for many pervasive computing tasks and need to be supplemented by larger high-resolution displays. We propose the notion of augmenting indoor intelligent environments with ambient projection, where large 
+
+
+Removed: 5834868425ff05a97b00c267	2013 Technical Reports by Author Computer Science Department School of Computer\nScience, Carnegie Mellon University. AKAN, Mustafa CMU-CS-13-109. ALDRICH,\nJonathan CMU-CS-13-132. AUSAVARUNGNIRUN, Rachata CMU-CS-13-108.\nBALZER, Stephanie CMU-CS-13-132. BLELLOCH, Guy E. CMU-CS-13-101. BORGS,\nChristian CMU-CS-13-109. CERVESATO, Iliano CMU-CS-13-106. CHAYES, Jennifer\nT. CMU-CS-13-109. CHEN, Zhuo CMU-CS-13-134.  \n
+
+
+Removed: 5834868425ff05a97b00d8c3	Abstract Sun-synchronous navigation is a technique that involves tracking the sun while exploring terrain. It is accomplished by traveling opposite to planetary rotation and in synchrony with the sun to always remain in sunlight. At appropriate latitude and speed, solar-powered rovers can maintain continual exposure to solar radiation sufficient for sustained operation. We are prototyping a robot, named Hyperion, for solar-powered operation in polar environments and developing sun-cognizant navigation methods to enable rovers to 
+
+
+Removed: 5834868425ff05a97b00c273	This course is devoted to the study of the Foundations of Cyber-Physical Systems [Pla12c, Pla12b]. Lecture 3 on Choice & Control explained hybrid programs, a program notation for hybrid systems [Pla08, Pla10, Pla12c, Pla12a]. Lecture 4 on Safety & Contracts defined differential dynamic logic [Pla08, Pla10, Pla12c, Pla12a] as a specification and verification logic for hybrid programs. Lecture 5 on Dynamical Systems & Dynamic Axioms and subsequent lectures studied proof principles for differential dynamic logic with which we 
+
+
+Removed: 5834868425ff05a97b00e2b5	Abstract We have developed a set of metrics and skill scores to analyze the performance of the objective analysis algorithm Ionospheric Data Assimilation Three-Dimensional (IDA3D). The objective of the skill score is to quantify the improvement in model predictions after either assimilation of a new data source, or improvement in the model itself. The metrics chosen to be evaluated by the skill score include electron density in the E-regin, F-region, and topside of the ionosphere, total electron content (TEC), F-region peak height and F-
+
+
+Removed: 5834868425ff05a97b00d8ca	Abstract Enabling multiple robots to work together as a team is a difficult problem. Robots must decide amongst themselves who should work on which goals and at what time each goal should be achieved. Since the team is situated in some physical environment, the robots must consider travel time in these decisions. This is particularly challenging in time critical domains where goal rewards decrease over time and for tightly coupled coordination where multiple robots must work together on each goal. Further complications arise when 
+
+
+Removed: 5834868425ff05a97b00c27b	In the previous lectures, we have studied models of cyber-physical systems. Hybrid programs provide a programming language for cyber-physical systems [Pla12c, Pla08, Pla10] with the most prominent features being differential equations and nondeterminism alongside the usual classical control structures and discrete assignments. This gives powerful and flexible ways of modeling even very challenging systems and very complex control principles. This lecture will start studying ways of making sure that the resulting 
+
+
+Removed: 5834868425ff05a97b00e2ca	Abstract Our weakly random additive preconditioners facilitate the solution of linear systems of equations and other fundamental matrix computations. Compared to the popular SVD-based multiplicative preconditioners, these preconditioners are generated more readily and for a much wider class of input matrices. Furthermore they better preserve matrix structure and sparseness and have a wider range of applications, in particular to linear systems with rectangular coefficient matrices. We study the generation of such preconditioners and their 
+
+
+Removed: 5834868425ff05a97b00c1b8	According to the Encyclopædia Britannica, logic is the study of propositions and their use in argumentation. From the breadth of this definition it is immediately clear that logic constitutes an important area in the disciplines of philosophy and mathematics. Logical tools and methods also play an essential role in the design, specification, and verification of computer hardware and software. It is these applications of logic in computer science which will be the focus of this course. In order to gain a proper understanding of logic and its relevance to 
