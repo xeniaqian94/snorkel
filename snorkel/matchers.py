@@ -137,7 +137,15 @@ class DictionaryMatch(NgramMatcher):
         # p = self._stem(p) if self.stemmer is not None else p
 
         p = self.stemmed_text(c)  # p is a string
+        # if any([(word in p) for word in self.d]):
+        #     print(p,any([(word in p) for word in self.d]))
         return (not self.reverse) if any([(word in p) for word in self.d]) else self.reverse
+
+
+class SentenceMatch(DictionaryMatch):
+
+    def _f(self, c):
+        return (not self.reverse) if any([(word in c.sentence.text) for word in self.d]) else self.reverse 
 
 
 class LambdaFunctionMatcher(NgramMatcher):
@@ -175,13 +183,9 @@ class Intersection(NgramMatcher):
 
     def f(self, c):
         for child in self.children:
-            # input(type(child))
             if not child.f(c):
                 return False
         return True
-
-    # def _f(self, c):
-    #     return self.f(c)
 
 
 class Concat(NgramMatcher):
