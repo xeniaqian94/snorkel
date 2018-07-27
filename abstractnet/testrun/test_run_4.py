@@ -3,13 +3,29 @@ import sys
 from snorkel import SnorkelSession
 from snorkel.parser.spacy_parser import Spacy
 from snorkel.parser import CorpusParser
-from snorkel.models import Document, Sentence
+from snorkel.models import Document, Sentence,Candidate
 from snorkel.models.meta import create_session_with_conn
 import argparse
 from snorkel.models import candidate_subclass
 from snorkel.candidates import Ngrams, CandidateExtractor
 from snorkel.matchers import *
 import imp
+
+
+def debug_sess_eval(session,Background,matcher):
+	
+	cands=session.query(Background).filter(Background.split==0).all()
+	print(len(cands))
+
+	results=matcher.udf_init_kwargs['matchers'][0].apply(cands)
+
+	for result in results:
+		input(type(result))
+		input(result)
+
+	print("Candidate")
+	cands2=session.query(Candidate).filter(Candidate.split==0).all()
+	print(cands)
 
 def extract_and_display(train_sents,dev_sents,test_sents, session, matcher,candidate_class,candidate_class_name,train_doc_breakdown_map=None,test_doc_breakdown_map=None,selected_split=0,is_print=True):  
 	# split over train/dev/test but returns only train set
@@ -28,6 +44,7 @@ def extract_and_display(train_sents,dev_sents,test_sents, session, matcher,candi
 
 	# add candidates into train_doc_breakdown_map
 	if train_doc_breakdown_map is not None:
+		cands = session.query(candidate_class).filter(candidate_class.split == 0).all()
 		for cand in cands:
 			doc_name=cand.get_parent().get_parent().name
 			if doc_name not in train_doc_breakdown_map:
@@ -97,21 +114,31 @@ def main(argv):
 				train_sents.add(s)
 
 
+	General,general_extractor=util_module.get_segment_class_and_matcher("General",ngrams)
+	general_cands=extract_and_display(train_sents,dev_sents,test_sents, session, general_extractor,General,"General",train_doc_breakdown_map=train_doc_breakdown_map,test_doc_breakdown_map=test_doc_breakdown_map)
+
+
+	input("Finished general ")
+
 	# load segment_candidate_class and corresponding_matcher, e.g. (Background, non_comma_dict_background_matcher)
-	# Background,background_matcher=util_module.get_segment_class_and_matcher("Background",ngrams)
-	# background_cands=extract_and_display(train_sents,dev_sents,test_sents, session, background_matcher,Background,"Background",train_doc_breakdown_map=train_doc_breakdown_map,test_doc_breakdown_map=test_doc_breakdown_map)
+	Background,background_matcher=util_module.get_segment_class_and_matcher("Background",ngrams)
+	background_cands=extract_and_display(train_sents,dev_sents,test_sents, session, background_matcher,Background,"Background",train_doc_breakdown_map=train_doc_breakdown_map,test_doc_breakdown_map=test_doc_breakdown_map)
 
-	# Purpose,purpose_matcher=util_module.get_segment_class_and_matcher("Purpose",ngrams)
-	# purpose_cands=extract_and_display(train_sents,dev_sents,test_sents, session, purpose_matcher,Purpose,"Purpose",train_doc_breakdown_map=train_doc_breakdown_map,test_doc_breakdown_map=test_doc_breakdown_map)
 
-	Mechanism,mechanism_matcher=util_module.get_segment_class_and_matcher("Mechanism",ngrams)
-	mechanism_cands=extract_and_display(train_sents,dev_sents,test_sents, session, mechanism_matcher,Mechanism,"Mechanism",train_doc_breakdown_map=train_doc_breakdown_map,test_doc_breakdown_map=test_doc_breakdown_map)
+	debug_sess_eval(session,Background,background_matcher)
 
-	Method,method_matcher=util_module.get_segment_class_and_matcher("Method",ngrams)
-	method_cands=extract_and_display(train_sents,dev_sents,test_sents, session, method_matcher,Method,"Method",train_doc_breakdown_map=train_doc_breakdown_map,test_doc_breakdown_map=test_doc_breakdown_map)
+	
+	# # Purpose,purpose_matcher=util_module.get_segment_class_and_matcher("Purpose",ngrams)
+	# # purpose_cands=extract_and_display(train_sents,dev_sents,test_sents, session, purpose_matcher,Purpose,"Purpose",train_doc_breakdown_map=train_doc_breakdown_map,test_doc_breakdown_map=test_doc_breakdown_map)
 
-	Finding,finding_matcher=util_module.get_segment_class_and_matcher("Finding",ngrams)
-	finding_cands=extract_and_display(train_sents,dev_sents,test_sents, session, finding_matcher,Finding,"Finding",train_doc_breakdown_map=train_doc_breakdown_map,test_doc_breakdown_map=test_doc_breakdown_map)
+	# Mechanism,mechanism_matcher=util_module.get_segment_class_and_matcher("Mechanism",ngrams)
+	# mechanism_cands=extract_and_display(train_sents,dev_sents,test_sents, session, mechanism_matcher,Mechanism,"Mechanism",train_doc_breakdown_map=train_doc_breakdown_map,test_doc_breakdown_map=test_doc_breakdown_map)
+
+	# Method,method_matcher=util_module.get_segment_class_and_matcher("Method",ngrams)
+	# method_cands=extract_and_display(train_sents,dev_sents,test_sents, session, method_matcher,Method,"Method",train_doc_breakdown_map=train_doc_breakdown_map,test_doc_breakdown_map=test_doc_breakdown_map)
+
+	# Finding,finding_matcher=util_module.get_segment_class_and_matcher("Finding",ngrams)
+	# finding_cands=extract_and_display(train_sents,dev_sents,test_sents, session, finding_matcher,Finding,"Finding",train_doc_breakdown_map=train_doc_breakdown_map,test_doc_breakdown_map=test_doc_breakdown_map)
 
 
 

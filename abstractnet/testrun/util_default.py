@@ -55,6 +55,11 @@ def get_segment_class_and_matcher(name,ngrams=None,non_comma_matcher=DictionaryM
 		dict_finding_matcher=DictionaryMatch(d=['show that','shows that','found','indicate','results','performance','find'],longest_match_only=True) 
 		non_comma_dict_finding_matcher=CandidateExtractor(Finding, [ngrams], [Intersection(non_comma_matcher,dict_finding_matcher)])
 		return Finding, non_comma_dict_finding_matcher
+
+	elif name.lower()=="general":
+		General=candidate_subclass('General',['general_cue'])
+		general_extractor=CandidateExtractor(General,[ngrams],[non_comma_matcher])
+		return General,general_extractor
 		
 
 

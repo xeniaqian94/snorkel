@@ -44,6 +44,11 @@ def get_text_splits(c):
     chunks.append(text[spans[-1][1]+1:])
     return chunks
 
+def get_first_span_text(c):
+	span = c.get_contexts()[0]
+	text=span.get_parent().text
+	return text[span.char_start:span.char_end+1]
+
 
 def get_tagged_text(c):
     """
@@ -188,6 +193,9 @@ def rule_text_in_span(candidate, text, span, sign):
 def rule_regex_search_tagged_text(candidate, pattern, sign):
     return sign if re.search(pattern, get_tagged_text(candidate), flags=re.I) else 0
 
+def rule_regex_search_candidate_text(candidate, pattern, sign):
+    return sign if re.search(pattern, get_first_span_text(candidate), flags=re.I) else 0
+
 
 def rule_regex_search_btw_AB(candidate, pattern, sign):
     return sign if re.search(r'{{A}}' + pattern + r'{{B}}', get_tagged_text(candidate), flags=re.I) else 0
@@ -210,7 +218,11 @@ def test_LF(session, lf, split, annotator_name):
     and also returns the error buckets of the candidates.
     """
     test_candidates = session.query(Candidate).filter(Candidate.split == split).all()
+    print("test_candidates #", len(test_candidates))
     test_labels     = load_gold_labels(session, annotator_name=annotator_name, split=split)
+    print("test_gold_labels",test_labels)
     scorer          = MentionScorer(test_candidates, test_labels)
     test_marginals  = np.array([0.5 * (lf(c) + 1) for c in test_candidates])
-    return scorer.score(test_marginals, set_unlabeled_as_neg=False, set_at_thresh_as_neg=False)
+    print("test_marginals",test_marginals)
+    print("num predicted positive ",test_marginals.sum())
+    return scorer.score(test_marginals, set_unlabeled_as_neg=False, set_at_thresh_as_neg=False)  # in this case, _score_binary()

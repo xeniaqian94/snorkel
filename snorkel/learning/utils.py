@@ -118,7 +118,7 @@ class Scorer(object):
         return cardinality
 
     def score(self, test_marginals, **kwargs):
-        cardinality = self._get_cardinality(test_marginals)
+        cardinality = self._get_cardinality(test_marginals)  # number of classes
         if cardinality == 2:
             return self._score_binary(test_marginals, **kwargs)
         else:
