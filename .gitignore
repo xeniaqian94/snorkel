@@ -38,6 +38,7 @@ tutorials/intro/data/gold_labels.tsv
 tutorials/tables/data/hardware/
 
 # abstractnet
+abstractnet/testrun/data/70kpaper_cleaned.tsv
 abstractnet/testrun/data/70kpaper.tsv
 abstractnet/cdr/data/CDR*.BioC.xml
 abstractnet/cdr/data/dicts
