@@ -212,17 +212,17 @@ def rule_regex_search_before_A(candidate, pattern, sign):
 def rule_regex_search_before_B(candidate, pattern, sign):
     return sign if re.search(pattern + r'{{B}}.*{{A}}', get_tagged_text(candidate), flags=re.I) else 0
 
-def test_LF(session, lf, split, annotator_name):
+def test_LF(session, lf, split, annotator_name,test_labels=None):
     """
     Gets the accuracy of a single LF on a split of the candidates, w.r.t. annotator labels,
     and also returns the error buckets of the candidates.
     """
     test_candidates = session.query(Candidate).filter(Candidate.split == split).all()
     print("test_candidates #", len(test_candidates))
-    test_labels     = load_gold_labels(session, annotator_name=annotator_name, split=split)
-    print("test_gold_labels",test_labels)
+    test_labels = load_gold_labels(session, annotator_name=annotator_name, split=split)
+    # print("test_gold_labels # ",len(test_labels))
     scorer          = MentionScorer(test_candidates, test_labels)
     test_marginals  = np.array([0.5 * (lf(c) + 1) for c in test_candidates])
     print("test_marginals",test_marginals)
-    print("num predicted positive ",test_marginals.sum())
+    # print("num predicted positive ",test_marginals.sum())
     return scorer.score(test_marginals, set_unlabeled_as_neg=False, set_at_thresh_as_neg=False)  # in this case, _score_binary()

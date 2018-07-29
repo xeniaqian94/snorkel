@@ -176,11 +176,15 @@ class Annotator(UDFRunner):
         cids_query = cids_query or session.query(Candidate.id)\
                                           .filter(Candidate.split == split)
 
+
         # Note: In the current UDFRunner implementation, we load all these into memory and fill a
         # multiprocessing JoinableQueue with them before starting... so might as well load them here and pass in.
         # Also, if we try to pass in a query iterator instead, with AUTOCOMMIT on, we get a TXN error...
         cids       = cids_query.all()
         cids_count = len(cids)
+
+        print(cids_count)
+        print(key_group)
 
         # Run the Annotator
         super(Annotator, self).apply(cids, split=split, key_group=key_group,
@@ -244,7 +248,6 @@ class AnnotatorUDF(UDF):
     def apply(self, cid, **kwargs):
         """
         Applies a given function to a Candidate, yielding a set of Annotations as key_name, value pairs
-
         Note: Accepts a candidate _id_ as argument, because of issues with putting Candidate subclasses
         into Queues (can't pickle...)
         """
@@ -415,7 +418,6 @@ def load_gold_labels(session, annotator_name, **kwargs):
 
 class LabelAnnotator(Annotator):
     """Apply labeling functions to the candidates, generating Label annotations
-
     :param lfs: A _list_ of labeling functions (LFs)
     """
     def __init__(self, lfs=None, label_generator=None):
@@ -468,7 +470,6 @@ class FeatureAnnotator(Annotator):
 
 def save_marginals(session, X, marginals, training=True):
     """Save marginal probabilities for a set of Candidates to db.
-
     :param X: Either an M x N csr_AnnotationMatrix-class matrix, where M
         is number of candidates, N number of LFs/features; OR a list of
         arbitrary objects with candidate ids accessible via a .id attrib
@@ -476,7 +477,6 @@ def save_marginals(session, X, marginals, training=True):
         K is the cardinality of the candidates, OR a M-dim list/array if K=2.
     :param training: If True, these are training marginals / labels; else they
         are saved as end model predictions.
-
     Note: The marginals for k=0 are not stored, only for k = 1,...,K
     """
     # Make sure that we are working with a numpy array
