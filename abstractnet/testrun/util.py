@@ -47,7 +47,7 @@ def load_groundtruth_as_external_dict(groundtruth_path):
     groundtruth_dict=defaultdict(lambda: defaultdict(lambda: list()))
     with open(groundtruth_path) as f:
         for line in f.readlines():
-            text=line.split("\t")[0].strip()
+            text=line.split("\t")[0].strip("., \n").strip()
             label=line.split("\t")[1].strip()
             name=line.split("\t")[2].strip()
             groundtruth_dict[name][label]+=[text]
@@ -56,9 +56,10 @@ def load_groundtruth_as_external_dict(groundtruth_path):
 def write_segment_name(cands,fpath,groundtruth_dict,segment_name):
     with open(fpath,"w") as f_write:
         f_write.write("segment\tlabel\n")
+        unmatched_count=0
         for segment in cands:
             labeled=False
-            striped_query_text=get_candidate_text(segment).strip("., ") # strip by . , or space
+            striped_query_text=get_candidate_text(segment).strip("., \n").strip() # strip by . , or space
             stable_label_id=segment.segment_cue.stable_id
             docid=segment.get_parent().document.name
             
@@ -68,8 +69,20 @@ def write_segment_name(cands,fpath,groundtruth_dict,segment_name):
                 else:
                     label=-1
                 for gold_sentence in groundtruth_dict[docid][sname]:
-                    if striped_query_text in gold_sentence and labeled==False:
+                    if striped_query_text.lower() in gold_sentence.lower() and labeled==False:
                         f_write.write(str(stable_label_id)+"\t"+str(label)+"\n")
+                        if label==1:
+                            print(striped_query_text)
                         # print(str(striped_query_text),"is ", str(sname), "so purpose=",str(label))
                         # print()
                         labeled=True
+
+
+            if labeled==False:
+                unmatched_count+=1
+                print("Unmatched - striped_query_text: ",striped_query_text)
+                # print(segment.__dict__)
+                # print(groundtruth_dict[docid])
+        print("\n\nOut of "+str(len(cands))+", "+str(unmatched_count)+" are unmatched"+(", great job!" if unmatched_count==0 else ", please double check"))
+
+

@@ -28,6 +28,7 @@ with open(sys.argv[1]) as csvfile:
 				for sentence in re.split("\\.",text):
 					segments=re.split(",",sentence)
 					for i in range(len(segments)):
-						f_write.write(segments[i].strip()+"\t"+pair[1]+"\t2K_dev_"+str(row[0])+"\n")
+						if len(segments[i].strip())>5:
+							f_write.write(segments[i].strip()+"\t"+pair[1]+"\t2K_dev_"+str(row[0])+"\n")
 			except:
 				continue
