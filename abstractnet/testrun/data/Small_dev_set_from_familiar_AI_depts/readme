@@ -1,0 +1,26 @@
+0. Filtered_MLD_RI_HCI_CSD_LTI_ISR is created through VLOOKUP, that finds author affiliation from faculty.csv
+
+1. Create gold segments 
+	python segment_label_2K_paper_comma_concatenated.py annotations_label-level_all-to-date-2018-4-25-WithTitle.csv 2
+valid_title_count  2071
+	
+	python segment_label_2K_paper_comma_concatenated.py annotations_label-level_all-to-date-2018-4-25-WithTitle.csv 1 Filtered_MLD_RI_HCI_CSD_LTI_ISR.csv
+valid_title_count  480
+
+2. Regroup segments into pseudo docs:
+	
+	python regroup_groundtruth_2K_paper.py annotations_label-level_all-to-date-2018-4-25-WithTitle.labelled_level_1.csv 
+	
+	python regroup_groundtruth_2K_paper.py annotations_label-level_all-to-date-2018-4-25-WithTitle.labelled_level_2.csv 
+
+3. Concatenate three files together, train/dev/test set
+
+70K papers plus 10 cscw paper samples are in 70kpaper_061418_cleaned_noBookLecture
+2K groundtruth are in annotations_label-level_all-to-date-2018-4-25-WithTitle.labelled_regrouped.csv
+Concatenated 70K + 10 cscw + 2K are in 70kpaper_061418_cleaned_noBookLecture_10cscw_2k.tsv
+
+Command: 
+cat 70kpaper_061418_cleaned_noBookLecture_10cscw.tsv annotations_label-level_all-to-date-2018-4-25-WithTitle.labelled_regrouped_level_1.csv annotations_label-level_all-to-date-2018-4-25-WithTitle.labelled_regrouped_level_2.csv     > 70kpaper_061418_cleaned_noBookLecture_10cscw_2k.tsv
+
+
+
