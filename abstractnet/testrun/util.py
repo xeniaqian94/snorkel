@@ -71,8 +71,8 @@ def write_segment_name(cands,fpath,groundtruth_dict,segment_name):
                 for gold_sentence in groundtruth_dict[docid][sname]:
                     if striped_query_text.lower() in gold_sentence.lower() and labeled==False:
                         f_write.write(str(stable_label_id)+"\t"+str(label)+"\n")
-                        if label==1:
-                            print(striped_query_text)
+                        # if label==1:
+                        #     print(striped_query_text)
                         # print(str(striped_query_text),"is ", str(sname), "so purpose=",str(label))
                         # print()
                         labeled=True
