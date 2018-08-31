@@ -4,7 +4,7 @@ import ast
 import re
 from collections import defaultdict
 
-# Usage: python regroup_groundtruth_2K_paper.py annotations_label-level_all-to-date-2018-4-25-WithTitle.labelled.csv 
+# Usage: python regroup_groundtruth_2K_paper_order_ignorant.py annotations_label-level_all-to-date-2018-4-25-WithTitle.labelled.csv 
 # Input: line format [segment]\t[segment_name]\t[docid]， e.g. authority and types of behaviors	background	2K_dev_0
 # Output: file format [docid]\t[regrouped_doc]
 

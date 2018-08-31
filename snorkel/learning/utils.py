@@ -166,7 +166,10 @@ class MentionScorer(Scorer):
             # Handle either a LabelMatrix or else assume test_labels array is in
             # correct order i.e. same order as test_candidates
             try:
+                
+                # print("type(test_label)",type(self.test_labels))
                 test_label_index = self.test_labels.get_row_index(candidate)
+                # print("type(test_label_index)",type(test_label_index))
                 test_label = self.test_labels[test_label_index, 0]
             except AttributeError:
                 test_label = self.test_labels[i]

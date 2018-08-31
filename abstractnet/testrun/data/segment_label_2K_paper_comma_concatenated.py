@@ -4,19 +4,29 @@ import ast
 import re
 
 
-# Usage: python segment_label_2K_paper_comma_concatenated.py annotations_label-level_all-to-date-2018-4-25-WithTitle.csv 1 Filtered_MLD_RI_HCI_CSD_LTI_ISR.csv
-# Output: the file is named as annotations_label-level_all-to-date-2018-4-25-WithTitle.labelled_comma_original.csv 
+# Usage: python segment_label_2K_paper_comma_concatenated.py [annotations-with-all-info-needed].csv [level] [filtered_paper_title.csv]
+
+# Example: python segment_label_2K_paper_comma_concatenated.py annotations_label-level_all-to-date-2018-4-25-WithTitle.csv 1 Filtered_MLD_RI_HCI_CSD_LTI_ISR.csv
+
+# level = 1 if we want only LTI, CSD, MLD, RI, HCII, ISR papers 
+# (also you need to provide an additional argument of filtered paper title .csv, 
+# level = 2 for all papers 
+
+# Output: the file is named as [[annotations-with-all-info-needed].labelled_comma_original.csv 
 # in each line, [segment]\t[label]\t[docid]
 
 docid_prefix="2K_test_"
-level=int(sys.argv[2])  # level = 1 if we want only LTI, CSD, MLD, RI, HCII, ISR papers, level = 2 for all papers 
+level=int(sys.argv[2])  
 if level==1:
 	with open(sys.argv[3]) as csvfile:
 		reader=csv.reader(csvfile)
 		next(reader)
 
-		title_set=set([r[14].lower().strip() for r in reader])
+		title_set=set([r[26].lower().strip() for r in reader])
 	docid_prefix="2K_dev_"
+
+input(title_set)
+input(len(title_set))
 
 
 f_write=open(sys.argv[1].replace(".csv",".labelled_level_"+str(level)+".csv"),"w")
@@ -26,7 +36,7 @@ with open(sys.argv[1]) as csvfile:
 	spamreader = csv.reader(csvfile)
 	n=0
 	valid_title_count=0
-	for row in spamreader:
+	for row in spamreader:  # a row denotes one paper in the .csv 
 		if n==0:
 			n+=1
 			continue

@@ -6,6 +6,7 @@ from builtins import *
 
 import re
 import sys
+import csv
 import numpy as np
 import scipy.sparse as sparse
 import pandas as pd
@@ -44,14 +45,21 @@ def get_candidate_text(candidate):
     return candidate.segment_cue.sentence.text[candidate.segment_cue.char_start:candidate.segment_cue.char_end+1]
 
 from collections import defaultdict
-def load_groundtruth_as_external_dict(groundtruth_path):
+def load_groundtruth_as_external_dict(groundtruth_path,delimiter=""):
     groundtruth_dict=defaultdict(lambda: defaultdict(lambda: list()))
     with open(groundtruth_path) as f:
-        for line in f.readlines():
-            text=line.split("\t")[0].strip("., \n").strip()
-            label=line.split("\t")[1].strip()
-            name=line.split("\t")[2].strip()
-            groundtruth_dict[name][label]+=[text]
+        if delimiter==",":
+            csv_reader=csv.reader(f,delimiter=",")
+            for row in csv_reader:
+                groundtruth_dict[row[2].strip()][row[1].strip()]+=[row[0].strip("., \n").strip()]
+        else:
+            for line in f.readlines():
+                if len(line.strip())==0:
+                    continue
+                text=line.split("\t")[0].strip("., \n").strip()
+                label=line.split("\t")[1].strip()
+                name=line.split("\t")[2].strip()
+                groundtruth_dict[name][label]+=[text]
     return groundtruth_dict
 
 def write_segment_name(cands,fpath,groundtruth_dict,segment_name):
@@ -72,6 +80,8 @@ def write_segment_name(cands,fpath,groundtruth_dict,segment_name):
                     label=-1
                 for gold_sentence in groundtruth_dict[docid][sname]:
                     if striped_query_text.lower() in gold_sentence.lower() and labeled==False:
+                        # if striped_query_text.lower()!=gold_sentence.lower():
+                        #     print("Partially matched - striped_query_text: ",striped_query_text, "\nbut gold_sentence ",gold_sentence,"\n=============\n")
                         f_write.write(str(stable_label_id)+"\t"+str(label)+"\n")
                         labeled=True
                         # if label==1:

@@ -1,5 +1,7 @@
 from snorkel.lf_helpers import *
 
+### below are deprecated(old) LFs who are no longer being used. 
+
 def LF_comparative_degree(c):
     return 1 if rule_regex_search_candidate_text(c,"(.*more.*than.*$)|(.*er than.*$)",1) else 0
 

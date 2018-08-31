@@ -320,6 +320,7 @@ class GenerativeModel(Classifier):
         burnin = 500
         trials = 5000
         cardinality = self.cardinality_for_stats
+        print("cardinality is",cardinality)
         count = np.zeros((self.nlf, cardinality, cardinality + 1))
 
         for true_label in range(cardinality):

@@ -89,6 +89,7 @@ class csr_AnnotationMatrix(sparse.csr_matrix):
         return index_new, inv_index_new
 
     def __getitem__(self, key):
+        # print("type(self)",type(self),self.__class__.__bases__)
         X = super(csr_AnnotationMatrix, self).__getitem__(key)
 
         # If X is an integer or float value, just return it
@@ -115,7 +116,7 @@ class csr_AnnotationMatrix(sparse.csr_matrix):
 try:
     class csr_LabelMatrix(csr_AnnotationMatrix):
 
-        def lf_stats(self, session, labels=None, est_accs=None):
+        def lf_stats(self, session, labels=None, est_accs=None,set_unlabeled_as_neg=False):
             """Returns a pandas DataFrame with the LFs and various per-LF statistics"""
             lf_names = [self.get_key(session, j).name for j in range(self.shape[1])]
 
@@ -127,24 +128,26 @@ try:
                 'Overlaps'  : Series(data=matrix_overlaps(self), index=lf_names),
                 'Conflicts' : Series(data=matrix_conflicts(self), index=lf_names)
             }
-            if labels is not None:
-                col_names.extend(['TP', 'FP', 'FN', 'TN', 'Empirical Acc.'])
+            if labels is not None:  
+                col_names.extend(['TP', 'FP', 'FN', 'TN', 'Empirical Acc.','Empirical Recall.'])
                 ls = np.ravel(labels.todense() if sparse.issparse(labels) else labels)
                 tp = matrix_tp(self, ls)
                 fp = matrix_fp(self, ls)
-                fn = matrix_fn(self, ls)
-                tn = matrix_tn(self, ls)
-                ac = (tp+tn) / (tp+tn+fp+fn)
+                fn = matrix_fn(self, ls,set_unlabeled_as_neg)
+                tn = matrix_tn(self, ls,set_unlabeled_as_neg)
+                ac = (tp+tn) / (tp+tn+fp+fn)   # TODO: shall we care nan error, i.e., denominator = 0?
+                recall=(tp)/(tp+fn)
                 d['Empirical Acc.'] = Series(data=ac, index=lf_names)
+                d['Empirical Recall.'] = Series(data=recall, index=lf_names)
                 d['TP']             = Series(data=tp, index=lf_names)
                 d['FP']             = Series(data=fp, index=lf_names)
                 d['FN']             = Series(data=fn, index=lf_names)
                 d['TN']             = Series(data=tn, index=lf_names)
 
             if est_accs is not None:
-                col_names.append('Learned Acc.')
-                d['Learned Acc.'] = est_accs
-                d['Learned Acc.'].index = lf_names
+                col_names.append('Learned Metric.')
+                d['Learned Metric.'] = est_accs
+                d['Learned Metric.'].index = lf_names
             return DataFrame(data=d, index=lf_names)[col_names]
 
 # This is a hack for getting the documentation to build...
@@ -183,8 +186,8 @@ class Annotator(UDFRunner):
         cids       = cids_query.all()
         cids_count = len(cids)
 
-        print(cids_count)
-        print(key_group)
+        print("cids_count",cids_count)
+        print("key_group",key_group)
 
         # Run the Annotator
         super(Annotator, self).apply(cids, split=split, key_group=key_group,

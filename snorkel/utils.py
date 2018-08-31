@@ -75,6 +75,21 @@ def sparse_nonzero(X):
         raise ValueError("Only supports CSR/CSC and LIL matrices")
     return X_nonzero
 
+def sparse_isone(X):
+    """Sparse matrix with value 1 for i,jth entry ==1, duplicated and modified from sparse_nonzero"""
+    X_isone = X.copy()
+    if not sparse.issparse(X):
+        X_isone[X_isone == 1] = 1
+        return X_isone
+    if sparse.isspmatrix_csr(X) or sparse.isspmatrix_csc(X):
+        X_isone.data[X_isone.data ==1] = 1
+    # elif sparse.isspmatrix_lil(X):
+    #     print("is lil (linked list) sparse matrix, double check!")
+    #     X_isone.data = [np.ones(len(L)) for L in X_isone.data]
+    else:
+        raise ValueError("Only supports CSR/CSC not LIL matrices")
+    return X_isone
+
 def sparse_abs(X):
     """Element-wise absolute value of sparse matrix- avoids casting to dense matrix!"""
     X_abs = X.copy()
@@ -136,12 +151,22 @@ def matrix_fp(L, labels):
         np.sum(np.ravel((L[:, j] == 1).todense()) * (labels == -1)) for j in range(L.shape[1])
     ])
 
-def matrix_tn(L, labels):
+def matrix_tn(L, labels,set_unlabeled_as_neg=False):
+    if set_unlabeled_as_neg:
+        return np.ravel([
+        np.sum(np.ravel(np.logical_or((L[:, j] == -1).todense(),(L[:, j] == 0).todense())) * (labels == -1)) for j in range(L.shape[1])
+    ])
+
     return np.ravel([
         np.sum(np.ravel((L[:, j] == -1).todense()) * (labels == -1)) for j in range(L.shape[1])
     ])
 
-def matrix_fn(L, labels):
+def matrix_fn(L, labels,set_unlabeled_as_neg=False):
+
+    if set_unlabeled_as_neg:
+        return np.ravel([
+        np.sum(np.ravel(np.logical_or((L[:, j] == -1).todense(),(L[:, j] == 0).todense()))  * (labels == 1)) for j in range(L.shape[1])
+    ])
     return np.ravel([
         np.sum(np.ravel((L[:, j] == -1).todense()) * (labels == 1)) for j in range(L.shape[1])
     ])
