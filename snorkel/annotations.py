@@ -24,7 +24,8 @@ from .utils import (
     matrix_tp,
     matrix_fp,
     matrix_fn,
-    matrix_tn
+    matrix_tn,
+    matrix_has_nonzero_per_row
 )
 
 
@@ -116,6 +117,12 @@ class csr_AnnotationMatrix(sparse.csr_matrix):
 try:
     class csr_LabelMatrix(csr_AnnotationMatrix):
 
+        # self has the shape of (#_candidates, #_LFs)
+
+        def non_overlapping_coverage(self):
+            return matrix_has_nonzero_per_row(self)*1.0/self.shape[0]
+
+
         def lf_stats(self, session, labels=None, est_accs=None,set_unlabeled_as_neg=False):
             """Returns a pandas DataFrame with the LFs and various per-LF statistics"""
             lf_names = [self.get_key(session, j).name for j in range(self.shape[1])]
@@ -148,6 +155,8 @@ try:
                 col_names.append('Learned Metric.')
                 d['Learned Metric.'] = est_accs
                 d['Learned Metric.'].index = lf_names
+
+            # DataFrame(data=d, index=lf_names)[col_names].to_csv('calculate_total_coverage.csv')
             return DataFrame(data=d, index=lf_names)[col_names]
 
 # This is a hack for getting the documentation to build...

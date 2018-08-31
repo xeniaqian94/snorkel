@@ -171,6 +171,12 @@ def matrix_fn(L, labels,set_unlabeled_as_neg=False):
         np.sum(np.ravel((L[:, j] == -1).todense()) * (labels == 1)) for j in range(L.shape[1])
     ])
 
+def matrix_has_nonzero_per_row(L):
+    # num_candidates=L.shape[0]
+    L_nonzero = sparse_nonzero(L)
+    num_candidates_labeled_by_gt_1_LF=len(set(sparse.find(L_nonzero)[0]))
+    return num_candidates_labeled_by_gt_1_LF
+
 def get_as_dict(x):
     """Return an object as a dictionary of its attributes"""
     if isinstance(x, dict):
