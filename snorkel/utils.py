@@ -80,9 +80,11 @@ def sparse_isone(X):
     X_isone = X.copy()
     if not sparse.issparse(X):
         X_isone[X_isone == 1] = 1
+        X_isone[X_isone != 1] = 0
         return X_isone
     if sparse.isspmatrix_csr(X) or sparse.isspmatrix_csc(X):
         X_isone.data[X_isone.data ==1] = 1
+        X_isone.data[X_isone.data !=1] = 0
     # elif sparse.isspmatrix_lil(X):
     #     print("is lil (linked list) sparse matrix, double check!")
     #     X_isone.data = [np.ones(len(L)) for L in X_isone.data]
@@ -139,6 +141,16 @@ def matrix_conflicts(L):
         if np.unique(B.getrow(row).data).size == 1:
             B.data[B.indptr[row]:B.indptr[row+1]] = 0
     return matrix_coverage(sparse_nonzero(B))
+
+
+def matrix_empirical_recall(L,labels):
+    # for i in range(L.shape[0])
+    L_isone=sparse_isone(L)
+    print("sum over rows "+str(np.where(L_isone.sum(axis=1)>=1,1,0))+" shape "+str(np.where(L_isone.sum(axis=1)>=1,1,0).shape))
+    print("TP over all segments "+str(np.sum(np.logical_and(np.ravel(np.where(L_isone.sum(axis=1)>=1,1,0)),(labels==1)))))
+    print("P among all segments "+str(np.sum(labels==1)))
+    return np.sum(np.logical_and(np.ravel(np.where(L_isone.sum(axis=1)>=1,1,0)),(labels==1)))/np.sum(labels==1)
+
 
 
 def matrix_tp(L, labels):

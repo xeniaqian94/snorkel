@@ -25,7 +25,8 @@ from .utils import (
     matrix_fp,
     matrix_fn,
     matrix_tn,
-    matrix_has_nonzero_per_row
+    matrix_has_nonzero_per_row,
+    matrix_empirical_recall
 )
 
 
@@ -121,6 +122,12 @@ try:
 
         def non_overlapping_coverage(self):
             return matrix_has_nonzero_per_row(self)*1.0/self.shape[0]
+
+        def total_empirical_recall(self,labels):
+            ls = np.ravel(labels.todense() if sparse.issparse(labels) else labels)
+            print("positive segments in gold labels "+str(np.sum(ls==1))+" out of "+str(ls.shape[0]))
+            empirical_recall=matrix_empirical_recall(self,ls)
+            return empirical_recall
 
 
         def lf_stats(self, session, labels=None, est_accs=None,set_unlabeled_as_neg=False,csv_path=""):
