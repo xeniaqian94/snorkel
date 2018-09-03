@@ -196,7 +196,6 @@ def rule_regex_search_tagged_text(candidate, pattern, sign):
 def rule_regex_search_candidate_text(candidate, pattern, sign):
     return sign if re.search(pattern, get_first_span_text(candidate), flags=re.I) else 0
 
-
 def rule_regex_search_btw_AB(candidate, pattern, sign):
     return sign if re.search(r'{{A}}' + pattern + r'{{B}}', get_tagged_text(candidate), flags=re.I) else 0
 

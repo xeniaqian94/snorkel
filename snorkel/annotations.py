@@ -123,7 +123,7 @@ try:
             return matrix_has_nonzero_per_row(self)*1.0/self.shape[0]
 
 
-        def lf_stats(self, session, labels=None, est_accs=None,set_unlabeled_as_neg=False):
+        def lf_stats(self, session, labels=None, est_accs=None,set_unlabeled_as_neg=False,csv_path=""):
             """Returns a pandas DataFrame with the LFs and various per-LF statistics"""
             lf_names = [self.get_key(session, j).name for j in range(self.shape[1])]
 
@@ -156,8 +156,10 @@ try:
                 d['Learned Metric.'] = est_accs
                 d['Learned Metric.'].index = lf_names
 
-            # DataFrame(data=d, index=lf_names)[col_names].to_csv('calculate_total_coverage.csv')
-            return DataFrame(data=d, index=lf_names)[col_names]
+            df=DataFrame(data=d, index=lf_names)[col_names]
+            if len(csv_path)>0:
+                df.to_csv(csv_path)
+            return df
 
 # This is a hack for getting the documentation to build...
 except:

@@ -1,6 +1,103 @@
 from snorkel.lf_helpers import *
 
-### below are deprecated(old) LFs who are no longer being used. 
+
+from .util_common_default import create_LFs
+
+# Part 1: common regex 8 LFs, about contrast 
+# common_regex_list are a list of tuples in the format of (regex, label_if_match_1_or_-1)
+common_regex_list=[("((^|\s)however.*$)",1)]
+common_regex_list+=[("((^|\s)nevertheless.*$)",1)]
+common_regex_list+=[("((^|\s)despite.*$)",1)]
+common_regex_list+=[("((^|\s)spite.*$)",1)]
+common_regex_list+=[("((^|\s)yet.*$)",1)]
+common_regex_list+=[("((^|\s)but.*$)",1)]
+common_regex_list+=[("(^.*but sometimes.*$)",-1)]
+common_regex_list+=[("(^.*but also.*$)",-1)]
+common_LFs=[create_LFs(pair,"common") for pair in common_regex_list]
+
+
+# Part 2: purpose-specific regex
+
+# Part 2.1: existing 15 LFs
+purpose_regex_list=[("(.*more.*than.*$)",1)]
+purpose_regex_list+=[("(.*er than.*$)",1)]
+purpose_regex_list+=[("(.*in order to.*$)",1)]
+purpose_regex_list+=[("(.* implication.*$)",1)]
+purpose_regex_list+=[("(.*to solve.*$)",1)]
+purpose_regex_list+=[("(.* hypothesis.*$)",1)]
+purpose_regex_list+=[("(.*to enable.*$)",1)]
+purpose_regex_list+=[("(.*to aid.*$)",1)]
+purpose_regex_list+=[("(.*to produce.*$)",1)]
+purpose_regex_list+=[("(.*to investigat.*$)",1)]
+purpose_regex_list+=[("(.* give.*$)",1)]
+purpose_regex_list+=[("(.* that can .*$)",1)]
+purpose_regex_list+=[("(.* examine.*$)",1)]
+purpose_regex_list+=[("(.* extend.*$)",1)]
+purpose_regex_list+=[("(.* offer.*$)",1)]
+
+# Part 2.2: new 58 LFs added 090218
+purpose_regex_list+=[("(.*we consider.*)",1)]
+purpose_regex_list+=[("(.*how[ a-z]+can.*)",1)]
+purpose_regex_list+=[("(.*we study.*)",1)]
+purpose_regex_list+=[("(.*we are interested in .*)",1)]
+purpose_regex_list+=[("(.*way to.*)",1)]
+purpose_regex_list+=[("(.*we seek.*)",1)]
+purpose_regex_list+=[("(.*initiate.*)",1)]
+purpose_regex_list+=[("(.*the question of how.*)",1)]
+purpose_regex_list+=[("(.*for[ a-z]+ing.*)",1)]
+purpose_regex_list+=[("(.* do .*)",1)]
+purpose_regex_list+=[("(.* does .*)",1)]
+purpose_regex_list+=[("(.*to address.*)",1)]
+purpose_regex_list+=[("(.*which can.*)",1)]
+purpose_regex_list+=[("(.*to extract.*)",1)]
+purpose_regex_list+=[("((^|\s)what .*)",1)]
+purpose_regex_list+=[("(.*focus.*)",1)]
+purpose_regex_list+=[("(.*allow.*)",1)]
+purpose_regex_list+=[("(.*explain.*)",1)]
+purpose_regex_list+=[("(.*answer.*)",1)]
+purpose_regex_list+=[("(.*discuss.*)",1)]
+purpose_regex_list+=[("(.*discover.*)",1)]
+purpose_regex_list+=[("(.*solve.*)",1)]
+purpose_regex_list+=[("(.*argue.*)",1)]
+purpose_regex_list+=[("(.*enable.*)",1)]
+purpose_regex_list+=[("(.*one can only.*)",1)]
+purpose_regex_list+=[("(.*in order for.*)",1)]
+purpose_regex_list+=[("(.*a[a-z ]+problem.*)",1)]
+purpose_regex_list+=[("(.*to further.*)",1)]
+purpose_regex_list+=[("(.*to find.*)",1)]
+purpose_regex_list+=[("(.*why.*)",1)]
+purpose_regex_list+=[("(.*current.*)",1)]
+purpose_regex_list+=[("(.*today.*)",1)]
+purpose_regex_list+=[("(.*recent .*)",1)]  # we don't want to have recently?? more like background?
+purpose_regex_list+=[("(.*we ask.*)",1)]
+purpose_regex_list+=[("(.*can we.*)",1)]
+purpose_regex_list+=[("(.*for the .*)",1)]
+purpose_regex_list+=[("(.*as a[n]* [a-z]*er.*)",1)]
+purpose_regex_list+=[("(.*as a more .*)",1)]
+purpose_regex_list+=[("(.*objective.*)",1)]
+purpose_regex_list+=[("(.*often.*)",1)]
+purpose_regex_list+=[("(.*an extension to.*)",1)]
+purpose_regex_list+=[("(.* problem.*)",1)]
+purpose_regex_list+=[("(.*challeng.*)",1)] # challenging or challenge
+purpose_regex_list+=[("(.*task.*)",1)] # challenging or challenge
+purpose_regex_list+=[("(.* goal.*)",1)]
+purpose_regex_list+=[("(.*especially if.*)",1)]
+purpose_regex_list+=[("(.*how [a-z ]* do[es]* .*)",1)]
+purpose_regex_list+=[("(.* no .*)",1)]
+purpose_regex_list+=[("(.* first.*)",1)]
+purpose_regex_list+=[("(.*fail to.*)",1)]
+purpose_regex_list+=[("(.*what is.*)",1)]
+purpose_regex_list+=[("(.*what are.*)",1)]
+purpose_regex_list+=[("(.*is needed.*)",1)]
+purpose_regex_list+=[("(.*necessary.*)",1)]
+purpose_regex_list+=[("(.*too [a-z ]* to.*)",1)]
+purpose_regex_list+=[("(.*prohibitive.*)",1)]  # negative sentiment towards past progress/approach
+purpose_regex_list+=[("(.*alternative to.*)",1)]
+purpose_regex_list+=[("(.*solutions for.*)",1)]
+
+purpose_LFs=[create_LFs(pair,"purpose") for pair in purpose_regex_list]
+
+### below are *Deprecated(old)* LFs who are no longer being used. 
 
 def LF_comparative_degree(c):
     return 1 if rule_regex_search_candidate_text(c,"(.*more.*than.*$)|(.*er than.*$)",1) else 0
@@ -19,9 +116,7 @@ def LF_purpose_leading_question_word(c):
 
 
 
-
-
-###  below are splitted LFs
+###  below are *Deprecated(old)*, splitted LFs
 def LF_comparative_degree_morethan(c):
 	return 1 if rule_regex_search_candidate_text(c,"(.*more.*than.*$)",1) else 0 
 
@@ -66,5 +161,4 @@ def LF_purpose_verb_extend(c):
 
 def LF_purpose_verb_offer(c):
 	return 1 if rule_regex_search_candidate_text(c,"(.* offer.*$)",1) else 0
-
 
