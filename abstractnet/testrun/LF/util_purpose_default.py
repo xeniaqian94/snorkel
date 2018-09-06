@@ -2,6 +2,10 @@ from snorkel.lf_helpers import *
 
 
 from .util_common_default import create_LFs
+from .util_background_default import background_regex_list
+from .util_mechanism_default import mechanism_regex_list,mechanism_LFs
+from .util_method_default import method_regex_list
+from .util_finding_default import finding_regex_list
 
 # Part 1: common regex 8 LFs, about contrast 
 # common_regex_list are a list of tuples in the format of (regex, label_if_match_1_or_-1)
@@ -96,6 +100,14 @@ purpose_regex_list+=[("(.*alternative to.*)",1)]
 purpose_regex_list+=[("(.*solutions for.*)",1)]
 
 purpose_LFs=[create_LFs(pair,"purpose") for pair in purpose_regex_list]
+
+
+## Below we declare a list of reverse LFs, -1 if match 
+neg_for_purpose_LFs=[create_LFs((pair[0],-1*pair[1]),"neg_"+segment_name) for (regex_list,segment_name) in [(background_regex_list,"background"),(mechanism_regex_list,"mechanism"),(method_regex_list,"method"),(finding_regex_list,"finding")] for pair in regex_list ]
+
+## Below we declare a list of reverse LFs, -1 if match 
+neg_for_mechanism_LFs=[create_LFs((pair[0],-1*pair[1]),"neg_"+segment_name) for (regex_list,segment_name) in [(background_regex_list,"background"),(purpose_regex_list,"purpose"),(method_regex_list,"method"),(finding_regex_list,"finding")] for pair in regex_list ]
+
 
 ### below are *Deprecated(old)* LFs who are no longer being used. 
 

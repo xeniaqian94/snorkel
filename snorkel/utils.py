@@ -146,7 +146,7 @@ def matrix_conflicts(L):
 def matrix_empirical_recall(L,labels):
     # for i in range(L.shape[0])
     L_isone=sparse_isone(L)
-    print("sum over rows "+str(np.where(L_isone.sum(axis=1)>=1,1,0))+" shape "+str(np.where(L_isone.sum(axis=1)>=1,1,0).shape))
+    print("sum over rows shape "+str(np.where(L_isone.sum(axis=1)>=1,1,0).shape))
     print("TP over all segments "+str(np.sum(np.logical_and(np.ravel(np.where(L_isone.sum(axis=1)>=1,1,0)),(labels==1)))))
     print("P among all segments "+str(np.sum(labels==1)))
     return np.sum(np.logical_and(np.ravel(np.where(L_isone.sum(axis=1)>=1,1,0)),(labels==1)))/np.sum(labels==1)
