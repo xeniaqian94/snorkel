@@ -21,4 +21,15 @@ e.g. 2
     # labeler.clear(session,split=1)
     %time L_dev = labeler.apply_existing(split=1)
 
-3. Document related to start a new session or re-open an existing session is located at models/meta.py
+3. Documentation that is related to start a new session or re-open an existing session is located at models/meta.py
+
+4. Write your regex in lightweight. Snorkel could hiccup (0% halting ProgressBar) with heavy regex, e.g. 
+
+mechanism_regex_list+=[("a[n]{0,1} (([a-z]+[ ]{0,1})*)algorithm",1)]
+mechanism_regex_list+=[("a[n]{0,1} (([a-z]+[ ]{0,1})*)mechanism",1)]
+
+compared to lightweight regex,
+
+mechanism_regex_list+=[("we (also )*show",1)]
+
+

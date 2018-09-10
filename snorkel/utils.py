@@ -23,6 +23,7 @@ class ProgressBar(object):
 
     def bar(self, i):
         """Assumes i ranges through [0, N-1]"""
+        # print("within bar ",i,self.N)
         if i in self.ticks:
             b = int(np.ceil(((i+1) / self.nf) * self.length))
             sys.stdout.write(

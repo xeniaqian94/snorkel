@@ -45,8 +45,8 @@ mechanism_regex_list+=[("we (also )*adopt",1)]
 mechanism_regex_list+=[("we (also )*argue",1)]
 mechanism_regex_list+=[("we (also )*generalize",1)]
 mechanism_regex_list+=[("novelty is",1)]
-mechanism_regex_list+=[("a[n]{0,1} (([a-z]+[ ]{0,1})*)algorithm",1)]
-mechanism_regex_list+=[("a[n]{0,1} (([a-z]+[ ]{0,1})*)mechanism",1)]
+# mechanism_regex_list+=[("a[n]{0,1} (([a-z]+[ ]{0,1})*)algorithm",1)]
+# mechanism_regex_list+=[("a[n]{0,1} (([a-z]+[ ]{0,1})*)mechanism",1)]
 mechanism_regex_list+=[("we (also )*demonstrate",1)]
 
 

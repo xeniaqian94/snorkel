@@ -5,6 +5,7 @@ def create_LFs(pair,lf_prefix):
     # (regex_str,label)=pair
 
     def func(c):
+        # print("working on c")
         return rule_regex_search_candidate_text(c,pair[0],pair[1]) 
 
     # print(func.__name__)
