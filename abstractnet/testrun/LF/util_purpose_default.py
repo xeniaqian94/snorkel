@@ -1,11 +1,12 @@
 from snorkel.lf_helpers import *
 
 
-from .util_common_default import create_LFs
-from .util_background_default import background_regex_list
-from .util_mechanism_default import mechanism_regex_list,mechanism_LFs
-from .util_method_default import method_regex_list
-from .util_finding_default import finding_regex_list
+from .util_common_default import create_LFs,candidate_pos_in_doc
+from .util_background_default import background_regex_list,neg_proper_background_pos
+from .util_mechanism_default import mechanism_regex_list,mechanism_LFs,neg_proper_mechanism_pos
+from .util_method_default import method_regex_list,neg_proper_method_pos
+from .util_finding_default import finding_regex_list,neg_proper_finding_pos
+
 
 # Part 1: common regex 8 LFs, about contrast 
 # common_regex_list are a list of tuples in the format of (regex, label_if_match_1_or_-1)
@@ -23,7 +24,7 @@ common_LFs=[create_LFs(pair,"common") for pair in common_regex_list]
 # Part 2: purpose-specific regex
 
 # Part 2.1: existing 15 LFs
-purpose_regex_list=[("(.*more.*than.*$)",1)]
+purpose_regex_list=[("(.*more [a-z ]* than.*$)",1)]
 purpose_regex_list+=[("(.*er than.*$)",1)]
 purpose_regex_list+=[("(.*in order to.*$)",1)]
 purpose_regex_list+=[("(.* implication.*$)",1)]
@@ -99,11 +100,18 @@ purpose_regex_list+=[("(.*prohibitive.*)",1)]  # negative sentiment towards past
 purpose_regex_list+=[("(.*alternative to.*)",1)]
 purpose_regex_list+=[("(.*solutions for.*)",1)]
 
-purpose_LFs=[create_LFs(pair,"purpose") for pair in purpose_regex_list]
+def proper_purpose_pos(c):
+	relative_pos=candidate_pos_in_doc(c)
+	return 1 if (relative_pos<=0.4 or relative_pos>=0.8) else 0
+
+def neg_proper_purpose_pos(c):
+	return -1*proper_purpose_pos(c)
+
+purpose_LFs=[create_LFs(pair,"purpose") for pair in purpose_regex_list]+[proper_purpose_pos]
 
 
 ## Below we declare a list of reverse LFs, -1 if match 
-neg_for_purpose_LFs=[create_LFs((pair[0],-1*pair[1]),"neg_"+segment_name) for (regex_list,segment_name) in [(background_regex_list,"background"),(mechanism_regex_list,"mechanism"),(method_regex_list,"method"),(finding_regex_list,"finding")] for pair in regex_list ]
+neg_for_purpose_LFs=[create_LFs((pair[0],-1*pair[1]),"neg_"+segment_name) for (regex_list,segment_name) in [(background_regex_list,"background"),(mechanism_regex_list,"mechanism"),(method_regex_list,"method"),(finding_regex_list,"finding")] for pair in regex_list ]+[neg_proper_finding_pos,neg_proper_method_pos,neg_proper_mechanism_pos,neg_proper_background_pos]
 
 ## Below we declare a list of reverse LFs, -1 if match 
 neg_for_mechanism_LFs=[create_LFs((pair[0],-1*pair[1]),"neg_"+segment_name) for (regex_list,segment_name) in [(background_regex_list,"background"),(purpose_regex_list,"purpose"),(method_regex_list,"method"),(finding_regex_list,"finding")] for pair in regex_list ]

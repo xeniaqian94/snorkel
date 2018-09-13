@@ -15,6 +15,14 @@ def create_LFs(pair,lf_prefix):
     return func
 
 
+def candidate_pos_in_doc(c):
+    sent=c.get_parent()
+    sents=sent.get_parent().sentences
+    return sents.index(sent)*1.0/len(sents)
+
+
+### below are (deprecated) features
+
 def LF_expressing_contrast(c):
     return 1 if rule_regex_search_candidate_text(c,"((^|\s)(however|nevertheless|despite|spite|yet).*$)|((^|\s)but(?!(also))*$)",1) else 0
 

@@ -1,7 +1,7 @@
 from snorkel.lf_helpers import *
 
 
-from .util_common_default import create_LFs
+from .util_common_default import create_LFs,candidate_pos_in_doc
 # from .util_background_default import background_regex_list
 # from .util_purpose_default import purpose_regex_list
 # from .util_method_default import method_regex_list
@@ -45,12 +45,17 @@ mechanism_regex_list+=[("we (also )*adopt",1)]
 mechanism_regex_list+=[("we (also )*argue",1)]
 mechanism_regex_list+=[("we (also )*generalize",1)]
 mechanism_regex_list+=[("novelty is",1)]
-# mechanism_regex_list+=[("a[n]{0,1} (([a-z]+[ ]{0,1})*)algorithm",1)]
-# mechanism_regex_list+=[("a[n]{0,1} (([a-z]+[ ]{0,1})*)mechanism",1)]
+mechanism_regex_list+=[("a[a-z ]+algorithm",1)]
+mechanism_regex_list+=[("a[a-z ]+mechanism",1)]
 mechanism_regex_list+=[("we (also )*demonstrate",1)]
 
+def proper_mechanism_pos(c):
+	return 1 if candidate_pos_in_doc(c)>=0.4 else 0
 
-mechanism_LFs=[create_LFs(pair,"mechanism") for pair in mechanism_regex_list]
+def neg_proper_mechanism_pos(c):
+	return -1*proper_mechanism_pos(c)
+
+mechanism_LFs=[create_LFs(pair,"mechanism") for pair in mechanism_regex_list]+[proper_mechanism_pos]
 
 
 ## Below we declare a list of reverse LFs, -1 if match 
