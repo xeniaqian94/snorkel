@@ -113,8 +113,14 @@ purpose_LFs=[create_LFs(pair,"purpose") for pair in purpose_regex_list]+[proper_
 ## Below we declare a list of reverse LFs, -1 if match 
 neg_for_purpose_LFs=[create_LFs((pair[0],-1*pair[1]),"neg_"+segment_name) for (regex_list,segment_name) in [(background_regex_list,"background"),(mechanism_regex_list,"mechanism"),(method_regex_list,"method"),(finding_regex_list,"finding")] for pair in regex_list ]+[neg_proper_finding_pos,neg_proper_method_pos,neg_proper_mechanism_pos,neg_proper_background_pos]
 
-## Below we declare a list of reverse LFs, -1 if match 
-neg_for_mechanism_LFs=[create_LFs((pair[0],-1*pair[1]),"neg_"+segment_name) for (regex_list,segment_name) in [(background_regex_list,"background"),(purpose_regex_list,"purpose"),(method_regex_list,"method"),(finding_regex_list,"finding")] for pair in regex_list ]
+neg_for_mechanism_LFs=[create_LFs((pair[0],-1*pair[1]),"neg_"+segment_name) for (regex_list,segment_name) in [(background_regex_list,"background"),(purpose_regex_list+common_regex_list,"purpose"),(method_regex_list,"method"),(finding_regex_list,"finding")] for pair in regex_list ]+[neg_proper_finding_pos,neg_proper_method_pos,neg_proper_purpose_pos,neg_proper_background_pos]
+
+neg_for_background_LFs=[create_LFs((pair[0],-1*pair[1]),"neg_"+segment_name) for (regex_list,segment_name) in [(purpose_regex_list+common_regex_list,"purpose"),(mechanism_regex_list,"mechanism"),(method_regex_list,"method"),(finding_regex_list,"finding")] for pair in regex_list ]+[neg_proper_finding_pos,neg_proper_method_pos,neg_proper_mechanism_pos,neg_proper_purpose_pos]
+
+neg_for_method_LFs=[create_LFs((pair[0],-1*pair[1]),"neg_"+segment_name) for (regex_list,segment_name) in [(background_regex_list,"background"),(purpose_regex_list+common_regex_list,"purpose"),(mechanism_regex_list,"mechanism"),(finding_regex_list,"finding")] for pair in regex_list ]+[neg_proper_finding_pos,neg_proper_purpose_pos,neg_proper_mechanism_pos,neg_proper_background_pos]
+
+neg_for_finding_LFs=[create_LFs((pair[0],-1*pair[1]),"neg_"+segment_name) for (regex_list,segment_name) in [(background_regex_list,"background"),(purpose_regex_list+common_regex_list,"purpose"),(method_regex_list,"method"),(mechanism_regex_list,"mechanism")] for pair in regex_list ]+[neg_proper_purpose_pos,neg_proper_method_pos,neg_proper_mechanism_pos,neg_proper_background_pos]
+
 
 
 ### below are *Deprecated(old)* LFs who are no longer being used. 
