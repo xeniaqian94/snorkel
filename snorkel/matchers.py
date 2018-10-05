@@ -79,7 +79,6 @@ class Matcher(object):
                     seen_spans.add(self._get_span(c))
                 yield c
 
-
 WORDS = 'words'
 
 

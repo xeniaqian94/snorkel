@@ -33,6 +33,8 @@ def new_sessionmaker(snorkel_conn_string=snorkel_conn_string):
     # Turning on autocommit for Postgres, see http://oddbird.net/2014/06/14/sqlalchemy-postgres-autocommit/
     # Otherwise any e.g. query starts a transaction, locking tables... very bad for e.g. multiple notebooks
     # open, multiple processes, etc.
+    print("snorkel_conn_string", snorkel_conn_string)
+    print("if snorkel_postgres?",snorkel_postgres)
     if snorkel_postgres:
         snorkel_engine = create_engine(snorkel_conn_string, isolation_level="AUTOCOMMIT")
     else:

@@ -21,6 +21,7 @@ class CorpusParser(UDFRunner):
         # We cannot cascade up from child contexts to parent Candidates,
         # so we delete all Candidates too
         session.query(Candidate).delete()
+        print("clear finished!")
 
 
 class CorpusParserUDF(UDF):

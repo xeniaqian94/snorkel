@@ -584,7 +584,7 @@ class GenerativeModel(Classifier):
             weight[i]['initialValue'] = np.float64(init_deps)
 
         #
-        # Compiles variable matrix
+        print("Compiles variable matrix")
         #
         # Internal representation:
         #   True Class:         0 to (cardinality - 1) are the classes
@@ -599,6 +599,8 @@ class GenerativeModel(Classifier):
 
         # LF label variables -- initial loop to set all variables
         for i in range(m):
+            if i%10000==0:
+                print("LF label variables -- initial loop to set all variables over "+str(i))
             for j in range(n):
                 index = m + n * i + j
                 variable[index]["isEvidence"] = 1
@@ -610,7 +612,10 @@ class GenerativeModel(Classifier):
 
         # LF labels -- now set the non-zero labels
         L_coo = L.tocoo()
+        print("L_coo.nnz",L_coo.nnz)
         for L_index in range(L_coo.nnz):
+            if L_index%10000==0:
+                print("LF labels -- now set the non-zero labels "+str(L_index))
             data, i, j = L_coo.data[L_index], L_coo.row[L_index], L_coo.col[L_index]
             index = m + n * i + j
 
@@ -637,7 +642,7 @@ class GenerativeModel(Classifier):
                                      "Valid values are 0 to %d. " % (i, j, data, self.cardinalities[i]))
 
         #
-        # Compiles factor and ftv matrices
+        print("Compiles factor and ftv matrices")
         #
         # Class prior
         if self.class_prior:
@@ -660,7 +665,8 @@ class GenerativeModel(Classifier):
             ftv_off = 0
             w_off = 0
 
-        # Factors over labeling function outputs
+        print("Factors over labeling function outputs")
+
         nfactors_for_lf = [(int(self.hasPrior[i]) + int(not is_fixed[i])) for i in range(n)]
         f_off, ftv_off, w_off = self._compile_output_factors(L, factor, f_off, ftv, ftv_off, w_off, "DP_GEN_LF_ACCURACY",
                                                              (lambda m, n, i, j: i, lambda m, n, i, j: m + n * i + j), nfactors_for_lf)
@@ -677,6 +683,8 @@ class GenerativeModel(Classifier):
                     lambda m, n, i, j: i,
                     lambda m, n, i, j: m + n * i + j)),
         }
+
+        print("optional_names for _compile_output_factors")
 
         for optional_name in GenerativeModel.optional_names:
             if getattr(self, optional_name):
@@ -719,7 +727,7 @@ class GenerativeModel(Classifier):
                     f_off, ftv_off, w_off = self._compile_dep_factors(L, factor, 
                         f_off, ftv, ftv_off, w_off, mat.row[i], mat.col[i],
                         dep_name_map[dep_name][0], dep_name_map[dep_name][1])
-
+        print("_compile finished!")
         return weight, variable, factor, ftv, domain_mask, n_edges
 
     def _compile_output_factors(self, L, factors, factors_offset, ftv, 
@@ -732,15 +740,17 @@ class GenerativeModel(Classifier):
         """
         m, n = L.shape
 
+        print("nfactors_for_lf is None? ", nfactors_for_lf == None)
         if nfactors_for_lf == None:
             nfactors_for_lf = [1 for i in range(n)]
 
-        factors_index = factors_offset
-        ftv_index = ftv_offset
-        for i in range(m):
-            w_off = weight_offset
-            for j in range(n):
-                for k in range(nfactors_for_lf[j]):
+
+        if nfactors_for_lf == None:
+            factors_index = factors_offset
+            ftv_index = ftv_offset
+            for i in range(m):
+                w_off = weight_offset
+                for j in range(n):
                     factors[factors_index]["factorFunction"] = FACTORS[factor_name]
                     factors[factors_index]["weightId"] = w_off
                     factors[factors_index]["featureValue"] = 1
@@ -753,6 +763,25 @@ class GenerativeModel(Classifier):
                     for vid_func in vid_funcs:
                         ftv[ftv_index]["vid"] = vid_func(m, n, i, j)
                         ftv_index += 1
+        else:
+            factors_index = factors_offset
+            ftv_index = ftv_offset
+            for i in range(m):
+                w_off = weight_offset
+                for j in range(n):
+                    for k in range(nfactors_for_lf[j]):
+                        factors[factors_index]["factorFunction"] = FACTORS[factor_name]
+                        factors[factors_index]["weightId"] = w_off
+                        factors[factors_index]["featureValue"] = 1
+                        factors[factors_index]["arity"] = len(vid_funcs)
+                        factors[factors_index]["ftv_offset"] = ftv_index
+
+                        factors_index += 1
+                        w_off += 1
+
+                        for vid_func in vid_funcs:
+                            ftv[ftv_index]["vid"] = vid_func(m, n, i, j)
+                            ftv_index += 1
 
         return factors_index, ftv_index, w_off
 

@@ -190,6 +190,12 @@ def matrix_has_nonzero_per_row(L):
     num_candidates_labeled_by_gt_1_LF=len(set(sparse.find(L_nonzero)[0]))
     return num_candidates_labeled_by_gt_1_LF
 
+
+def matrix_nonallzero_row_idx(L):
+    L_nonzero = sparse_nonzero(L)
+    return sparse.find(L_nonzero)[0]
+
+
 def get_as_dict(x):
     """Return an object as a dictionary of its attributes"""
     if isinstance(x, dict):

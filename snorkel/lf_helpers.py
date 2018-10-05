@@ -49,6 +49,12 @@ def get_first_span_text(c):
 	text=span.get_parent().text
 	return text[span.char_start:span.char_end+1]
 
+def get_pos_tag_string(c):
+    span = c.get_contexts()[0]
+    sent=span.get_parent()
+    pos_tag_string=" ".join(sent.__dict__['pos_tags'])
+    return pos_tag_string
+
 
 def get_tagged_text(c):
     """
@@ -193,11 +199,17 @@ def rule_text_in_span(candidate, text, span, sign):
 def rule_regex_search_tagged_text(candidate, pattern, sign):
     return sign if re.search(pattern, get_tagged_text(candidate), flags=re.I) else 0
 
-def rule_regex_search_candidate_text(candidate, pattern, sign):
+def rule_regex_search_candidate_text(candidate, pattern, sign,otherwise=0):
     if re.search(pattern, get_first_span_text(candidate), flags=re.I):
         # print(pattern,get_first_span_text(candidate))
         return sign
-    return 0
+    return otherwise
+
+def rule_pos_tag_pattern_search(candidate,pattern,label,otherwise=0): 
+    # label is the same as sign from rule_regex_search_candidate_text
+    # if pattern in get_pos_tag_string(candidate):
+    #     print("hoory!!", pattern, get_pos_tag_string(candidate))
+    return label if pattern in get_pos_tag_string(candidate) else otherwise
 
 def rule_regex_search_btw_AB(candidate, pattern, sign):
     return sign if re.search(r'{{A}}' + pattern + r'{{B}}', get_tagged_text(candidate), flags=re.I) else 0

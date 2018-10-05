@@ -26,6 +26,7 @@ from .utils import (
     matrix_fn,
     matrix_tn,
     matrix_has_nonzero_per_row,
+    matrix_nonallzero_row_idx,
     matrix_empirical_recall
 )
 
@@ -119,6 +120,9 @@ try:
     class csr_LabelMatrix(csr_AnnotationMatrix):
 
         # self has the shape of (#_candidates, #_LFs)
+
+        def get_nonallzero_rows_submatrix(self):
+            return matrix_nonallzero_row_idx
 
         def non_overlapping_coverage(self):
             return matrix_has_nonzero_per_row(self)*1.0/self.shape[0]
@@ -452,6 +456,7 @@ class LabelAnnotator(Annotator):
         # Convert lfs to a generator function
         # In particular, catch verbose values and convert to integer ones
         def f_gen(c):
+            count=0
             for lf_key, label in labels(c):
                 # Note: We assume if the LF output is an int, it is already
                 # mapped correctly

@@ -44,6 +44,7 @@ class UDFRunner(object):
 
         # Execute the UDF
         print("Running UDF...")
+        # print("xs here means", type(xs),type(xs[0]),xs[0])
         if parallelism is None or parallelism < 2:
             self.apply_st(xs, progress_bar, clear=clear, count=count, **kwargs)
         else:

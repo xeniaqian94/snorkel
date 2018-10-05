@@ -43,6 +43,6 @@ def proper_background_pos(c):
 def neg_proper_background_pos(c):
 	return -1*proper_background_pos(c)
 	
-background_LFs=[create_LFs(pair,"background") for pair in background_regex_list]+[proper_background_pos]
+background_LFs=[create_LFs(pair,"background") for pair in background_regex_list] +[proper_background_pos]
 
 
