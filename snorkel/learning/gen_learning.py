@@ -599,8 +599,8 @@ class GenerativeModel(Classifier):
 
         # LF label variables -- initial loop to set all variables
         for i in range(m):
-            if i%10000==0:
-                print("LF label variables -- initial loop to set all variables over "+str(i))
+            # if i%10000==0:
+            #     print("LF label variables -- initial loop to set all variables over "+str(i))
             for j in range(n):
                 index = m + n * i + j
                 variable[index]["isEvidence"] = 1
@@ -612,10 +612,10 @@ class GenerativeModel(Classifier):
 
         # LF labels -- now set the non-zero labels
         L_coo = L.tocoo()
-        print("L_coo.nnz",L_coo.nnz)
+        # print("L_coo.nnz",L_coo.nnz)
         for L_index in range(L_coo.nnz):
-            if L_index%10000==0:
-                print("LF labels -- now set the non-zero labels "+str(L_index))
+            # if L_index%10000==0:
+            #     print("LF labels -- now set the non-zero labels "+str(L_index))
             data, i, j = L_coo.data[L_index], L_coo.row[L_index], L_coo.col[L_index]
             index = m + n * i + j
 
@@ -642,7 +642,7 @@ class GenerativeModel(Classifier):
                                      "Valid values are 0 to %d. " % (i, j, data, self.cardinalities[i]))
 
         #
-        print("Compiles factor and ftv matrices")
+        # print("Compiles factor and ftv matrices")
         #
         # Class prior
         if self.class_prior:
@@ -665,7 +665,7 @@ class GenerativeModel(Classifier):
             ftv_off = 0
             w_off = 0
 
-        print("Factors over labeling function outputs")
+        # print("Factors over labeling function outputs")
 
         nfactors_for_lf = [(int(self.hasPrior[i]) + int(not is_fixed[i])) for i in range(n)]
         f_off, ftv_off, w_off = self._compile_output_factors(L, factor, f_off, ftv, ftv_off, w_off, "DP_GEN_LF_ACCURACY",
@@ -684,7 +684,7 @@ class GenerativeModel(Classifier):
                     lambda m, n, i, j: m + n * i + j)),
         }
 
-        print("optional_names for _compile_output_factors")
+        # print("optional_names for _compile_output_factors")
 
         for optional_name in GenerativeModel.optional_names:
             if getattr(self, optional_name):
@@ -740,7 +740,7 @@ class GenerativeModel(Classifier):
         """
         m, n = L.shape
 
-        print("nfactors_for_lf is None? ", nfactors_for_lf == None)
+        # print("nfactors_for_lf is None? ", nfactors_for_lf == None)
         if nfactors_for_lf == None:
             nfactors_for_lf = [1 for i in range(n)]
 
