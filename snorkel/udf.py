@@ -38,7 +38,7 @@ class UDFRunner(object):
             print("Clearing existing...")
             SnorkelSession = new_sessionmaker()
             session = SnorkelSession()
-            print("clearning..")
+            print("clearing..")
             self.clear(session, **kwargs)
             session.commit()
             session.close()

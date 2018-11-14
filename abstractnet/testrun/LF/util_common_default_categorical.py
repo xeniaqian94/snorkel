@@ -641,6 +641,9 @@ purpose_word_tag_list+=[("yet ",PURPOSE_LABEL)]
 purpose_word_tag_list+=[("but ",PURPOSE_LABEL)]
 purpose_word_tag_list+=[("existing ",PURPOSE_LABEL)]
 purpose_word_tag_list+=[("deals with ",PURPOSE_LABEL)]
+purpose_word_tag_list+=[("we explore", PURPOSE_LABEL)]
+purpose_word_tag_list+=[("investigate", PURPOSE_LABEL)]
+purpose_word_tag_list+=[("examine",PURPOSE_LABEL)]
 purpose_LFs+=[create_words_LFs_by_window((pair[0],window_size,pair[1]),"purpose") for pair in purpose_word_tag_list for window_size in [3,-2]]
 
 purpose_word_tag_list2=[("bottleneck",PURPOSE_LABEL)]
@@ -664,7 +667,9 @@ mechanism_pos_tag_list=[]
 mechanism_LFs=[create_POS_LFs_by_window((pair[0],window_size,pair[1]),"mechanism") for pair in mechanism_pos_tag_list for window_size in [3,-2]]
 
 mechanism_word_tag_list=[("propose", MECHANISM_LABEL)]
-mechanism_word_tag_list+=[("develop", MECHANISM_LABEL)]
+mechanism_word_tag_list+=[("develop ", MECHANISM_LABEL)]
+mechanism_word_tag_list+=[("develops ", MECHANISM_LABEL)]
+mechanism_word_tag_list+=[("developed ", MECHANISM_LABEL)]
 mechanism_word_tag_list+=[("provide", MECHANISM_LABEL)]
 # mechanism_word_tag_list+=[("we have developed", MECHANISM_LABEL)]
 # mechanism_word_tag_list+=[("we also propose", MECHANISM_LABEL)]
@@ -678,7 +683,6 @@ mechanism_word_tag_list+=[("by using", MECHANISM_LABEL)]
 mechanism_word_tag_list+=[("by ", MECHANISM_LABEL)] 
 mechanism_word_tag_list+=[("method ", MECHANISM_LABEL)] # propsed a method, vs. most existing methods
 mechanism_word_tag_list+=[("approach ", MECHANISM_LABEL)]
-mechanism_word_tag_list+=[("we also developed", MECHANISM_LABEL)]
 mechanism_word_tag_list+=[("via ", MECHANISM_LABEL)]
 mechanism_word_tag_list+=[("to solve ", MECHANISM_LABEL)]
 # mechanism_word_tag_list+=[("contribution", MECHANISM_LABEL)]
@@ -770,6 +774,9 @@ null_LFs+=[create_words_LFs_by_window((pair[0],window_size,pair[1]),"null") for 
 null_word_tag_list2=[("settings", NULL_LABEL)]
 null_word_tag_list2+=[("general", NULL_LABEL)] # background
 null_LFs+=[create_words_LFs_by_window((pair[0],window_size,pair[1]),"null") for pair in null_word_tag_list2 for window_size in [3,-1]]
+
+
+# below are embedding-based LFs
 
 
 

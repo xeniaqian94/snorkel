@@ -42,7 +42,7 @@ def load_external_labels(session, candidate_class, annotator_name='gold',file_pa
     reload_annotator_labels(session, candidate_class, annotator_name, split=2, filter_label_split=False)
 
 def get_candidate_text(candidate):
-    return candidate.segment_cue.sentence.text[candidate.segment_cue.char_start:candidate.segment_cue.char_end+1]
+    return candidate.get_contexts()[0].sentence.text[candidate.segment_cue.char_start:candidate.segment_cue.char_end+1]
 
 from collections import defaultdict
 def load_groundtruth_as_external_dict(groundtruth_path,delimiter=""):
