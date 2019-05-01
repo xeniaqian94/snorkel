@@ -10,26 +10,29 @@ We illustrate the segmentation (red as problem section, blue as mechanism sectio
 
 ### Lessons learned
 
-1. Q: Can weak supervision support segmentation of abstracts (i.e., purpose/mechanism)?
-A: To some extent. First, one requirement is to segment by word (as the unit), not clause or sentence. We design labeling functions wit the word as candidate, and its surroundin context. 
+##### Can weak supervision support segmentation of abstracts (i.e., purpose/mechanism)?
 
-we seem to have some success with purpose, less so with mechanism (supervised models still seem to be substantially better)
+To some extent. First, one requirement is to segment by word (as the unit), not clause or sentence. We design labeling functions that considers a word as a candidate to be the <START> of a segment. The labeling function writes rules about the word information and surrounding context. Second, are more successful to identify purpose segment, less successful with mechanism segment (i.e. supervised models still seem to be substantially better).
+
+##### Do word-level segmentation accuracy have a high impact the analogical matching (finding true analogical pairs) accuracy? 
+
+No, even if the word-level segmentation accuracy is low at a face value (sub-0.5, ~0.3-0.5), is is still possible to use the segmentation and do pair-wise analogical match, that finds true analogical pairs. 
+
+This is because some word-level errors are not affecting match. It is possible to have low label accuracy on template words (e.g. "This paper proposes") but still capture the most important substantial information bits.
+
+##### Why weak-onset segments better than supervised for purpose section, and weak-onset segments worse than supervised for mechanism section?
+
+This is because we could easily write rules for <START> words in purpose section (e.g. "for X-ing", "to verb.", etc.) and know when the section stops. It is harder to write <START> rules for mechanism beside "using", "... approach is ...", and also harder to know when the section stops.
 
 
-A: Especially if we do expansions
-A: Hybrid model (Snorkel-purpose, supervised-mechanism) partially replicates CSCW50 findings: approaches crowd-level matching, but only up to K=2%; also finding different matches than all-words baseline
-Q: Why is there such a weak relationship between word-level label accuracy (agreement with “gold standard”) and matching accuracy? In other words, how can we get reasonable matching performance with sub-.50 label accuracy?
-H: Types of errors matter - might be ok to have overall bad-ish label accuracy as long as we capture the most important/informative bits, or ok to capture things that are purpose but were ignored by gold standard because they were repeats at the end.
-Q: Why weak-onset > supervised for purpose, and weak-onset < supervised for mechanism?
-H: good cues + reasonable expansion strategies for purpose, not so much for mechanism (especially expansion strategies)
-A: Cue-density seems like a poor fit for Snorkel’s advantages: many cues are sparse, so denoising of LFs doesn’t really seem to add much value
-BIG TAKEAWAYS (edit: 4/30/19):
-Weak supervision is promising; but does not have to be within Snorkel
-Snorkel has significant costs (computational efficiency, transparency) that significantly outweigh any benefits for our application (esp. since cue density is so low)
-If we had to do it again, we would probably have better spent our time by validating this key assumption first, and if it turned out to false, explore weak supervision outside of the Snorkel framework
-Q: What are some useful ways to help people judge the quality of potential analogical matches?
-Q: Might entity-matching and verb-matching be a useful way to filter down important bits of discourse segments?
-Not for matching, but possible for sensemaking
-Q: What signals might be useful to capture for “lit-review profiling” and make available to others?
-?
+##### Is Snorkel a good tool to do weak supervision?
+
+Not necessarily. This is because our weak supervision rules that identify segmentation <START> are mostly mutual indepdent. There is little room/necessity to denoise these rules (labeling function). Denoising turns out to be Snorkel’s advantages, but is hardly here. 
+  
+Another downside of snorkel is the costs (computational efficiency, transparency of implementation). If we had to do it again, we would probably have better spent our time by validating this key assumption first, and if it turned out to false, explore weak supervision outside of the Snorkel framework
+
+
+##### Any final note?
+
+Weak supervision to segment abstracts could be an effective approach; but does not have to be within Snorkel. 
 
